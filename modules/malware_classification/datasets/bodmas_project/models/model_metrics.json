@@ -1,0 +1,123 @@
+{
+  "dataset": "C:\\Users\\Dell\\.cache\\huggingface\\datasets\\bodmas_category_joined.csv",
+  "total_rows": 134428,
+  "feature_count": 2326,
+  "binary_classifier": {
+    "model": "CatBoost",
+    "classes": [
+      "Benign",
+      "Malware"
+    ],
+    "accuracy": 0.9950531875325448,
+    "malware_f1": 0.9941939145239447,
+    "roc_auc": 0.9997221707189287,
+    "confusion_matrix": [
+      [
+        15366,
+        62
+      ],
+      [
+        71,
+        11387
+      ]
+    ]
+  },
+  "category_classifier": {
+    "model": "Random Forest",
+    "categories": [
+      "backdoor",
+      "downloader",
+      "dropper",
+      "informationstealer",
+      "ransomware",
+      "trojan",
+      "virus",
+      "worm"
+    ],
+    "accuracy": 0.9433615942662354,
+    "macro_f1": 0.8765923649087202,
+    "weighted_f1": 0.9432111549175557,
+    "confusion_matrix": [
+      [
+        1425,
+        0,
+        2,
+        0,
+        1,
+        38,
+        0,
+        0
+      ],
+      [
+        0,
+        178,
+        0,
+        1,
+        0,
+        27,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        111,
+        0,
+        0,
+        23,
+        0,
+        7
+      ],
+      [
+        0,
+        0,
+        3,
+        74,
+        0,
+        13,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        139,
+        24,
+        0,
+        0
+      ],
+      [
+        96,
+        12,
+        30,
+        5,
+        12,
+        5627,
+        1,
+        212
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        24,
+        0
+      ],
+      [
+        4,
+        0,
+        6,
+        0,
+        0,
+        114,
+        0,
+        3215
+      ]
+    ]
+  }
+}
