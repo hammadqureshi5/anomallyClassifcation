@@ -1,0 +1,15 @@
+\section{Future System Usage Analysis}
+
+Once integrated, the system is expected to fit into the monitoring routine of a small security or IT team as an analysis layer that sits between raw data sources and the analyst. It is not intended to replace existing firewalls or log collectors.
+
+\textbf{Integration into the target environment.} In an organisation, flow records would be produced by a flow exporter at the network edge, executable files or their extracted features would come from endpoints or mail gateways, and logs would come from servers and applications. The platform would analyse each stream with the relevant module and present the results in one place. Because the modules work on standard representations (CICFlowMeter-style flow features and EMBER-style PE features), an organisation could connect them to its existing data collection rather than install new sensors. This requires feature extraction to match the formats the models were trained on, which is part of the planned integration work.
+
+\textbf{Impact on analysts.} An analyst who today receives a generic alert would instead see a specific label, such as ``PortScan'' or ``Ransomware'', with a confidence value. Unusual flows that match no known category would still be reported, with the features that made them stand out. Once incident correlation is implemented, alerts belonging to the same activity would be grouped, and the investigation agent would summarise them in plain language. Together these changes should reduce the time needed to decide which events deserve attention.
+
+\textbf{Impact on administrators and managers.} Administrators would receive summary views of alert volume and severity, and managers would receive risk-based priorities. This supports the kind of prioritisation recommended in incident response guidance, where limited staff must decide which incidents to handle first \cite{nist80061r3}.
+
+\textbf{Use of advanced technologies.} The platform combines gradient-boosted trees, Random Forests and unsupervised anomaly detection, and is planned to use an AI agent for explanation. The value of this combination is that each technique covers a different weakness: supervised models are precise on known threats, anomaly detection covers unknown behaviour, and the agent and dashboard make the combined output understandable.
+
+\textbf{Long-term evolution.} The modular design allows models to be retrained on new data as attacks change, and allows new modules to be added. Evaluation results already show that thresholds tuned on one network do not transfer perfectly to another (see Section~\ref{sec:module-relationship} and the anomaly results in Section~2.4). Future versions will therefore need periodic recalibration on the organisation's own traffic, and the analyst feedback feature is planned partly for this purpose.
+
+\textbf{Wider influence.} In academic settings, the platform can serve as a reproducible reference for comparing detection methods on public datasets. In organisations, it can encourage a habit of evidence-based triage, where alerts are accompanied by the reasons behind them.

@@ -1,0 +1,6517 @@
+[
+  {
+    "id": "ALERT-000001",
+    "row_index": 1,
+    "timestamp": "2026-01-01 18:42:11.385833861",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 443,
+    "score": 0.999062,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.06,
+        "direction": "high",
+        "value": 23618981.15261878
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.87,
+        "direction": "high",
+        "value": 73.49643667348609
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.09,
+        "direction": "low",
+        "value": 0.4076284308858098
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000003",
+    "row_index": 3,
+    "timestamp": "2026-01-01 01:29:21.919174926",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 22,
+    "score": 0.967969,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 27.28,
+        "direction": "high",
+        "value": 14.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": -1.16,
+        "direction": "low",
+        "value": 0.017218678518149975
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -0.99,
+        "direction": "low",
+        "value": 402.1963706844808
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000006",
+    "row_index": 6,
+    "timestamp": "2026-01-01 09:15:01.895152349",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 9381,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.65,
+        "direction": "high",
+        "value": 267.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.88,
+        "direction": "high",
+        "value": 0.9511466242784731
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000020",
+    "row_index": 20,
+    "timestamp": "2026-01-01 00:13:39.779959070",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 22,
+    "score": 0.977812,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 34.26,
+        "direction": "high",
+        "value": 29.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.61,
+        "direction": "low",
+        "value": 215.06645578422618
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.21,
+        "direction": "high",
+        "value": 2.4650311344424503
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000024",
+    "row_index": 24,
+    "timestamp": "2026-01-01 20:10:54.521189325",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 443,
+    "score": 0.996719,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.59,
+        "direction": "high",
+        "value": 39889592.486156665
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.31,
+        "direction": "high",
+        "value": 90.00716063472929
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.16,
+        "direction": "low",
+        "value": 0.32183901696290673
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000051",
+    "row_index": 51,
+    "timestamp": "2026-01-01 17:15:20.156797688",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3016.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.85,
+        "direction": "high",
+        "value": 0.9486891633513449
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.91,
+        "direction": "high",
+        "value": 7334.917738833412
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000070",
+    "row_index": 70,
+    "timestamp": "2026-01-01 00:02:32.183965517",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.76,
+        "direction": "high",
+        "value": 3096.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.52,
+        "direction": "high",
+        "value": 0.9165013814032068
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.11,
+        "direction": "high",
+        "value": 20425.983546278996
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000075",
+    "row_index": 75,
+    "timestamp": "2026-01-01 20:58:43.767419700",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 443,
+    "score": 0.998437,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.36,
+        "direction": "high",
+        "value": 31673104.18507214
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.59,
+        "direction": "high",
+        "value": 40.3389904709371
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.96,
+        "direction": "low",
+        "value": 0.568758016264767
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000079",
+    "row_index": 79,
+    "timestamp": "2026-01-01 23:34:15.243692812",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.998437,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.67,
+        "direction": "high",
+        "value": 3035.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.72,
+        "direction": "high",
+        "value": 0.9363057050850648
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.11,
+        "direction": "high",
+        "value": 8663.748995716154
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000086",
+    "row_index": 86,
+    "timestamp": "2026-01-01 04:02:00.242353930",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 443,
+    "score": 0.997031,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.83,
+        "direction": "high",
+        "value": 18701456.959443193
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.54,
+        "direction": "high",
+        "value": 39.260441918428214
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.91,
+        "direction": "low",
+        "value": 0.6351554703529693
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000093",
+    "row_index": 93,
+    "timestamp": "2026-01-01 23:19:37.048789091",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 22,
+    "score": 0.974531,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.92,
+        "direction": "high",
+        "value": 28.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.47,
+        "direction": "low",
+        "value": 537.6784582731835
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000096",
+    "row_index": 96,
+    "timestamp": "2026-01-01 19:08:32.057959904",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 443,
+    "score": 0.99625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.05,
+        "direction": "high",
+        "value": 23228998.5051572
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.17,
+        "direction": "high",
+        "value": 33.07508421427877
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -3.06,
+        "direction": "low",
+        "value": 79.12909535270168
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000104",
+    "row_index": 104,
+    "timestamp": "2026-01-01 17:44:47.340790335",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 80,
+    "score": 0.999219,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.82,
+        "direction": "high",
+        "value": 3134.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.82,
+        "direction": "high",
+        "value": 0.9452269871256652
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.3,
+        "direction": "high",
+        "value": 24194.793528933555
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000118",
+    "row_index": 118,
+    "timestamp": "2026-01-01 08:19:09.360247554",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 11576,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.87,
+        "direction": "high",
+        "value": 282.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 9.72,
+        "direction": "high",
+        "value": 0.7515976821444323
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000126",
+    "row_index": 126,
+    "timestamp": "2026-01-01 03:57:03.832527564",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 24920,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.14,
+        "direction": "high",
+        "value": 302.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.87,
+        "direction": "high",
+        "value": 0.9500808374171881
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000138",
+    "row_index": 138,
+    "timestamp": "2026-01-01 11:27:25.643274643",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 58086,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.97,
+        "direction": "high",
+        "value": 289.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.62,
+        "direction": "high",
+        "value": 0.925918449958533
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000143",
+    "row_index": 143,
+    "timestamp": "2026-01-01 18:40:10.408852218",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 22,
+    "score": 0.985,
+    "threshold": 0.966573,
+    "severity": "medium",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.01,
+        "direction": "high",
+        "value": 23.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 2.78,
+        "direction": "high",
+        "value": 3.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -2.08,
+        "direction": "low",
+        "value": 13.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000148",
+    "row_index": 148,
+    "timestamp": "2026-01-01 00:55:11.435140414",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 443,
+    "score": 0.998125,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.65,
+        "direction": "high",
+        "value": 42082731.17262537
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.79,
+        "direction": "high",
+        "value": 44.19600925049293
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.96,
+        "direction": "low",
+        "value": 0.5643849281912862
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000150",
+    "row_index": 150,
+    "timestamp": "2026-01-01 11:56:24.129813004",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.35,
+        "direction": "high",
+        "value": 2834.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.6,
+        "direction": "high",
+        "value": 0.9241323177714841
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.29,
+        "direction": "high",
+        "value": 10116.235986429307
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000156",
+    "row_index": 156,
+    "timestamp": "2026-01-01 04:19:06.945907732",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 443,
+    "score": 0.995,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.85,
+        "direction": "high",
+        "value": 19144212.588230714
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.49,
+        "direction": "high",
+        "value": 97.76786462474725
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.23,
+        "direction": "low",
+        "value": 0.2452286058556883
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000161",
+    "row_index": 161,
+    "timestamp": "2026-01-01 09:30:06.566598261",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 443,
+    "score": 0.995625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.66,
+        "direction": "high",
+        "value": 15822785.179831658
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.53,
+        "direction": "high",
+        "value": 62.69638223529487
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.15,
+        "direction": "low",
+        "value": 0.33441416929583717
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000197",
+    "row_index": 197,
+    "timestamp": "2026-01-01 07:45:31.497245500",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 22,
+    "score": 0.972344,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.01,
+        "direction": "high",
+        "value": 23.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.34,
+        "direction": "low",
+        "value": 281.4381655735591
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": -0.94,
+        "direction": "low",
+        "value": 0.02868806100682464
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000207",
+    "row_index": 207,
+    "timestamp": "2026-01-01 12:53:14.125003070",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 22,
+    "score": 0.98125,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.01,
+        "direction": "high",
+        "value": 23.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.87,
+        "direction": "low",
+        "value": 335.32566112446784
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000214",
+    "row_index": 214,
+    "timestamp": "2026-01-01 00:25:32.269424013",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 11008,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.99,
+        "direction": "high",
+        "value": 291.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.17,
+        "direction": "high",
+        "value": 0.8834551793972842
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000221",
+    "row_index": 221,
+    "timestamp": "2026-01-01 08:37:29.386164810",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 52608,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.14,
+        "direction": "high",
+        "value": 302.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.02,
+        "direction": "high",
+        "value": 0.8694092999994941
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000247",
+    "row_index": 247,
+    "timestamp": "2026-01-01 03:56:29.476299609",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 22,
+    "score": 0.971563,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 30.17,
+        "direction": "high",
+        "value": 19.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.5,
+        "direction": "high",
+        "value": 2.946747441449149
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.32,
+        "direction": "low",
+        "value": 648.0094865889898
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000257",
+    "row_index": 257,
+    "timestamp": "2026-01-01 05:28:08.369006295",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 443,
+    "score": 0.998125,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.03,
+        "direction": "high",
+        "value": 22909713.57610095
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.86,
+        "direction": "high",
+        "value": 73.12987015599708
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.1,
+        "direction": "low",
+        "value": 0.3960132653277015
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000275",
+    "row_index": 275,
+    "timestamp": "2026-01-01 09:41:14.319340952",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 22,
+    "score": 0.984687,
+    "threshold": 0.966573,
+    "severity": "medium",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 26.58,
+        "direction": "high",
+        "value": 13.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 2.78,
+        "direction": "high",
+        "value": 3.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.54,
+        "direction": "low",
+        "value": 232.2185426812929
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000277",
+    "row_index": 277,
+    "timestamp": "2026-01-01 10:53:32.749882912",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 22,
+    "score": 0.967187,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.2,
+        "direction": "high",
+        "value": 26.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.31,
+        "direction": "high",
+        "value": 2.6173252279657833
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -0.86,
+        "direction": "low",
+        "value": 8.464205816547778
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000293",
+    "row_index": 293,
+    "timestamp": "2026-01-01 08:05:13.743269706",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 443,
+    "score": 0.996875,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 8.73,
+        "direction": "high",
+        "value": 6243895.717447815
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.14,
+        "direction": "high",
+        "value": 83.18699356434044
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.14,
+        "direction": "low",
+        "value": 0.3481936225444021
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000297",
+    "row_index": 297,
+    "timestamp": "2026-01-01 22:59:53.464024811",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.56,
+        "direction": "high",
+        "value": 2965.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.27,
+        "direction": "high",
+        "value": 0.9896101128643614
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.81,
+        "direction": "high",
+        "value": 6749.599581941816
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000302",
+    "row_index": 302,
+    "timestamp": "2026-01-01 08:19:38.168978156",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 443,
+    "score": 0.99625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.56,
+        "direction": "high",
+        "value": 14362493.31309093
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.66,
+        "direction": "high",
+        "value": 41.51363661368168
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.01,
+        "direction": "low",
+        "value": 0.5046422689502614
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000314",
+    "row_index": 314,
+    "timestamp": "2026-01-01 14:15:04.818652812",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.4",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.66,
+        "direction": "high",
+        "value": 3031.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.15,
+        "direction": "high",
+        "value": 0.7901425765978548
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.48,
+        "direction": "high",
+        "value": 5067.045986719785
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000325",
+    "row_index": 325,
+    "timestamp": "2026-01-01 20:06:38.346614694",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 22,
+    "score": 0.979688,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.56,
+        "direction": "high",
+        "value": 27.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 2.2,
+        "direction": "high",
+        "value": 0.20354865178357084
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.24,
+        "direction": "high",
+        "value": 2.515167973903018
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000332",
+    "row_index": 332,
+    "timestamp": "2026-01-01 20:54:00.914242268",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 80,
+    "score": 0.999688,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.76,
+        "direction": "high",
+        "value": 3094.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.33,
+        "direction": "high",
+        "value": 0.995851361526427
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.8,
+        "direction": "high",
+        "value": 15648.49907395923
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000334",
+    "row_index": 334,
+    "timestamp": "2026-01-01 14:03:11.475760152",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 23645,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.09,
+        "direction": "high",
+        "value": 298.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.06,
+        "direction": "high",
+        "value": 0.9687140710015938
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000336",
+    "row_index": 336,
+    "timestamp": "2026-01-01 21:44:29.035261762",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 22,
+    "score": 0.980781,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 34.26,
+        "direction": "high",
+        "value": 29.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.72,
+        "direction": "low",
+        "value": 192.73930335996587
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 1.67,
+        "direction": "high",
+        "value": 0.1718586847651501
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000340",
+    "row_index": 340,
+    "timestamp": "2026-01-01 19:43:52.291792408",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 22,
+    "score": 0.979844,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 26.58,
+        "direction": "high",
+        "value": 13.0
+      },
+      {
+        "feature": "packets",
+        "z_score": 1.43,
+        "direction": "high",
+        "value": 29.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.39,
+        "direction": "high",
+        "value": 2.7663192057517003
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000345",
+    "row_index": 345,
+    "timestamp": "2026-01-01 12:46:41.359537689",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 80,
+    "score": 0.999219,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.57,
+        "direction": "high",
+        "value": 2972.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.05,
+        "direction": "high",
+        "value": 0.8720915352402296
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.09,
+        "direction": "high",
+        "value": 20151.078344865735
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000360",
+    "row_index": 360,
+    "timestamp": "2026-01-01 01:56:14.379594210",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3019.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.58,
+        "direction": "high",
+        "value": 0.9220487403609288
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.81,
+        "direction": "high",
+        "value": 15855.671273883763
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000364",
+    "row_index": 364,
+    "timestamp": "2026-01-01 11:29:24.219468001",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.59,
+        "direction": "high",
+        "value": 2983.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.26,
+        "direction": "high",
+        "value": 0.8921263544755578
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.33,
+        "direction": "high",
+        "value": 10508.838604534765
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000365",
+    "row_index": 365,
+    "timestamp": "2026-01-01 17:31:48.561660350",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 56791,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.88,
+        "direction": "high",
+        "value": 283.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.95,
+        "direction": "high",
+        "value": 0.8632562112407722
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000373",
+    "row_index": 373,
+    "timestamp": "2026-01-01 03:40:39.389776543",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 57383,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.18,
+        "direction": "high",
+        "value": 305.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.56,
+        "direction": "high",
+        "value": 0.8272067213098252
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000377",
+    "row_index": 377,
+    "timestamp": "2026-01-01 23:20:32.433906271",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 443,
+    "score": 0.996406,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.36,
+        "direction": "high",
+        "value": 31533099.48404236
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.01,
+        "direction": "high",
+        "value": 48.963312124188484
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.0,
+        "direction": "low",
+        "value": 0.5095457056939061
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000391",
+    "row_index": 391,
+    "timestamp": "2026-01-01 06:38:15.160071777",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 80,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.5,
+        "direction": "high",
+        "value": 2924.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.9,
+        "direction": "high",
+        "value": 0.8586889750309545
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.03,
+        "direction": "high",
+        "value": 19157.80644340925
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000403",
+    "row_index": 403,
+    "timestamp": "2026-01-01 13:47:07.559326528",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.4",
+    "dst_port": 443,
+    "score": 0.996094,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.2,
+        "direction": "high",
+        "value": 10022684.31742867
+      },
+      {
+        "feature": "duration",
+        "z_score": 5.86,
+        "direction": "high",
+        "value": 28.518671252173224
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.99,
+        "direction": "low",
+        "value": 0.5241333487438185
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000425",
+    "row_index": 425,
+    "timestamp": "2026-01-01 13:48:37.665766862",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 22,
+    "score": 0.980156,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 31.13,
+        "direction": "high",
+        "value": 21.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 1.55,
+        "direction": "high",
+        "value": 0.16473356043953494
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000433",
+    "row_index": 433,
+    "timestamp": "2026-01-01 01:36:54.518468982",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 443,
+    "score": 0.994687,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 11.59,
+        "direction": "high",
+        "value": 107368118.2405701
+      },
+      {
+        "feature": "duration",
+        "z_score": 9.82,
+        "direction": "high",
+        "value": 181.910861619668
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.39,
+        "direction": "low",
+        "value": 0.08790684169955629
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000450",
+    "row_index": 450,
+    "timestamp": "2026-01-01 23:35:59.711297753",
+    "src_ip": "192.168.1.127",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 443,
+    "score": 0.968125,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 3.68,
+        "direction": "high",
+        "value": 4.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -2.43,
+        "direction": "low",
+        "value": 170.44473918243514
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 2.17,
+        "direction": "high",
+        "value": 125.2884661273065
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000452",
+    "row_index": 452,
+    "timestamp": "2026-01-01 10:35:54.080174282",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 443,
+    "score": 0.999531,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.07,
+        "direction": "high",
+        "value": 8773043.51862478
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.41,
+        "direction": "high",
+        "value": 94.41154691515607
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 3.34,
+        "direction": "high",
+        "value": 0.27367600940800324
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000454",
+    "row_index": 454,
+    "timestamp": "2026-01-01 10:21:52.029353293",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 22,
+    "score": 0.990625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.82,
+        "direction": "high",
+        "value": 25.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -3.01,
+        "direction": "low",
+        "value": 84.14295565278685
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000465",
+    "row_index": 465,
+    "timestamp": "2026-01-01 17:46:41.944968930",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 443,
+    "score": 0.997969,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.29,
+        "direction": "high",
+        "value": 29558160.341742724
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.07,
+        "direction": "high",
+        "value": 31.396458631692457
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -3.09,
+        "direction": "low",
+        "value": 76.65065621615138
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000475",
+    "row_index": 475,
+    "timestamp": "2026-01-01 15:09:52.444476432",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 443,
+    "score": 0.995313,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "duration",
+        "z_score": 8.79,
+        "direction": "high",
+        "value": 112.88882556437204
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": 8.46,
+        "direction": "high",
+        "value": 4795480.119272078
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.29,
+        "direction": "low",
+        "value": 0.17700865461784618
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000476",
+    "row_index": 476,
+    "timestamp": "2026-01-01 11:45:48.619147169",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 80,
+    "score": 0.998906,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3016.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.31,
+        "direction": "high",
+        "value": 0.9939787368512151
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.99,
+        "direction": "high",
+        "value": 18403.561896083764
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000477",
+    "row_index": 477,
+    "timestamp": "2026-01-01 06:50:49.082535887",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 443,
+    "score": 0.99625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.1,
+        "direction": "high",
+        "value": 24549761.237037186
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.31,
+        "direction": "high",
+        "value": 56.39179359831571
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -3.29,
+        "direction": "low",
+        "value": 60.2245840377474
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000490",
+    "row_index": 490,
+    "timestamp": "2026-01-01 12:11:02.068795938",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 46412,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.08,
+        "direction": "high",
+        "value": 297.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.24,
+        "direction": "high",
+        "value": 0.7981891849462663
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000503",
+    "row_index": 503,
+    "timestamp": "2026-01-01 11:42:45.609475787",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 5109,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.9,
+        "direction": "high",
+        "value": 284.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.54,
+        "direction": "high",
+        "value": 0.8247404566352975
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000510",
+    "row_index": 510,
+    "timestamp": "2026-01-01 13:44:15.531152371",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 80,
+    "score": 0.99875,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.55,
+        "direction": "high",
+        "value": 2959.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.59,
+        "direction": "high",
+        "value": 0.9231120023326482
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.28,
+        "direction": "high",
+        "value": 10053.379123400124
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000513",
+    "row_index": 513,
+    "timestamp": "2026-01-01 11:44:10.947795116",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 22,
+    "score": 0.987188,
+    "threshold": 0.966573,
+    "severity": "medium",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.01,
+        "direction": "high",
+        "value": 23.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -2.08,
+        "direction": "low",
+        "value": 13.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000520",
+    "row_index": 520,
+    "timestamp": "2026-01-01 12:56:49.764510125",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.61,
+        "direction": "high",
+        "value": 2998.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 9.59,
+        "direction": "high",
+        "value": 0.7408483474765456
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.03,
+        "direction": "high",
+        "value": 19106.358113782917
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000536",
+    "row_index": 536,
+    "timestamp": "2026-01-01 20:28:00.930251596",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 443,
+    "score": 0.997344,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 11.06,
+        "direction": "high",
+        "value": 63497658.26848482
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.47,
+        "direction": "high",
+        "value": 60.859553230198195
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.17,
+        "direction": "low",
+        "value": 0.3116820743132967
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000538",
+    "row_index": 538,
+    "timestamp": "2026-01-01 16:27:41.909763598",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.15",
+    "dst_port": 5485,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.93,
+        "direction": "high",
+        "value": 286.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.32,
+        "direction": "high",
+        "value": 0.8972671146849892
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000545",
+    "row_index": 545,
+    "timestamp": "2026-01-01 19:20:32.571220783",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 22,
+    "score": 0.987969,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 29.11,
+        "direction": "high",
+        "value": 17.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 1.98,
+        "direction": "high",
+        "value": 0.19040140400541125
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.5,
+        "direction": "high",
+        "value": 2.951111109101664
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000549",
+    "row_index": 549,
+    "timestamp": "2026-01-01 23:04:23.925065716",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 63527,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.22,
+        "direction": "high",
+        "value": 308.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.67,
+        "direction": "high",
+        "value": 0.9311374797950929
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000580",
+    "row_index": 580,
+    "timestamp": "2026-01-01 11:31:40.560185446",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 22,
+    "score": 0.979062,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.01,
+        "direction": "high",
+        "value": 23.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 2.37,
+        "direction": "high",
+        "value": 0.21366644849233277
+      },
+      {
+        "feature": "packets",
+        "z_score": 1.11,
+        "direction": "high",
+        "value": 27.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000590",
+    "row_index": 590,
+    "timestamp": "2026-01-01 20:38:23.873857093",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 26513,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.39,
+        "direction": "high",
+        "value": 321.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.24,
+        "direction": "high",
+        "value": 0.8900558468219422
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000592",
+    "row_index": 592,
+    "timestamp": "2026-01-01 15:11:04.528414995",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 80,
+    "score": 0.999375,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.62,
+        "direction": "high",
+        "value": 3003.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.97,
+        "direction": "high",
+        "value": 0.9600105462523006
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.81,
+        "direction": "high",
+        "value": 6719.118610920024
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000599",
+    "row_index": 599,
+    "timestamp": "2026-01-01 16:28:03.751166791",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 47941,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.46,
+        "direction": "high",
+        "value": 327.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.18,
+        "direction": "high",
+        "value": 0.8840355966028943
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000605",
+    "row_index": 605,
+    "timestamp": "2026-01-01 21:15:14.958177014",
+    "src_ip": "192.168.1.176",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 80,
+    "score": 0.97625,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "syn_ratio",
+        "z_score": 5.39,
+        "direction": "high",
+        "value": 0.41107635140143545
+      },
+      {
+        "feature": "duration",
+        "z_score": 3.13,
+        "direction": "high",
+        "value": 7.392134624352356
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": 1.7,
+        "direction": "high",
+        "value": 5819.355878717327
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000619",
+    "row_index": 619,
+    "timestamp": "2026-01-01 04:20:19.088531230",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 80,
+    "score": 0.999062,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3018.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.83,
+        "direction": "high",
+        "value": 0.9470710125086057
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.38,
+        "direction": "high",
+        "value": 25742.74782514283
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000645",
+    "row_index": 645,
+    "timestamp": "2026-01-01 16:04:24.257533736",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 60950,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.91,
+        "direction": "high",
+        "value": 285.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.21,
+        "direction": "high",
+        "value": 0.9838834142339473
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000656",
+    "row_index": 656,
+    "timestamp": "2026-01-01 05:19:08.691651256",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 80,
+    "score": 0.999375,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.61,
+        "direction": "high",
+        "value": 2998.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.08,
+        "direction": "high",
+        "value": 0.9706812489906068
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.7,
+        "direction": "high",
+        "value": 6145.920829047114
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000658",
+    "row_index": 658,
+    "timestamp": "2026-01-01 04:51:41.027021295",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 443,
+    "score": 0.999531,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.46,
+        "direction": "high",
+        "value": 34935002.672372945
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.38,
+        "direction": "high",
+        "value": 58.30576355747949
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.22,
+        "direction": "low",
+        "value": 0.25682396884064174
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000664",
+    "row_index": 664,
+    "timestamp": "2026-01-01 10:13:22.363287232",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 80,
+    "score": 0.998437,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.85,
+        "direction": "high",
+        "value": 3154.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.77,
+        "direction": "high",
+        "value": 0.8458571833355928
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.55,
+        "direction": "high",
+        "value": 5382.6705002559
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000665",
+    "row_index": 665,
+    "timestamp": "2026-01-01 15:15:27.581150319",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 22,
+    "score": 0.975625,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 25.03,
+        "direction": "high",
+        "value": 11.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.36,
+        "direction": "low",
+        "value": 611.5104165744765
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000676",
+    "row_index": 676,
+    "timestamp": "2026-01-01 17:19:08.949023440",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 26190,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.31,
+        "direction": "high",
+        "value": 315.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.3,
+        "direction": "high",
+        "value": 0.9927907858688998
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000682",
+    "row_index": 682,
+    "timestamp": "2026-01-01 03:54:11.527247703",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 80,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.77,
+        "direction": "high",
+        "value": 3103.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.6,
+        "direction": "high",
+        "value": 0.8301750147892099
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.65,
+        "direction": "high",
+        "value": 5853.318571949423
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000683",
+    "row_index": 683,
+    "timestamp": "2026-01-01 11:15:40.537162755",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.4",
+    "dst_port": 31614,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.05,
+        "direction": "high",
+        "value": 295.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.85,
+        "direction": "high",
+        "value": 0.8532926537690126
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000686",
+    "row_index": 686,
+    "timestamp": "2026-01-01 00:04:45.952608829",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 18309,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.04,
+        "direction": "high",
+        "value": 294.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.08,
+        "direction": "high",
+        "value": 0.8749887184070385
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000698",
+    "row_index": 698,
+    "timestamp": "2026-01-01 18:48:19.694645846",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.4",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.71,
+        "direction": "high",
+        "value": 3063.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.73,
+        "direction": "high",
+        "value": 0.9366672827195972
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.86,
+        "direction": "high",
+        "value": 7024.896477333927
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000740",
+    "row_index": 740,
+    "timestamp": "2026-01-01 15:32:48.834056793",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 59632,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.02,
+        "direction": "high",
+        "value": 293.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.55,
+        "direction": "high",
+        "value": 0.9199186567902607
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000760",
+    "row_index": 760,
+    "timestamp": "2026-01-01 05:55:52.811253019",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 22,
+    "score": 0.9775,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 31.13,
+        "direction": "high",
+        "value": 21.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.31,
+        "direction": "high",
+        "value": 2.622177263273031
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.14,
+        "direction": "low",
+        "value": 344.45118095916456
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000796",
+    "row_index": 796,
+    "timestamp": "2026-01-01 20:30:10.138183964",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.15",
+    "dst_port": 41965,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.18,
+        "direction": "high",
+        "value": 305.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.79,
+        "direction": "high",
+        "value": 0.9425446734283313
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000817",
+    "row_index": 817,
+    "timestamp": "2026-01-01 12:04:40.983332838",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 443,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.62,
+        "direction": "high",
+        "value": 15151807.99173485
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.52,
+        "direction": "high",
+        "value": 62.19737923331554
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.19,
+        "direction": "low",
+        "value": 0.2889367132538044
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000821",
+    "row_index": 821,
+    "timestamp": "2026-01-01 14:56:42.205638326",
+    "src_ip": "192.168.1.62",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 80,
+    "score": 0.974531,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "syn_ratio",
+        "z_score": 4.23,
+        "direction": "high",
+        "value": 0.33165438102376105
+      },
+      {
+        "feature": "duration",
+        "z_score": 4.09,
+        "direction": "high",
+        "value": 12.017335832093382
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.18,
+        "direction": "low",
+        "value": 2.063159785815808
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000836",
+    "row_index": 836,
+    "timestamp": "2026-01-01 14:06:27.550852395",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 22,
+    "score": 0.98125,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.42,
+        "direction": "high",
+        "value": 24.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": 1.64,
+        "direction": "high",
+        "value": 22124.535387274434
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000839",
+    "row_index": 839,
+    "timestamp": "2026-01-01 19:56:00.662458144",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.15",
+    "dst_port": 22,
+    "score": 0.976875,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.82,
+        "direction": "high",
+        "value": 25.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": -1.37,
+        "direction": "low",
+        "value": 0.006791996256928269
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.26,
+        "direction": "high",
+        "value": 2.534804364303717
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000844",
+    "row_index": 844,
+    "timestamp": "2026-01-01 10:33:33.074042677",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 1558,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.46,
+        "direction": "high",
+        "value": 327.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.38,
+        "direction": "high",
+        "value": 0.9036678742594132
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000848",
+    "row_index": 848,
+    "timestamp": "2026-01-01 02:00:23.524963464",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.78,
+        "direction": "high",
+        "value": 3110.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.16,
+        "direction": "high",
+        "value": 0.8821315832684291
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.19,
+        "direction": "high",
+        "value": 9331.827840693479
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000861",
+    "row_index": 861,
+    "timestamp": "2026-01-01 17:06:29.968077250",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 443,
+    "score": 0.996719,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.09,
+        "direction": "high",
+        "value": 24217246.632788226
+      },
+      {
+        "feature": "duration",
+        "z_score": 5.23,
+        "direction": "high",
+        "value": 21.08111568798626
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.68,
+        "direction": "low",
+        "value": 0.9914491903706004
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000866",
+    "row_index": 866,
+    "timestamp": "2026-01-01 14:08:39.007959189",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3017.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.14,
+        "direction": "high",
+        "value": 0.8804480801561464
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.79,
+        "direction": "high",
+        "value": 6606.7499856342065
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000900",
+    "row_index": 900,
+    "timestamp": "2026-01-01 12:11:49.303048363",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.998437,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.78,
+        "direction": "high",
+        "value": 3109.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.35,
+        "direction": "high",
+        "value": 0.9002654547561123
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.59,
+        "direction": "high",
+        "value": 5576.927116104544
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000902",
+    "row_index": 902,
+    "timestamp": "2026-01-01 17:12:18.618543319",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 22,
+    "score": 0.982344,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.92,
+        "direction": "high",
+        "value": 28.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -1.76,
+        "direction": "low",
+        "value": 14.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000906",
+    "row_index": 906,
+    "timestamp": "2026-01-01 16:11:55.694860709",
+    "src_ip": "192.168.1.188",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 80,
+    "score": 0.967031,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "protocol=icmp",
+        "z_score": 6.93,
+        "direction": "high"
+      },
+      {
+        "feature": "protocol=tcp",
+        "z_score": -2.47,
+        "direction": "low"
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.93,
+        "direction": "high",
+        "value": 3.8198656259791655
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000919",
+    "row_index": 919,
+    "timestamp": "2026-01-01 12:22:38.467959342",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 18695,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.5,
+        "direction": "high",
+        "value": 330.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.81,
+        "direction": "high",
+        "value": 0.9443040516531404
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000920",
+    "row_index": 920,
+    "timestamp": "2026-01-01 12:03:30.868969742",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 80,
+    "score": 0.998437,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.79,
+        "direction": "high",
+        "value": 3114.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.15,
+        "direction": "high",
+        "value": 0.8814800095406679
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.99,
+        "direction": "high",
+        "value": 7823.105198189204
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000921",
+    "row_index": 921,
+    "timestamp": "2026-01-01 18:43:07.571416958",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 34998,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.06,
+        "direction": "high",
+        "value": 296.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.37,
+        "direction": "high",
+        "value": 0.8097745075924883
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000922",
+    "row_index": 922,
+    "timestamp": "2026-01-01 15:11:41.106420646",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 42031,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.83,
+        "direction": "high",
+        "value": 279.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.29,
+        "direction": "high",
+        "value": 0.9921370589457025
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000933",
+    "row_index": 933,
+    "timestamp": "2026-01-01 09:48:20.511995120",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 443,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.94,
+        "direction": "high",
+        "value": 20835261.743978757
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.36,
+        "direction": "high",
+        "value": 57.895522051513275
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.25,
+        "direction": "low",
+        "value": 0.22415523716560443
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000938",
+    "row_index": 938,
+    "timestamp": "2026-01-01 05:50:53.359741029",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 443,
+    "score": 0.994687,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 8.83,
+        "direction": "high",
+        "value": 6922144.234497921
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.46,
+        "direction": "high",
+        "value": 96.42122412810389
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.31,
+        "direction": "low",
+        "value": 0.16576665023191842
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000971",
+    "row_index": 971,
+    "timestamp": "2026-01-01 03:32:15.645312496",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 22,
+    "score": 0.980156,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 31.58,
+        "direction": "high",
+        "value": 22.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.31,
+        "direction": "high",
+        "value": 2.6229745753118494
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": -1.26,
+        "direction": "low",
+        "value": 0.012374242825832488
+      }
+    ]
+  },
+  {
+    "id": "ALERT-000994",
+    "row_index": 994,
+    "timestamp": "2026-01-01 15:51:48.246384956",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 22,
+    "score": 0.9675,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 29.11,
+        "direction": "high",
+        "value": 17.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -1.19,
+        "direction": "low",
+        "value": 16.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001022",
+    "row_index": 1022,
+    "timestamp": "2026-01-01 17:15:16.917560909",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 443,
+    "score": 0.997812,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.06,
+        "direction": "high",
+        "value": 23514364.817432843
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.86,
+        "direction": "high",
+        "value": 45.720089955113195
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.94,
+        "direction": "low",
+        "value": 0.5892611740057702
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001034",
+    "row_index": 1034,
+    "timestamp": "2026-01-01 17:18:42.080015740",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 443,
+    "score": 0.997344,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.08,
+        "direction": "high",
+        "value": 23882890.446652826
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.3,
+        "direction": "high",
+        "value": 89.68726470005846
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.23,
+        "direction": "low",
+        "value": 0.24502361302009545
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001057",
+    "row_index": 1057,
+    "timestamp": "2026-01-01 11:06:28.731166789",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 443,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.2,
+        "direction": "high",
+        "value": 27045160.36811844
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.96,
+        "direction": "high",
+        "value": 76.5732840978506
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.29,
+        "direction": "low",
+        "value": 0.1825929352671678
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001109",
+    "row_index": 1109,
+    "timestamp": "2026-01-01 03:42:13.333238400",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.47,
+        "direction": "high",
+        "value": 2906.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.09,
+        "direction": "high",
+        "value": 0.9718066997708179
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.7,
+        "direction": "high",
+        "value": 14386.741792959745
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001114",
+    "row_index": 1114,
+    "timestamp": "2026-01-01 18:46:05.385661329",
+    "src_ip": "192.168.1.56",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 80,
+    "score": 0.966875,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "syn_ratio",
+        "z_score": 4.42,
+        "direction": "high",
+        "value": 0.344605620674843
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -2.35,
+        "direction": "low",
+        "value": 102.90107329589206
+      },
+      {
+        "feature": "duration",
+        "z_score": 2.13,
+        "direction": "high",
+        "value": 4.283421394159816
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001116",
+    "row_index": 1116,
+    "timestamp": "2026-01-01 17:31:35.397998155",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 63091,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.25,
+        "direction": "high",
+        "value": 310.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.43,
+        "direction": "high",
+        "value": 0.9078105288063092
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001129",
+    "row_index": 1129,
+    "timestamp": "2026-01-01 06:51:06.132811143",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3013.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.5,
+        "direction": "high",
+        "value": 0.9143154133789185
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.69,
+        "direction": "high",
+        "value": 6064.522795155423
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001157",
+    "row_index": 1157,
+    "timestamp": "2026-01-01 05:31:31.898560868",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 9028,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.59,
+        "direction": "high",
+        "value": 338.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.64,
+        "direction": "high",
+        "value": 0.9284704443578861
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001189",
+    "row_index": 1189,
+    "timestamp": "2026-01-01 20:30:35.626262182",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 22,
+    "score": 0.992031,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.2,
+        "direction": "high",
+        "value": 26.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": 2.44,
+        "direction": "high",
+        "value": 57584.9484164847
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.55,
+        "direction": "low",
+        "value": 228.3972522134231
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001193",
+    "row_index": 1193,
+    "timestamp": "2026-01-01 03:05:17.747050676",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 443,
+    "score": 0.997969,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.64,
+        "direction": "high",
+        "value": 41985130.86621555
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.44,
+        "direction": "high",
+        "value": 95.66406602956656
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.19,
+        "direction": "low",
+        "value": 0.28194291574528507
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001204",
+    "row_index": 1204,
+    "timestamp": "2026-01-01 04:14:01.320938183",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 22,
+    "score": 0.96875,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 34.26,
+        "direction": "high",
+        "value": 29.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 2.25,
+        "direction": "high",
+        "value": 0.20646026145561674
+      },
+      {
+        "feature": "duration",
+        "z_score": 0.78,
+        "direction": "high",
+        "value": 1.8398017285432253
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001206",
+    "row_index": 1206,
+    "timestamp": "2026-01-01 17:58:54.434622409",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 443,
+    "score": 0.995156,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.75,
+        "direction": "high",
+        "value": 46617172.67434628
+      },
+      {
+        "feature": "duration",
+        "z_score": 5.03,
+        "direction": "high",
+        "value": 19.10701296164685
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.71,
+        "direction": "low",
+        "value": 0.937157695261775
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001208",
+    "row_index": 1208,
+    "timestamp": "2026-01-01 04:58:07.637243270",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 443,
+    "score": 0.997812,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.55,
+        "direction": "high",
+        "value": 14155526.458520865
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.01,
+        "direction": "high",
+        "value": 78.42560083003778
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.2,
+        "direction": "low",
+        "value": 0.28016340871580464
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001215",
+    "row_index": 1215,
+    "timestamp": "2026-01-01 01:30:14.275263191",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 443,
+    "score": 0.995781,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.19,
+        "direction": "high",
+        "value": 26722780.060029045
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.51,
+        "direction": "high",
+        "value": 38.779523288782755
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.94,
+        "direction": "low",
+        "value": 0.5915710393145637
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001228",
+    "row_index": 1228,
+    "timestamp": "2026-01-01 21:56:08.003844768",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 22,
+    "score": 0.975313,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 29.11,
+        "direction": "high",
+        "value": 17.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.55,
+        "direction": "low",
+        "value": 230.13538932714596
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001229",
+    "row_index": 1229,
+    "timestamp": "2026-01-01 15:05:23.953555756",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.15",
+    "dst_port": 443,
+    "score": 0.996875,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.99,
+        "direction": "high",
+        "value": 59223756.54495821
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.45,
+        "direction": "high",
+        "value": 37.76821418415766
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.12,
+        "direction": "low",
+        "value": 0.36970320099903115
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001230",
+    "row_index": 1230,
+    "timestamp": "2026-01-01 02:04:25.486059027",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 80,
+    "score": 0.999375,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.52,
+        "direction": "high",
+        "value": 2939.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.14,
+        "direction": "high",
+        "value": 0.9771955601630556
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.41,
+        "direction": "high",
+        "value": 11228.38816844961
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001248",
+    "row_index": 1248,
+    "timestamp": "2026-01-01 13:11:35.111258309",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 37335,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.88,
+        "direction": "high",
+        "value": 283.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.51,
+        "direction": "high",
+        "value": 0.9156026518611388
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001257",
+    "row_index": 1257,
+    "timestamp": "2026-01-01 09:56:10.862848511",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 22,
+    "score": 0.982656,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 31.58,
+        "direction": "high",
+        "value": 22.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 2.78,
+        "direction": "high",
+        "value": 3.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.27,
+        "direction": "low",
+        "value": 301.7310185547213
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001273",
+    "row_index": 1273,
+    "timestamp": "2026-01-01 10:39:00.062406455",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.6,
+        "direction": "high",
+        "value": 2987.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.13,
+        "direction": "high",
+        "value": 0.9759582195641193
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.61,
+        "direction": "high",
+        "value": 5658.776743377165
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001300",
+    "row_index": 1300,
+    "timestamp": "2026-01-01 18:45:52.337797656",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 443,
+    "score": 0.999062,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.63,
+        "direction": "high",
+        "value": 15297384.244730968
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.66,
+        "direction": "high",
+        "value": 66.48996368477363
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.06,
+        "direction": "low",
+        "value": 0.4355010634527663
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001328",
+    "row_index": 1328,
+    "timestamp": "2026-01-01 14:23:31.984776103",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 24458,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.17,
+        "direction": "high",
+        "value": 304.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.75,
+        "direction": "high",
+        "value": 0.9392680698399418
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001331",
+    "row_index": 1331,
+    "timestamp": "2026-01-01 08:59:10.161289669",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 443,
+    "score": 0.993906,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.88,
+        "direction": "high",
+        "value": 19596281.144522738
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.4,
+        "direction": "high",
+        "value": 36.877438071699224
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.92,
+        "direction": "low",
+        "value": 0.6220009064825697
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001333",
+    "row_index": 1333,
+    "timestamp": "2026-01-01 21:53:06.004031912",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 22,
+    "score": 0.992344,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.42,
+        "direction": "high",
+        "value": 24.0
+      },
+      {
+        "feature": "packets",
+        "z_score": -2.79,
+        "direction": "low",
+        "value": 11.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 2.78,
+        "direction": "high",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001343",
+    "row_index": 1343,
+    "timestamp": "2026-01-01 05:58:13.276551685",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 52140,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.94,
+        "direction": "high",
+        "value": 287.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.51,
+        "direction": "high",
+        "value": 0.9160362727505919
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001354",
+    "row_index": 1354,
+    "timestamp": "2026-01-01 16:27:17.984093014",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 443,
+    "score": 0.995625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.78,
+        "direction": "high",
+        "value": 48166404.56054743
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.24,
+        "direction": "high",
+        "value": 34.15364433234441
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -3.08,
+        "direction": "low",
+        "value": 77.55931034539267
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001390",
+    "row_index": 1390,
+    "timestamp": "2026-01-01 00:47:34.788113724",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.68,
+        "direction": "high",
+        "value": 3040.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.24,
+        "direction": "high",
+        "value": 0.8904199682768326
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.64,
+        "direction": "high",
+        "value": 5827.358118557578
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001396",
+    "row_index": 1396,
+    "timestamp": "2026-01-01 10:14:05.035537156",
+    "src_ip": "192.168.1.221",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 443,
+    "score": 0.989688,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "protocol=icmp",
+        "z_score": 6.93,
+        "direction": "high"
+      },
+      {
+        "feature": "duration",
+        "z_score": 3.0,
+        "direction": "high",
+        "value": 6.894521071132315
+      },
+      {
+        "feature": "protocol=tcp",
+        "z_score": -2.47,
+        "direction": "low"
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001405",
+    "row_index": 1405,
+    "timestamp": "2026-01-01 15:31:47.006450801",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 80,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.63,
+        "direction": "high",
+        "value": 3010.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.95,
+        "direction": "high",
+        "value": 0.8626212119394108
+      },
+      {
+        "feature": "protocol=icmp",
+        "z_score": 6.93,
+        "direction": "high"
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001407",
+    "row_index": 1407,
+    "timestamp": "2026-01-01 21:38:54.985645149",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 80,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.57,
+        "direction": "high",
+        "value": 2971.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.44,
+        "direction": "high",
+        "value": 0.908795304454399
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.61,
+        "direction": "high",
+        "value": 13318.862871949637
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001413",
+    "row_index": 1413,
+    "timestamp": "2026-01-01 03:36:44.303322310",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 2273,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.04,
+        "direction": "high",
+        "value": 294.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.21,
+        "direction": "high",
+        "value": 0.9837533413501974
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001419",
+    "row_index": 1419,
+    "timestamp": "2026-01-01 03:15:08.516370644",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 80,
+    "score": 0.998906,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.59,
+        "direction": "high",
+        "value": 2980.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.64,
+        "direction": "high",
+        "value": 0.9279267199739335
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.47,
+        "direction": "high",
+        "value": 5043.7363056992735
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001423",
+    "row_index": 1423,
+    "timestamp": "2026-01-01 05:16:17.471574782",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.999062,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.65,
+        "direction": "high",
+        "value": 3023.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.18,
+        "direction": "high",
+        "value": 0.8842994357973646
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.11,
+        "direction": "high",
+        "value": 20404.46657958968
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001433",
+    "row_index": 1433,
+    "timestamp": "2026-01-01 03:06:45.299929296",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 11456,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.02,
+        "direction": "high",
+        "value": 293.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.35,
+        "direction": "high",
+        "value": 0.9008197534004023
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001464",
+    "row_index": 1464,
+    "timestamp": "2026-01-01 12:27:36.025888510",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 80,
+    "score": 0.999219,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.6,
+        "direction": "high",
+        "value": 2987.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.11,
+        "direction": "high",
+        "value": 0.8777316561345371
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.85,
+        "direction": "high",
+        "value": 6959.559314440851
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001495",
+    "row_index": 1495,
+    "timestamp": "2026-01-01 14:44:07.269565744",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.68,
+        "direction": "high",
+        "value": 3041.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.74,
+        "direction": "high",
+        "value": 0.9375518534752136
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.76,
+        "direction": "high",
+        "value": 15119.358014226886
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001498",
+    "row_index": 1498,
+    "timestamp": "2026-01-01 03:40:46.252377487",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.4",
+    "dst_port": 443,
+    "score": 0.996094,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.66,
+        "direction": "high",
+        "value": 15801821.361957837
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.38,
+        "direction": "high",
+        "value": 58.2365374786494
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.08,
+        "direction": "low",
+        "value": 0.4114059736367412
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001502",
+    "row_index": 1502,
+    "timestamp": "2026-01-01 09:44:51.066256091",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.15",
+    "dst_port": 22,
+    "score": 0.991875,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 30.17,
+        "direction": "high",
+        "value": 19.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 3.68,
+        "direction": "high",
+        "value": 4.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.61,
+        "direction": "low",
+        "value": 215.71520916584302
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001510",
+    "row_index": 1510,
+    "timestamp": "2026-01-01 01:44:58.115029131",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 22,
+    "score": 0.973437,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 29.11,
+        "direction": "high",
+        "value": 17.0
+      },
+      {
+        "feature": "packets",
+        "z_score": 1.27,
+        "direction": "high",
+        "value": 28.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.21,
+        "direction": "low",
+        "value": 736.2531105409065
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001560",
+    "row_index": 1560,
+    "timestamp": "2026-01-01 08:43:49.084744780",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 5297,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.9,
+        "direction": "high",
+        "value": 284.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.19,
+        "direction": "high",
+        "value": 0.9818031103910978
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001578",
+    "row_index": 1578,
+    "timestamp": "2026-01-01 00:32:32.481049181",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 22,
+    "score": 0.972344,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.56,
+        "direction": "high",
+        "value": 27.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.3,
+        "direction": "low",
+        "value": 292.6733088928377
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001580",
+    "row_index": 1580,
+    "timestamp": "2026-01-01 17:31:15.232536493",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 443,
+    "score": 0.997969,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.64,
+        "direction": "high",
+        "value": 15432169.743030457
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.07,
+        "direction": "high",
+        "value": 50.55628511106469
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.15,
+        "direction": "low",
+        "value": 0.3355950789270717
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001583",
+    "row_index": 1583,
+    "timestamp": "2026-01-01 21:31:37.201792540",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.6",
+    "dst_port": 80,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.7,
+        "direction": "high",
+        "value": 3055.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.1,
+        "direction": "high",
+        "value": 0.9730474450412827
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.96,
+        "direction": "high",
+        "value": 7619.4010060054425
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001587",
+    "row_index": 1587,
+    "timestamp": "2026-01-01 19:38:20.733586209",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.62,
+        "direction": "high",
+        "value": 3002.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.89,
+        "direction": "high",
+        "value": 0.9525871325205798
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.99,
+        "direction": "high",
+        "value": 7849.981742337791
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001601",
+    "row_index": 1601,
+    "timestamp": "2026-01-01 11:31:56.222227492",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.5",
+    "dst_port": 20156,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.16,
+        "direction": "high",
+        "value": 303.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.67,
+        "direction": "high",
+        "value": 0.9308964027032148
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001609",
+    "row_index": 1609,
+    "timestamp": "2026-01-01 23:25:47.580544962",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 443,
+    "score": 0.996406,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 11.42,
+        "direction": "high",
+        "value": 90836337.691988
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.02,
+        "direction": "high",
+        "value": 78.61103890980608
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.22,
+        "direction": "low",
+        "value": 0.2540939654337142
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001622",
+    "row_index": 1622,
+    "timestamp": "2026-01-01 13:11:52.378583644",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 22,
+    "score": 0.975313,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 34.26,
+        "direction": "high",
+        "value": 29.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.03,
+        "direction": "low",
+        "value": 383.7070913099094
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001623",
+    "row_index": 1623,
+    "timestamp": "2026-01-01 12:38:53.971589005",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 443,
+    "score": 0.994531,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.64,
+        "direction": "high",
+        "value": 41760754.44181613
+      },
+      {
+        "feature": "duration",
+        "z_score": 9.32,
+        "direction": "high",
+        "value": 144.37726596075836
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.33,
+        "direction": "low",
+        "value": 0.1384300835636814
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001625",
+    "row_index": 1625,
+    "timestamp": "2026-01-01 20:24:24.440702473",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 443,
+    "score": 0.997344,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.58,
+        "direction": "high",
+        "value": 14652058.733805457
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.44,
+        "direction": "high",
+        "value": 37.41588288659988
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.03,
+        "direction": "low",
+        "value": 0.4797967851218912
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001639",
+    "row_index": 1639,
+    "timestamp": "2026-01-01 19:47:31.323748970",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 35436,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.22,
+        "direction": "high",
+        "value": 308.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.67,
+        "direction": "high",
+        "value": 0.9314593011503123
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001642",
+    "row_index": 1642,
+    "timestamp": "2026-01-01 19:21:29.044111242",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.79,
+        "direction": "high",
+        "value": 3113.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.88,
+        "direction": "high",
+        "value": 0.8567038314180604
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.12,
+        "direction": "high",
+        "value": 8775.318374459195
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001653",
+    "row_index": 1653,
+    "timestamp": "2026-01-01 15:43:00.834065546",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 56189,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.31,
+        "direction": "high",
+        "value": 315.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.56,
+        "direction": "high",
+        "value": 0.9209079509156393
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001666",
+    "row_index": 1666,
+    "timestamp": "2026-01-01 03:23:09.927731292",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 22,
+    "score": 0.967812,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 33.92,
+        "direction": "high",
+        "value": 28.0
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.29,
+        "direction": "low",
+        "value": 295.55431721317774
+      },
+      {
+        "feature": "packets",
+        "z_score": 1.11,
+        "direction": "high",
+        "value": 27.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001670",
+    "row_index": 1670,
+    "timestamp": "2026-01-01 04:52:39.707442497",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 36539,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.75,
+        "direction": "high",
+        "value": 274.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.12,
+        "direction": "high",
+        "value": 0.9754656498638041
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001674",
+    "row_index": 1674,
+    "timestamp": "2026-01-01 22:58:30.385335750",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.2",
+    "dst_port": 22,
+    "score": 0.985625,
+    "threshold": 0.966573,
+    "severity": "medium",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 28.54,
+        "direction": "high",
+        "value": 16.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": 2.49,
+        "direction": "high",
+        "value": 61782.306652139974
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.2,
+        "direction": "low",
+        "value": 326.22948292560943
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001679",
+    "row_index": 1679,
+    "timestamp": "2026-01-01 02:58:50.318763440",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 22,
+    "score": 0.979375,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 34.26,
+        "direction": "high",
+        "value": 29.0
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.39,
+        "direction": "high",
+        "value": 2.7668470997639796
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001690",
+    "row_index": 1690,
+    "timestamp": "2026-01-01 09:55:10.373276736",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 4334,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.05,
+        "direction": "high",
+        "value": 295.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.83,
+        "direction": "high",
+        "value": 0.8514001078708198
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001692",
+    "row_index": 1692,
+    "timestamp": "2026-01-01 17:07:40.526742421",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 26570,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.09,
+        "direction": "high",
+        "value": 298.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.88,
+        "direction": "high",
+        "value": 0.9511084328179494
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001695",
+    "row_index": 1695,
+    "timestamp": "2026-01-01 00:24:44.168295699",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.74,
+        "direction": "high",
+        "value": 3081.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.46,
+        "direction": "high",
+        "value": 0.9106343092968416
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.57,
+        "direction": "high",
+        "value": 5456.33329927089
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001701",
+    "row_index": 1701,
+    "timestamp": "2026-01-01 16:19:05.079901197",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 80,
+    "score": 0.99875,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.65,
+        "direction": "high",
+        "value": 3023.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.57,
+        "direction": "high",
+        "value": 0.8276625306712488
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.9,
+        "direction": "high",
+        "value": 7284.192661541485
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001702",
+    "row_index": 1702,
+    "timestamp": "2026-01-01 13:52:04.080002655",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.57,
+        "direction": "high",
+        "value": 2967.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.6,
+        "direction": "high",
+        "value": 0.9239352600311536
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.71,
+        "direction": "high",
+        "value": 6151.4863807277425
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001708",
+    "row_index": 1708,
+    "timestamp": "2026-01-01 18:35:24.365044486",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 22,
+    "score": 0.970938,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 30.67,
+        "direction": "high",
+        "value": 20.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.22,
+        "direction": "high",
+        "value": 2.472724158638096
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": 1.12,
+        "direction": "high",
+        "value": 11931.82704441223
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001712",
+    "row_index": 1712,
+    "timestamp": "2026-01-01 14:25:28.276235408",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 22,
+    "score": 0.982031,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 32.82,
+        "direction": "high",
+        "value": 25.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 1.64,
+        "direction": "high",
+        "value": 0.16996861641479685
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.45,
+        "direction": "high",
+        "value": 2.871325999581922
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001734",
+    "row_index": 1734,
+    "timestamp": "2026-01-01 06:47:05.288514579",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 80,
+    "score": 0.998906,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.63,
+        "direction": "high",
+        "value": 3011.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.44,
+        "direction": "high",
+        "value": 0.9090799361146806
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.91,
+        "direction": "high",
+        "value": 17267.84430258351
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001761",
+    "row_index": 1761,
+    "timestamp": "2026-01-01 16:31:55.724204794",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.3",
+    "dst_port": 22,
+    "score": 0.971094,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 31.13,
+        "direction": "high",
+        "value": 21.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 1.07,
+        "direction": "high",
+        "value": 2.2515293294735397
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": -0.87,
+        "direction": "low",
+        "value": 0.03233880697527263
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001789",
+    "row_index": 1789,
+    "timestamp": "2026-01-01 23:22:46.631295858",
+    "src_ip": "192.168.1.85",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 80,
+    "score": 0.987812,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "protocol=icmp",
+        "z_score": 6.93,
+        "direction": "high"
+      },
+      {
+        "feature": "duration",
+        "z_score": 2.88,
+        "direction": "high",
+        "value": 6.467136661363042
+      },
+      {
+        "feature": "protocol=tcp",
+        "z_score": -2.47,
+        "direction": "low"
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001803",
+    "row_index": 1803,
+    "timestamp": "2026-01-01 18:46:33.696962259",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 51697,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.95,
+        "direction": "high",
+        "value": 288.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.18,
+        "direction": "high",
+        "value": 0.9804575789874356
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001810",
+    "row_index": 1810,
+    "timestamp": "2026-01-01 22:16:06.292273267",
+    "src_ip": "192.168.1.185",
+    "dst_ip": "172.16.0.15",
+    "dst_port": 443,
+    "score": 0.967656,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "protocol=icmp",
+        "z_score": 6.93,
+        "direction": "high"
+      },
+      {
+        "feature": "protocol=tcp",
+        "z_score": -2.47,
+        "direction": "low"
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001818",
+    "row_index": 1818,
+    "timestamp": "2026-01-01 01:38:46.140001540",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 4922,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.05,
+        "direction": "high",
+        "value": 295.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.56,
+        "direction": "high",
+        "value": 0.9201510461981902
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001864",
+    "row_index": 1864,
+    "timestamp": "2026-01-01 16:25:10.103594486",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 22,
+    "score": 0.98625,
+    "threshold": 0.966573,
+    "severity": "medium",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 30.67,
+        "direction": "high",
+        "value": 20.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": 2.23,
+        "direction": "high",
+        "value": 44893.079691283805
+      },
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 1.63,
+        "direction": "high",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001878",
+    "row_index": 1878,
+    "timestamp": "2026-01-01 07:58:13.188005430",
+    "src_ip": "192.168.1.134",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 80,
+    "score": 0.970781,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 6.98,
+        "direction": "high",
+        "value": 1.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 3.57,
+        "direction": "high",
+        "value": 0.28886628671446535
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.38,
+        "direction": "low",
+        "value": 596.6127633389675
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001912",
+    "row_index": 1912,
+    "timestamp": "2026-01-01 23:17:50.898775495",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.67,
+        "direction": "high",
+        "value": 3035.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.99,
+        "direction": "high",
+        "value": 0.9617814017714674
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.74,
+        "direction": "high",
+        "value": 14975.52778957369
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001915",
+    "row_index": 1915,
+    "timestamp": "2026-01-01 07:29:48.604235043",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 54253,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.99,
+        "direction": "high",
+        "value": 291.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.27,
+        "direction": "high",
+        "value": 0.8005979525025597
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001927",
+    "row_index": 1927,
+    "timestamp": "2026-01-01 15:00:54.543197356",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 443,
+    "score": 0.995781,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.92,
+        "direction": "high",
+        "value": 20466701.423972566
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.91,
+        "direction": "high",
+        "value": 74.66215471228506
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.22,
+        "direction": "low",
+        "value": 0.2541392777284131
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001941",
+    "row_index": 1941,
+    "timestamp": "2026-01-01 17:45:38.462823099",
+    "src_ip": "192.168.1.28",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 443,
+    "score": 0.980937,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 4.41,
+        "direction": "high",
+        "value": 5.0
+      },
+      {
+        "feature": "protocol=udp",
+        "z_score": 2.58,
+        "direction": "high"
+      },
+      {
+        "feature": "protocol=tcp",
+        "z_score": -2.47,
+        "direction": "low"
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001950",
+    "row_index": 1950,
+    "timestamp": "2026-01-01 03:53:46.787415069",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.4",
+    "dst_port": 443,
+    "score": 0.996719,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.65,
+        "direction": "high",
+        "value": 42241489.908813
+      },
+      {
+        "feature": "duration",
+        "z_score": 9.43,
+        "direction": "high",
+        "value": 151.46537462625827
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.32,
+        "direction": "low",
+        "value": 0.15174969914279693
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001951",
+    "row_index": 1951,
+    "timestamp": "2026-01-01 11:52:07.794206394",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 80,
+    "score": 0.999688,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.49,
+        "direction": "high",
+        "value": 2922.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.18,
+        "direction": "high",
+        "value": 0.8846361501912665
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 8.11,
+        "direction": "high",
+        "value": 20558.718604880723
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001956",
+    "row_index": 1956,
+    "timestamp": "2026-01-01 04:07:31.038377521",
+    "src_ip": "192.168.1.106",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 443,
+    "score": 0.978906,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 3.68,
+        "direction": "high",
+        "value": 4.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 3.07,
+        "direction": "high",
+        "value": 0.2570638898588685
+      },
+      {
+        "feature": "duration",
+        "z_score": 2.71,
+        "direction": "high",
+        "value": 5.921759014367887
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001959",
+    "row_index": 1959,
+    "timestamp": "2026-01-01 12:41:30.874443184",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 62116,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.41,
+        "direction": "high",
+        "value": 323.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.35,
+        "direction": "high",
+        "value": 0.9001490594896853
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001962",
+    "row_index": 1962,
+    "timestamp": "2026-01-01 18:37:58.924995568",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 80,
+    "score": 0.999062,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.64,
+        "direction": "high",
+        "value": 3014.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.43,
+        "direction": "high",
+        "value": 0.8149112141591839
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.57,
+        "direction": "high",
+        "value": 12952.22274507071
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001967",
+    "row_index": 1967,
+    "timestamp": "2026-01-01 14:37:14.872003908",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.7",
+    "dst_port": 443,
+    "score": 0.997344,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.31,
+        "direction": "high",
+        "value": 30206145.407663636
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.03,
+        "direction": "high",
+        "value": 30.827479137465208
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.88,
+        "direction": "low",
+        "value": 0.6790078139462984
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001974",
+    "row_index": 1974,
+    "timestamp": "2026-01-01 05:03:32.118790563",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 21369,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.5,
+        "direction": "high",
+        "value": 330.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.33,
+        "direction": "high",
+        "value": 0.8988984545885166
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001976",
+    "row_index": 1976,
+    "timestamp": "2026-01-01 06:53:35.045016538",
+    "src_ip": "192.168.1.39",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 80,
+    "score": 0.976094,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "duration",
+        "z_score": 4.18,
+        "direction": "high",
+        "value": 12.582485820781546
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.66,
+        "direction": "low",
+        "value": 1.025035642357918
+      },
+      {
+        "feature": "protocol=udp",
+        "z_score": 2.58,
+        "direction": "high"
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001979",
+    "row_index": 1979,
+    "timestamp": "2026-01-01 00:03:33.723333682",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.19",
+    "dst_port": 443,
+    "score": 0.999375,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.0,
+        "direction": "high",
+        "value": 22117134.927935407
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.71,
+        "direction": "high",
+        "value": 42.57205804359474
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.24,
+        "direction": "low",
+        "value": 0.2343453880237924
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001985",
+    "row_index": 1985,
+    "timestamp": "2026-01-01 00:45:30.684875784",
+    "src_ip": "192.168.1.152",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.967031,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 3.68,
+        "direction": "high",
+        "value": 4.0
+      },
+      {
+        "feature": "duration",
+        "z_score": 3.5,
+        "direction": "high",
+        "value": 8.917198827936017
+      },
+      {
+        "feature": "protocol=udp",
+        "z_score": 2.58,
+        "direction": "high"
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001988",
+    "row_index": 1988,
+    "timestamp": "2026-01-01 04:52:11.915560672",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.58,
+        "direction": "high",
+        "value": 2978.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.59,
+        "direction": "high",
+        "value": 0.9236955559501724
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.75,
+        "direction": "high",
+        "value": 6392.693605549351
+      }
+    ]
+  },
+  {
+    "id": "ALERT-001994",
+    "row_index": 1994,
+    "timestamp": "2026-01-01 09:36:00.110463581",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.10",
+    "dst_port": 10756,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.16,
+        "direction": "high",
+        "value": 303.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.72,
+        "direction": "high",
+        "value": 0.9354648450247295
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002012",
+    "row_index": 2012,
+    "timestamp": "2026-01-01 00:53:20.660214842",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.8",
+    "dst_port": 50910,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.99,
+        "direction": "high",
+        "value": 291.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.55,
+        "direction": "high",
+        "value": 0.9193711825505246
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002038",
+    "row_index": 2038,
+    "timestamp": "2026-01-01 00:15:37.262623651",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 33697,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.21,
+        "direction": "high",
+        "value": 307.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 10.95,
+        "direction": "high",
+        "value": 0.862762744186853
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002040",
+    "row_index": 2040,
+    "timestamp": "2026-01-01 11:57:20.231978744",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 60917,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 19.94,
+        "direction": "high",
+        "value": 287.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.25,
+        "direction": "high",
+        "value": 0.9877226678081783
+      },
+      {
+        "feature": "packets",
+        "z_score": -7.84,
+        "direction": "low",
+        "value": 3.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002078",
+    "row_index": 2078,
+    "timestamp": "2026-01-01 07:52:55.700108054",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 443,
+    "score": 0.996719,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.5,
+        "direction": "high",
+        "value": 13538761.536739087
+      },
+      {
+        "feature": "duration",
+        "z_score": 5.83,
+        "direction": "high",
+        "value": 28.028209106811527
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -2.91,
+        "direction": "low",
+        "value": 94.9850685654663
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002087",
+    "row_index": 2087,
+    "timestamp": "2026-01-01 20:14:11.017499250",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.9",
+    "dst_port": 5728,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.12,
+        "direction": "high",
+        "value": 300.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 12.04,
+        "direction": "high",
+        "value": 0.9669462762876172
+      },
+      {
+        "feature": "packets",
+        "z_score": -9.17,
+        "direction": "low",
+        "value": 2.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002090",
+    "row_index": 2090,
+    "timestamp": "2026-01-01 20:48:03.526767402",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.12",
+    "dst_port": 443,
+    "score": 0.994219,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.66,
+        "direction": "high",
+        "value": 15880244.564683013
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.57,
+        "direction": "high",
+        "value": 39.819036587437466
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -2.99,
+        "direction": "low",
+        "value": 0.5260648000359985
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002096",
+    "row_index": 2096,
+    "timestamp": "2026-01-01 20:12:21.084677352",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 443,
+    "score": 0.995625,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.92,
+        "direction": "high",
+        "value": 20505433.20164849
+      },
+      {
+        "feature": "duration",
+        "z_score": 7.29,
+        "direction": "high",
+        "value": 56.036116526755904
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.13,
+        "direction": "low",
+        "value": 0.35627687195760127
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002101",
+    "row_index": 2101,
+    "timestamp": "2026-01-01 00:18:24.644123007",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 80,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.79,
+        "direction": "high",
+        "value": 3116.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.53,
+        "direction": "high",
+        "value": 0.917583510384158
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 6.81,
+        "direction": "high",
+        "value": 6716.981283099617
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002107",
+    "row_index": 2107,
+    "timestamp": "2026-01-01 07:57:35.016350387",
+    "src_ip": "10.0.0.1",
+    "dst_ip": "172.16.0.18",
+    "dst_port": 443,
+    "score": 0.998281,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.84,
+        "direction": "high",
+        "value": 51241585.0495086
+      },
+      {
+        "feature": "duration",
+        "z_score": 6.99,
+        "direction": "high",
+        "value": 48.492155291164934
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.05,
+        "direction": "low",
+        "value": 0.45274797687354396
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002140",
+    "row_index": 2140,
+    "timestamp": "2026-01-01 02:18:19.088969000",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.17",
+    "dst_port": 80,
+    "score": 0.999844,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.67,
+        "direction": "high",
+        "value": 3034.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.92,
+        "direction": "high",
+        "value": 0.9551476220403355
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.37,
+        "direction": "high",
+        "value": 10843.889041350545
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002144",
+    "row_index": 2144,
+    "timestamp": "2026-01-01 13:56:16.120324735",
+    "src_ip": "10.0.0.3",
+    "dst_ip": "172.16.0.14",
+    "dst_port": 443,
+    "score": 0.998125,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 10.77,
+        "direction": "high",
+        "value": 47776954.15999988
+      },
+      {
+        "feature": "duration",
+        "z_score": 10.29,
+        "direction": "high",
+        "value": 225.46096780527424
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.34,
+        "direction": "low",
+        "value": 0.1285683435488518
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002159",
+    "row_index": 2159,
+    "timestamp": "2026-01-01 23:31:47.163692588",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 58966,
+    "score": 1.0,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "distinct_dst_ports",
+        "z_score": 20.14,
+        "direction": "high",
+        "value": 302.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.72,
+        "direction": "high",
+        "value": 0.9354713247378308
+      },
+      {
+        "feature": "packets",
+        "z_score": -11.03,
+        "direction": "low",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002178",
+    "row_index": 2178,
+    "timestamp": "2026-01-01 23:04:59.505218729",
+    "src_ip": "10.0.0.2",
+    "dst_ip": "172.16.0.11",
+    "dst_port": 443,
+    "score": 0.99875,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "src_bytes",
+        "z_score": 9.91,
+        "direction": "high",
+        "value": 20258084.973219763
+      },
+      {
+        "feature": "duration",
+        "z_score": 8.84,
+        "direction": "high",
+        "value": 115.04714715037117
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": -3.32,
+        "direction": "low",
+        "value": 0.15632171916941826
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002187",
+    "row_index": 2187,
+    "timestamp": "2026-01-01 14:26:27.720260127",
+    "src_ip": "10.0.0.5",
+    "dst_ip": "172.16.0.13",
+    "dst_port": 80,
+    "score": 0.998594,
+    "threshold": 0.966573,
+    "severity": "high",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "packets",
+        "z_score": 22.69,
+        "direction": "high",
+        "value": 3051.0
+      },
+      {
+        "feature": "syn_ratio",
+        "z_score": 11.72,
+        "direction": "high",
+        "value": 0.9357213148893165
+      },
+      {
+        "feature": "packet_rate",
+        "z_score": 7.39,
+        "direction": "high",
+        "value": 11084.02531138425
+      }
+    ]
+  },
+  {
+    "id": "ALERT-002191",
+    "row_index": 2191,
+    "timestamp": "2026-01-01 09:41:12.516829760",
+    "src_ip": "10.0.0.4",
+    "dst_ip": "172.16.0.16",
+    "dst_port": 22,
+    "score": 0.977656,
+    "threshold": 0.966573,
+    "severity": "low",
+    "detector": "ensemble",
+    "top_features": [
+      {
+        "feature": "failed_logins",
+        "z_score": 27.93,
+        "direction": "high",
+        "value": 15.0
+      },
+      {
+        "feature": "dst_bytes",
+        "z_score": -1.39,
+        "direction": "low",
+        "value": 591.7867304955997
+      },
+      {
+        "feature": "src_bytes",
+        "z_score": -1.32,
+        "direction": "low",
+        "value": 286.93450085612386
+      }
+    ]
+  }
+]

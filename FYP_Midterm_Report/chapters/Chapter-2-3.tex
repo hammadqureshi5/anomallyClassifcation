@@ -1,0 +1,34 @@
+\section{Problem Statement / Limitations}
+
+\textbf{Core problem.} Security teams must examine large and varied streams of evidence (network traffic, files and logs) to find the small number of events that represent real attacks. Existing tools collect and store this evidence well, but much of the interpretation remains manual. Rule- and signature-based detection only recognises patterns that have already been written down. Supervised machine learning only recognises the classes present in its training data. Neither reliably flags new behaviour \cite{sommer2010outside}. Different kinds of evidence are also usually analysed by different tools, so the analyst has to connect them by hand.
+
+\textbf{Impact on stakeholders.} For analysts, this means time spent on alerts that turn out to be harmless, and a risk of missing activity that matches no existing rule. For administrators in smaller organisations, who handle security alongside other duties, the effort needed to operate several separate tools is often too high. For the organisation, slow or missed detection increases the potential damage of an incident.
+
+\textbf{Deficiencies of current solutions.} The review in Section~2.1 shows the following:
+\begin{itemize}[itemsep=1pt, topsep=2pt]
+  \item Commercial platforms offer broad coverage but are costly and closed, so their detection logic cannot be inspected or adapted.
+  \item Open-source tools are accessible but mostly rule-based.
+  \item Research systems demonstrate strong algorithms but usually address a single task, for example only network anomaly detection or only malware classification, and are rarely evaluated together.
+  \item Results reported on benchmark datasets frequently overstate real-world performance because of dataset artefacts and evaluation pitfalls, such as duplicate records shared between training and test data \cite{engelen2021troubleshooting,arp2022dos}.
+\end{itemize}
+
+\textbf{Problem statement.} There is a need for a modular, transparent system that applies machine learning to several kinds of security evidence, covers both known and previously unseen threats, explains its findings, and is evaluated honestly enough that its results can be trusted.
+
+\textbf{Technical challenges and limitations.}
+\begin{itemize}[itemsep=1pt, topsep=2pt]
+  \item \textit{Dataset realism.} The modules are trained on public benchmarks recorded in laboratory conditions (CIC-IDS2017, NSL-KDD and BODMAS). Results on these datasets may not transfer to a different network or to future malware \cite{sommer2010outside,engelen2021troubleshooting}.
+  \item \textit{Class imbalance and rare classes.} Some attack families have very few examples, for example 36 Infiltration flows in CIC-IDS2017 and 192 Virus samples in BODMAS. Results on these classes are statistically weak.
+  \item \textit{False alarms.} Anomaly detection trades false alarms against missed attacks. The improved detector's false-positive rate rose to 11.9\% on NSL-KDD test traffic, which would be too high for many operational settings without recalibration.
+  \item \textit{Integration.} The modules were developed independently with different interfaces and data formats, and must be connected through a common backend and data schema.
+  \item \textit{Security and robustness.} An integrated system that stores security data must itself be secured. Machine learning models can also be targeted by adversarial manipulation, which is outside the current scope.
+\end{itemize}
+
+\textbf{Planned mitigation.} The project addresses these challenges by:
+\begin{itemize}[itemsep=1pt, topsep=2pt]
+  \item evaluating every model on held-out data never used for training or tuning;
+  \item reporting class-level and imbalance-aware metrics instead of accuracy alone;
+  \item removing duplicates where they cause leakage;
+  \item keeping thresholds configurable for recalibration;
+  \item producing response recommendations instead of automatic actions.
+\end{itemize}
+The incremental development approach described in Section~2.5 allows these issues to be addressed step by step, with each increment tested before the next begins.

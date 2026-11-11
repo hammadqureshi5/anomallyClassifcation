@@ -1,0 +1,11 @@
+\section{Product Purpose}
+
+The purpose of the system is to reduce the manual effort needed to recognise and understand security threats by applying machine learning to several kinds of security data and presenting the results in a consistent, explainable form. Three needs drive the design.
+
+The first is to \textbf{detect and name known threats quickly}. When a network flow belongs to a familiar attack family, such as a denial-of-service flood or a port scan, the analyst benefits from an immediate and specific label instead of a generic alert. The Network Threat Classification module serves this need for network traffic, and the Malware Classification module serves it for Windows executables represented as feature vectors.
+
+The second is to \textbf{notice behaviour that no rule or classifier has seen before}. Supervised models can only recognise the categories they were trained on. The Anomaly Detection module therefore learns a profile of normal traffic and reports flows that deviate from it, together with the features that made each flow look unusual. This gives the platform some coverage of new or modified attacks, which is a known gap in signature-based and purely supervised approaches \cite{sommer2010outside}.
+
+The third is to \textbf{make results usable by a person}. Every module produces structured output instead of a bare yes/no answer: class labels with confidence values in the classification modules, and alerts with a severity level and the most unusual features in the anomaly module. This is the basis on which the planned dashboard and investigation agent will build.
+
+Within the wider Final Year Project, the product is meant to show how separate AI components can contribute to a single defensive workflow. It is a research prototype tested on benchmark data in a controlled setting, not a replacement for an operational security operations centre (SOC).

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Local tool settings
+.claude/
+
+# Datasets (large; download them as described in README.md)
+*.zip
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Trained models (~130 MB; recreate with `bash experiments/run_all.sh`)
+models/*
+!models/.gitkeep
+
+# LaTeX build files (main.pdf is kept)
+FYP_Midterm_Report/*.aux
+FYP_Midterm_Report/*.log
+FYP_Midterm_Report/*.out
+FYP_Midterm_Report/*.toc
+FYP_Midterm_Report/*.lof
+FYP_Midterm_Report/*.lot
+FYP_Midterm_Report/*.bbl
+FYP_Midterm_Report/*.blg
+FYP_Midterm_Report/*.fls
+FYP_Midterm_Report/*.fdb_latexmk

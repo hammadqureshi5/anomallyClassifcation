@@ -1,0 +1,73 @@
+\section{Product Scope}
+
+The system is a software platform for analysing security data with machine learning. Its scope is defined by the twelve modules listed in the approved project proposal. Because this is a mid-term report, the scope is described together with the current state of each module, using four status labels: \textbf{Completed} (implemented, trained and evaluated as a standalone prototype), \textbf{Partially implemented}, \textbf{In progress} (development has started) and \textbf{Planned} (scheduled for the second half of the project).
+
+\textbf{Core functionality.} The platform analyses three kinds of evidence. Network flow records, described by statistics such as packet counts, packet lengths, durations and TCP flag counts, are classified as benign or as one of several attack families. They are also checked for deviations from normal traffic. Feature vectors extracted from Windows Portable Executable (PE) files are classified as benign or malicious, and malicious samples are assigned a malware category. System and application logs will be analysed by the log analysis module once it is completed.
+
+\textbf{Technological components.} The implemented modules are written in Python. They use pandas and NumPy for data handling, scikit-learn \cite{pedregosa2011sklearn} for preprocessing, Isolation Forest, Local Outlier Factor, Random Forest and the autoencoder, LightGBM \cite{ke2017lightgbm} for network threat classification, CatBoost \cite{prokhorenkova2018catboost} for malware detection, joblib for model persistence and Gradio \cite{abid2019gradio} for the malware module's interface. The development environment named in the proposal also includes FastAPI for backend services, React for the web dashboard and a relational database. These are planned for the integration phase and are not yet in use.
+
+\textbf{Limitations and boundaries.} The system will not attack or scan real systems without permission, develop malware, control production systems automatically, or include hardware such as physical intrusion prevention devices. All development and testing take place in a controlled environment using public datasets: CIC-IDS2017 \cite{sharafaldin2018cicids}, NSL-KDD \cite{tavallaee2009nslkdd} and BODMAS \cite{yang2021bodmas}. The network module can generate recommended response plans (for example, rate limiting or blocking), but these are text outputs for analyst review and are never executed by the system. The current modules work on pre-extracted features: they do not capture live packets or parse raw executable files.
+
+\textbf{Integration and compatibility.} At present the three completed modules are independent prototypes, each with its own interface (a command-line tool for network threat classification and for anomaly detection, and a Gradio web interface for malware classification). Each module already produces structured output, which will make integration easier. The anomaly module, for example, writes alerts in JSON format with source and destination addresses, a score, a severity level and the main contributing features. A shared backend that receives these outputs and passes them to the dashboard and the investigation agent is planned but not yet implemented.
+
+\textbf{Evolution and future enhancements.} After integration, the platform can be extended with live data sources (a flow exporter such as CICFlowMeter, or log collectors), additional datasets such as UNSW-NB15 \cite{moustafa2015unsw}, better calibrated alert thresholds and the remaining analysis modules described below.
+
+\textbf{Modules}
+
+    \textbf{Module 1: Network Threat Classification} (Completed, standalone prototype)
+    \begin{itemize}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Preparation of CIC-IDS2017 flow records and mapping of attack labels into six attack families
+      \item Preprocessing fitted on training data only (median imputation, variance filtering, robust scaling)
+      \item Stage 1: class-weighted LightGBM classifier for benign versus attack
+      \item Stage 2: class-weighted LightGBM classifier for the attack family
+      \item Supporting outputs: anomaly score, feature-based explanation, MITRE ATT\&CK context and a recommended (non-executed) response plan
+    \end{itemize}
+
+    \textbf{Module 2: Malware Classification} (Completed, standalone prototype)
+    \begin{itemize}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Preparation of the BODMAS feature data (2,326 numerical features per sample)
+      \item Stage 1: CatBoost classifier for benign versus malware
+      \item Stage 2: Random Forest classifier for eight malware categories
+      \item Gradio interface for CSV-based batch prediction and result visualisation
+    \end{itemize}
+
+    \textbf{Module 3: Anomaly Detection} (Completed, standalone prototype)
+    \begin{itemize}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Preprocessing of flow features (cleaning, log transform, categorical encoding, robust scaling, optional removal of redundant features)
+      \item Unsupervised detectors trained on benign traffic only: Isolation Forest, Local Outlier Factor, autoencoder and robust z-score
+      \item Score combination and an alert threshold calibrated on held-out normal traffic
+      \item Alert generation with severity levels and the most anomalous features as an explanation
+      \item Evaluation tooling and a hybrid variant combining the anomaly detector with a supervised classifier
+    \end{itemize}
+
+    \textbf{Module 4: Log Analysis} (In progress)
+    \begin{itemize}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Examination of system and application logs for errors and suspicious events (design and implementation details will be reported in the final report)
+    \end{itemize}
+
+    \textbf{Modules 5--12} (Planned)
+    \begin{itemize}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \item Network Monitoring: collection of live network activity for the analysis modules
+      \item Incident Correlation: grouping related alerts and events into incidents
+      \item Vulnerability Analysis: identification of known weaknesses in systems and applications
+      \item Attack-Path Analysis: study of how an attacker could move through a system, with MITRE ATT\&CK \cite{strom2018attack} as a reference
+      \item Attack Prediction: estimation of likely future attack activity from available evidence
+      \item Risk Analysis: prioritisation of threats and vulnerabilities by estimated risk
+      \item Investigation Agent: an AI agent that combines module results and explains incidents in plain language
+      \item Dashboard and Feedback: a web interface for results, plus analyst feedback on their quality
+    \end{itemize}

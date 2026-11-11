@@ -1,0 +1,2570 @@
+{
+  "dataset": "nsl-kdd",
+  "train": {
+    "rows": 125973,
+    "attacks": 58630,
+    "benign": 67343,
+    "attack_types": 22
+  },
+  "test": {
+    "rows": 22544,
+    "attacks": 12833,
+    "benign": 9711,
+    "attack_types": 37
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "summary": {
+    "baseline": {
+      "accuracy": {
+        "mean": 0.6169860421102437,
+        "std": 0.015944192238454766,
+        "values": [
+          0.632452,
+          0.600603,
+          0.617903
+        ]
+      },
+      "precision": {
+        "mean": 0.8990335835533374,
+        "std": 0.01680391937218673,
+        "values": [
+          0.895873,
+          0.917193,
+          0.884034
+        ]
+      },
+      "recall": {
+        "mean": 0.36910049611678225,
+        "std": 0.03734705831786321,
+        "values": [
+          0.40092,
+          0.327983,
+          0.378399
+        ]
+      },
+      "f1": {
+        "mean": 0.5223600631473774,
+        "std": 0.035985793530363706,
+        "values": [
+          0.553941,
+          0.483182,
+          0.529957
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.05543541688120002,
+        "std": 0.01426220789229038,
+        "values": [
+          0.06158,
+          0.039131,
+          0.065596
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9355183686965735,
+        "std": 0.002336965696712154,
+        "values": [
+          0.938206,
+          0.934388,
+          0.933962
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.9107306519358979,
+        "std": 0.0025155998894610676,
+        "values": [
+          0.912882,
+          0.911345,
+          0.907965
+        ]
+      },
+      "fit_seconds": {
+        "mean": 14.546363190666701,
+        "std": 1.6114654478381447,
+        "values": [
+          15.252665,
+          15.684076,
+          12.702349
+        ]
+      },
+      "inference_ms_per_1k_flows": {
+        "mean": 23.93663619292644,
+        "std": 0.9870842807762586,
+        "values": [
+          23.737776,
+          25.008011,
+          23.064122
+        ]
+      }
+    },
+    "improved": {
+      "accuracy": {
+        "mean": 0.8862520700260234,
+        "std": 0.008758296633811915,
+        "values": [
+          0.89465,
+          0.886932,
+          0.877174
+        ]
+      },
+      "precision": {
+        "mean": 0.9078977694622643,
+        "std": 0.0022725064795599335,
+        "values": [
+          0.909989,
+          0.908225,
+          0.905479
+        ]
+      },
+      "recall": {
+        "mean": 0.8904906620951193,
+        "std": 0.014401068364302973,
+        "values": [
+          0.904387,
+          0.891452,
+          0.875633
+        ]
+      },
+      "f1": {
+        "mean": 0.8990819223209465,
+        "std": 0.00845702133611169,
+        "values": [
+          0.907179,
+          0.89976,
+          0.890306
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.11934919163834827,
+        "std": 0.001314709642138163,
+        "values": [
+          0.118216,
+          0.11904,
+          0.120791
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.925005828793973,
+        "std": 0.0054399129592544735,
+        "values": [
+          0.926665,
+          0.918929,
+          0.929423
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.900996016142439,
+        "std": 0.02095816413833736,
+        "values": [
+          0.897571,
+          0.881961,
+          0.923456
+        ]
+      },
+      "fit_seconds": {
+        "mean": 4.519292317333414,
+        "std": 0.32051514984250035,
+        "values": [
+          4.882692,
+          4.398301,
+          4.276884
+        ]
+      },
+      "inference_ms_per_1k_flows": {
+        "mean": 51.81723598296113,
+        "std": 0.966558633340454,
+        "values": [
+          52.817706,
+          50.888597,
+          51.745405
+        ]
+      }
+    },
+    "hybrid": {
+      "accuracy": {
+        "mean": 0.8908356990773597,
+        "std": 0.004645714773166076,
+        "values": [
+          0.896026,
+          0.889416,
+          0.887065
+        ]
+      },
+      "precision": {
+        "mean": 0.9077411792612744,
+        "std": 0.0014357412271196453,
+        "values": [
+          0.909183,
+          0.907729,
+          0.906312
+        ]
+      },
+      "recall": {
+        "mean": 0.8996597314215954,
+        "std": 0.0074074363288511216,
+        "values": [
+          0.90805,
+          0.896906,
+          0.894023
+        ]
+      },
+      "f1": {
+        "mean": 0.9036755411784526,
+        "std": 0.0044127010861338,
+        "values": [
+          0.908616,
+          0.902285,
+          0.900126
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.12082518106614493,
+        "std": 0.0011710927202301167,
+        "values": [
+          0.119864,
+          0.120482,
+          0.12213
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9517354220148878,
+        "std": 0.002204117236446325,
+        "values": [
+          0.954236,
+          0.950893,
+          0.950077
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.9555046294536731,
+        "std": 0.0022786289057648637,
+        "values": [
+          0.957986,
+          0.953507,
+          0.955021
+        ]
+      },
+      "fit_seconds": {
+        "mean": 6.904572209666791,
+        "std": 0.37641387793297604,
+        "values": [
+          7.325208,
+          6.789051,
+          6.599457
+        ]
+      },
+      "inference_ms_per_1k_flows": {
+        "mean": 55.192652176483115,
+        "std": 1.71663619619724,
+        "values": [
+          57.090853,
+          53.749118,
+          54.737985
+        ]
+      }
+    }
+  },
+  "per_seed": [
+    {
+      "baseline": {
+        "threshold": 0.9324320611820612,
+        "accuracy": 0.6324520936834634,
+        "precision": 0.8958732369841547,
+        "recall": 0.40091950440271173,
+        "f1": 0.5539405684754521,
+        "false_positive_rate": 0.06157965194109773,
+        "roc_auc": 0.9382056254717945,
+        "pr_auc": 0.9128819489198238,
+        "confusion_matrix": {
+          "tn": 9113,
+          "fp": 598,
+          "fn": 7688,
+          "tp": 5145
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 0.6608,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.0919,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.7,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.0,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.0171,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.015,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 0.9716,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.6004,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.0556,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.3529,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 0.4252,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.8049,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 0.9682,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.4453,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.4,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.1538,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.4107,
+            "count": 319
+          },
+          "satan": {
+            "recall": 0.4776,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 0.9459,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.0,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.003,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 0.0,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.1737,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.1111,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.25,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.3846,
+            "count": 13
+          }
+        },
+        "fit_seconds": 15.252664931000254,
+        "inference_ms_per_1k_flows": 23.737775993613834
+      },
+      "improved": {
+        "threshold": 0.972575735075735,
+        "accuracy": 0.8946504613200852,
+        "precision": 0.9099890230515917,
+        "recall": 0.904387126938362,
+        "f1": 0.9071794270528003,
+        "false_positive_rate": 0.11821645556585315,
+        "roc_auc": 0.9266653797273744,
+        "pr_auc": 0.8975710273645411,
+        "confusion_matrix": {
+          "tn": 8563,
+          "fp": 1148,
+          "fn": 1227,
+          "tp": 11606
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 1.0,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.9805,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.7,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.3333,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.7555,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.9098,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 0.9716,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0137,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.9739,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.5,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.3529,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 1.0,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "phf": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.9024,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 1.0,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.9708,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.3333,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.2308,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.9749,
+            "count": 319
+          },
+          "satan": {
+            "recall": 0.9986,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 1.0,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.2584,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.8731,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 0.5,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.6886,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.3333,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.5,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.4615,
+            "count": 13
+          }
+        },
+        "fit_seconds": 4.88269193799988,
+        "inference_ms_per_1k_flows": 52.81770630766468
+      },
+      "hybrid": {
+        "threshold": 0.5,
+        "accuracy": 0.8960255500354861,
+        "precision": 0.9091831161738316,
+        "recall": 0.9080495597288242,
+        "f1": 0.9086159844054581,
+        "false_positive_rate": 0.11986407167130059,
+        "roc_auc": 0.954236489322051,
+        "pr_auc": 0.9579862810616213,
+        "confusion_matrix": {
+          "tn": 8547,
+          "fp": 1164,
+          "fn": 1180,
+          "tp": 11653
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 1.0,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.9972,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.8,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.3333,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.7555,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.9098,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 1.0,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0137,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.9819,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.5556,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.4118,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 1.0,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "phf": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.9756,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 1.0,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.981,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.4667,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.2308,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.9843,
+            "count": 319
+          },
+          "satan": {
+            "recall": 1.0,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 1.0,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.2584,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.8731,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 1.0,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.6907,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.3333,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.5,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.4615,
+            "count": 13
+          }
+        },
+        "fit_seconds": 7.3252081050000015,
+        "inference_ms_per_1k_flows": 57.09085322036361
+      }
+    },
+    {
+      "baseline": {
+        "threshold": 0.9274760543510543,
+        "accuracy": 0.6006032647267565,
+        "precision": 0.9171932882981042,
+        "recall": 0.32798254500116886,
+        "f1": 0.48318218344621744,
+        "false_positive_rate": 0.03913088250437648,
+        "roc_auc": 0.9343878058754708,
+        "pr_auc": 0.9113453240552601,
+        "confusion_matrix": {
+          "tn": 9331,
+          "fp": 380,
+          "fn": 8624,
+          "tp": 4209
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 0.6771,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.1365,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.7,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.0,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.0187,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.0226,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 0.8369,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.6386,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.0556,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.4118,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 0.2049,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.8293,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 0.9554,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.3591,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.3333,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.1538,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.4138,
+            "count": 319
+          },
+          "satan": {
+            "recall": 0.5551,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 0.9669,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.0,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.003,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 0.0,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.1992,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.3333,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.5,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.4615,
+            "count": 13
+          }
+        },
+        "fit_seconds": 15.68407592199992,
+        "inference_ms_per_1k_flows": 25.008010911994052
+      },
+      "improved": {
+        "threshold": 0.9728244728244728,
+        "accuracy": 0.8869322214336409,
+        "precision": 0.9082248332804065,
+        "recall": 0.8914517260188576,
+        "f1": 0.8997601164025325,
+        "false_positive_rate": 0.11904026361857688,
+        "roc_auc": 0.9189294285999975,
+        "pr_auc": 0.8819613002863225,
+        "confusion_matrix": {
+          "tn": 8555,
+          "fp": 1156,
+          "fn": 1393,
+          "tp": 11440
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 1.0,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.9694,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.85,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.3333,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.7019,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.9248,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 0.9716,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0375,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.9799,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.3889,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.4118,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 1.0,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.7805,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 0.9936,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.7299,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.3333,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.3846,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.9781,
+            "count": 319
+          },
+          "satan": {
+            "recall": 0.9986,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.1429,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 1.0,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.2303,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.9909,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 0.5833,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.7044,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.4444,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.75,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.6154,
+            "count": 13
+          }
+        },
+        "fit_seconds": 4.398300810000364,
+        "inference_ms_per_1k_flows": 50.88859687720355
+      },
+      "hybrid": {
+        "threshold": 0.5,
+        "accuracy": 0.8894162526614621,
+        "precision": 0.9077287066246057,
+        "recall": 0.8969064131535884,
+        "f1": 0.9022851095519931,
+        "false_positive_rate": 0.12048192771084337,
+        "roc_auc": 0.9508930911733738,
+        "pr_auc": 0.9535067015015293,
+        "confusion_matrix": {
+          "tn": 8541,
+          "fp": 1170,
+          "fn": 1323,
+          "tp": 11510
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 1.0,
+            "count": 737
+          },
+          "back": {
+            "recall": 1.0,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.95,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.3333,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.7019,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.9248,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 1.0,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0375,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.9839,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.4444,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.5294,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 1.0,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.9756,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 1.0,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.7299,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.4667,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.3846,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.9875,
+            "count": 319
+          },
+          "satan": {
+            "recall": 1.0,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.1429,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 1.0,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.2303,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.9909,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 1.0,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.7299,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.4444,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.75,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.6154,
+            "count": 13
+          }
+        },
+        "fit_seconds": 6.789051362000464,
+        "inference_ms_per_1k_flows": 53.74911821326611
+      }
+    },
+    {
+      "baseline": {
+        "threshold": 0.9256818013068012,
+        "accuracy": 0.617902767920511,
+        "precision": 0.8840342253777536,
+        "recall": 0.37839943894646616,
+        "f1": 0.5299574375204628,
+        "false_positive_rate": 0.06559571619812583,
+        "roc_auc": 0.9339616747424555,
+        "pr_auc": 0.90796468283261,
+        "confusion_matrix": {
+          "tn": 9074,
+          "fp": 637,
+          "fn": 7977,
+          "tp": 4856
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 0.8033,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.1198,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.8,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.0,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.0146,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.0226,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 0.9645,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.0,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.6606,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.0556,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.3529,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 0.3223,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.8537,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 0.9427,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 0.4161,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.4667,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.1538,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.4138,
+            "count": 319
+          },
+          "satan": {
+            "recall": 0.4762,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 0.9609,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.0,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.006,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 0.0,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.1939,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.3333,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.5,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.6923,
+            "count": 13
+          }
+        },
+        "fit_seconds": 12.702348718999929,
+        "inference_ms_per_1k_flows": 23.06412167317143
+      },
+      "improved": {
+        "threshold": 0.9730954855954855,
+        "accuracy": 0.8771735273243435,
+        "precision": 0.9054794520547945,
+        "recall": 0.8756331333281384,
+        "f1": 0.890306223507507,
+        "false_positive_rate": 0.12079085573061477,
+        "roc_auc": 0.9294226780545467,
+        "pr_auc": 0.9234557207764532,
+        "confusion_matrix": {
+          "tn": 8538,
+          "fp": 1173,
+          "fn": 1596,
+          "tp": 11237
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 1.0,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.429,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.9,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.3333,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.7327,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.9023,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 0.9787,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.1741,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.9799,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.2778,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.4118,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 1.0,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "pod": {
+            "recall": 0.9268,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 1.0,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 1.0,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.4,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.2308,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.9718,
+            "count": 319
+          },
+          "satan": {
+            "recall": 0.9986,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0714,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 1.0,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.2978,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.145,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 0.5833,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.7013,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.3333,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.5,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.6154,
+            "count": 13
+          }
+        },
+        "fit_seconds": 4.276884203999998,
+        "inference_ms_per_1k_flows": 51.745404764015156
+      },
+      "hybrid": {
+        "threshold": 0.5,
+        "accuracy": 0.8870652945351313,
+        "precision": 0.9063117149853859,
+        "recall": 0.8940232213823736,
+        "f1": 0.9001255295779068,
+        "false_positive_rate": 0.1221295438162908,
+        "roc_auc": 0.9500766855492389,
+        "pr_auc": 0.9550209057978687,
+        "confusion_matrix": {
+          "tn": 8525,
+          "fp": 1186,
+          "fn": 1360,
+          "tp": 11473
+        },
+        "recall_per_attack": {
+          "apache2": {
+            "recall": 1.0,
+            "count": 737
+          },
+          "back": {
+            "recall": 0.9889,
+            "count": 359
+          },
+          "buffer_overflow": {
+            "recall": 0.95,
+            "count": 20
+          },
+          "ftp_write": {
+            "recall": 0.3333,
+            "count": 3
+          },
+          "guess_passwd": {
+            "recall": 0.7327,
+            "count": 1231
+          },
+          "httptunnel": {
+            "recall": 0.9023,
+            "count": 133
+          },
+          "imap": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "ipsweep": {
+            "recall": 1.0,
+            "count": 141
+          },
+          "land": {
+            "recall": 1.0,
+            "count": 7
+          },
+          "loadmodule": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "mailbomb": {
+            "recall": 0.1741,
+            "count": 293
+          },
+          "mscan": {
+            "recall": 0.9849,
+            "count": 996
+          },
+          "multihop": {
+            "recall": 0.3333,
+            "count": 18
+          },
+          "named": {
+            "recall": 0.5294,
+            "count": 17
+          },
+          "neptune": {
+            "recall": 1.0,
+            "count": 4657
+          },
+          "nmap": {
+            "recall": 1.0,
+            "count": 73
+          },
+          "perl": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "phf": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "pod": {
+            "recall": 1.0,
+            "count": 41
+          },
+          "portsweep": {
+            "recall": 1.0,
+            "count": 157
+          },
+          "processtable": {
+            "recall": 1.0,
+            "count": 685
+          },
+          "ps": {
+            "recall": 0.5333,
+            "count": 15
+          },
+          "rootkit": {
+            "recall": 0.2308,
+            "count": 13
+          },
+          "saint": {
+            "recall": 0.9875,
+            "count": 319
+          },
+          "satan": {
+            "recall": 1.0,
+            "count": 735
+          },
+          "sendmail": {
+            "recall": 0.0714,
+            "count": 14
+          },
+          "smurf": {
+            "recall": 1.0,
+            "count": 665
+          },
+          "snmpgetattack": {
+            "recall": 0.2978,
+            "count": 178
+          },
+          "snmpguess": {
+            "recall": 0.145,
+            "count": 331
+          },
+          "sqlattack": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "teardrop": {
+            "recall": 1.0,
+            "count": 12
+          },
+          "udpstorm": {
+            "recall": 1.0,
+            "count": 2
+          },
+          "warezmaster": {
+            "recall": 0.7076,
+            "count": 944
+          },
+          "worm": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "xlock": {
+            "recall": 0.3333,
+            "count": 9
+          },
+          "xsnoop": {
+            "recall": 0.5,
+            "count": 4
+          },
+          "xterm": {
+            "recall": 0.6154,
+            "count": 13
+          }
+        },
+        "fit_seconds": 6.599457161999908,
+        "inference_ms_per_1k_flows": 54.73798509581964
+      }
+    }
+  ],
+  "best_model_by_validation": "hybrid",
+  "validation": {
+    "baseline": {
+      "pr_auc": 0.9705293165937962,
+      "roc_auc": 0.9846172562418901,
+      "f1": 0.7065679119921577,
+      "recall": 0.5532150776053215,
+      "false_positive_rate": 0.011062439676293712,
+      "member_pr_auc": {
+        "robust_z": 0.7860658444685561,
+        "iforest": 0.9790025375571662,
+        "lof": 0.8124069605173808,
+        "autoencoder": 0.9718176144463303
+      }
+    },
+    "improved": {
+      "pr_auc": 0.9885214719023183,
+      "roc_auc": 0.9923451299030994,
+      "f1": 0.9595060068890195,
+      "recall": 0.9739894252089374,
+      "false_positive_rate": 0.04892716608508427,
+      "fit_seconds": 4.751263655999992
+    },
+    "hybrid": {
+      "pr_auc": 0.9998662459332488,
+      "roc_auc": 0.9998536129742567,
+      "f1": 0.9723697311649518,
+      "recall": 0.9994030359884019,
+      "false_positive_rate": 0.04892716608508427
+    }
+  },
+  "per_attack_recall": {
+    "baseline": {
+      "apache2": {
+        "recall": 0.6608,
+        "count": 737
+      },
+      "back": {
+        "recall": 0.0919,
+        "count": 359
+      },
+      "buffer_overflow": {
+        "recall": 0.7,
+        "count": 20
+      },
+      "ftp_write": {
+        "recall": 0.0,
+        "count": 3
+      },
+      "guess_passwd": {
+        "recall": 0.0171,
+        "count": 1231
+      },
+      "httptunnel": {
+        "recall": 0.015,
+        "count": 133
+      },
+      "imap": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "ipsweep": {
+        "recall": 0.9716,
+        "count": 141
+      },
+      "land": {
+        "recall": 1.0,
+        "count": 7
+      },
+      "loadmodule": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "mailbomb": {
+        "recall": 0.0,
+        "count": 293
+      },
+      "mscan": {
+        "recall": 0.6004,
+        "count": 996
+      },
+      "multihop": {
+        "recall": 0.0556,
+        "count": 18
+      },
+      "named": {
+        "recall": 0.3529,
+        "count": 17
+      },
+      "neptune": {
+        "recall": 0.4252,
+        "count": 4657
+      },
+      "nmap": {
+        "recall": 1.0,
+        "count": 73
+      },
+      "perl": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "phf": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "pod": {
+        "recall": 0.8049,
+        "count": 41
+      },
+      "portsweep": {
+        "recall": 0.9682,
+        "count": 157
+      },
+      "processtable": {
+        "recall": 0.4453,
+        "count": 685
+      },
+      "ps": {
+        "recall": 0.4,
+        "count": 15
+      },
+      "rootkit": {
+        "recall": 0.1538,
+        "count": 13
+      },
+      "saint": {
+        "recall": 0.4107,
+        "count": 319
+      },
+      "satan": {
+        "recall": 0.4776,
+        "count": 735
+      },
+      "sendmail": {
+        "recall": 0.0,
+        "count": 14
+      },
+      "smurf": {
+        "recall": 0.9459,
+        "count": 665
+      },
+      "snmpgetattack": {
+        "recall": 0.0,
+        "count": 178
+      },
+      "snmpguess": {
+        "recall": 0.003,
+        "count": 331
+      },
+      "sqlattack": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "teardrop": {
+        "recall": 0.0,
+        "count": 12
+      },
+      "udpstorm": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "warezmaster": {
+        "recall": 0.1737,
+        "count": 944
+      },
+      "worm": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "xlock": {
+        "recall": 0.1111,
+        "count": 9
+      },
+      "xsnoop": {
+        "recall": 0.25,
+        "count": 4
+      },
+      "xterm": {
+        "recall": 0.3846,
+        "count": 13
+      }
+    },
+    "improved": {
+      "apache2": {
+        "recall": 1.0,
+        "count": 737
+      },
+      "back": {
+        "recall": 0.9805,
+        "count": 359
+      },
+      "buffer_overflow": {
+        "recall": 0.7,
+        "count": 20
+      },
+      "ftp_write": {
+        "recall": 0.3333,
+        "count": 3
+      },
+      "guess_passwd": {
+        "recall": 0.7555,
+        "count": 1231
+      },
+      "httptunnel": {
+        "recall": 0.9098,
+        "count": 133
+      },
+      "imap": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "ipsweep": {
+        "recall": 0.9716,
+        "count": 141
+      },
+      "land": {
+        "recall": 1.0,
+        "count": 7
+      },
+      "loadmodule": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "mailbomb": {
+        "recall": 0.0137,
+        "count": 293
+      },
+      "mscan": {
+        "recall": 0.9739,
+        "count": 996
+      },
+      "multihop": {
+        "recall": 0.5,
+        "count": 18
+      },
+      "named": {
+        "recall": 0.3529,
+        "count": 17
+      },
+      "neptune": {
+        "recall": 1.0,
+        "count": 4657
+      },
+      "nmap": {
+        "recall": 1.0,
+        "count": 73
+      },
+      "perl": {
+        "recall": 0.5,
+        "count": 2
+      },
+      "phf": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "pod": {
+        "recall": 0.9024,
+        "count": 41
+      },
+      "portsweep": {
+        "recall": 1.0,
+        "count": 157
+      },
+      "processtable": {
+        "recall": 0.9708,
+        "count": 685
+      },
+      "ps": {
+        "recall": 0.3333,
+        "count": 15
+      },
+      "rootkit": {
+        "recall": 0.2308,
+        "count": 13
+      },
+      "saint": {
+        "recall": 0.9749,
+        "count": 319
+      },
+      "satan": {
+        "recall": 0.9986,
+        "count": 735
+      },
+      "sendmail": {
+        "recall": 0.0,
+        "count": 14
+      },
+      "smurf": {
+        "recall": 1.0,
+        "count": 665
+      },
+      "snmpgetattack": {
+        "recall": 0.2584,
+        "count": 178
+      },
+      "snmpguess": {
+        "recall": 0.8731,
+        "count": 331
+      },
+      "sqlattack": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "teardrop": {
+        "recall": 0.5,
+        "count": 12
+      },
+      "udpstorm": {
+        "recall": 0.5,
+        "count": 2
+      },
+      "warezmaster": {
+        "recall": 0.6886,
+        "count": 944
+      },
+      "worm": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "xlock": {
+        "recall": 0.3333,
+        "count": 9
+      },
+      "xsnoop": {
+        "recall": 0.5,
+        "count": 4
+      },
+      "xterm": {
+        "recall": 0.4615,
+        "count": 13
+      }
+    },
+    "hybrid": {
+      "apache2": {
+        "recall": 1.0,
+        "count": 737
+      },
+      "back": {
+        "recall": 0.9972,
+        "count": 359
+      },
+      "buffer_overflow": {
+        "recall": 0.8,
+        "count": 20
+      },
+      "ftp_write": {
+        "recall": 0.3333,
+        "count": 3
+      },
+      "guess_passwd": {
+        "recall": 0.7555,
+        "count": 1231
+      },
+      "httptunnel": {
+        "recall": 0.9098,
+        "count": 133
+      },
+      "imap": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "ipsweep": {
+        "recall": 1.0,
+        "count": 141
+      },
+      "land": {
+        "recall": 1.0,
+        "count": 7
+      },
+      "loadmodule": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "mailbomb": {
+        "recall": 0.0137,
+        "count": 293
+      },
+      "mscan": {
+        "recall": 0.9819,
+        "count": 996
+      },
+      "multihop": {
+        "recall": 0.5556,
+        "count": 18
+      },
+      "named": {
+        "recall": 0.4118,
+        "count": 17
+      },
+      "neptune": {
+        "recall": 1.0,
+        "count": 4657
+      },
+      "nmap": {
+        "recall": 1.0,
+        "count": 73
+      },
+      "perl": {
+        "recall": 0.5,
+        "count": 2
+      },
+      "phf": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "pod": {
+        "recall": 0.9756,
+        "count": 41
+      },
+      "portsweep": {
+        "recall": 1.0,
+        "count": 157
+      },
+      "processtable": {
+        "recall": 0.981,
+        "count": 685
+      },
+      "ps": {
+        "recall": 0.4667,
+        "count": 15
+      },
+      "rootkit": {
+        "recall": 0.2308,
+        "count": 13
+      },
+      "saint": {
+        "recall": 0.9843,
+        "count": 319
+      },
+      "satan": {
+        "recall": 1.0,
+        "count": 735
+      },
+      "sendmail": {
+        "recall": 0.0,
+        "count": 14
+      },
+      "smurf": {
+        "recall": 1.0,
+        "count": 665
+      },
+      "snmpgetattack": {
+        "recall": 0.2584,
+        "count": 178
+      },
+      "snmpguess": {
+        "recall": 0.8731,
+        "count": 331
+      },
+      "sqlattack": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "teardrop": {
+        "recall": 1.0,
+        "count": 12
+      },
+      "udpstorm": {
+        "recall": 1.0,
+        "count": 2
+      },
+      "warezmaster": {
+        "recall": 0.6907,
+        "count": 944
+      },
+      "worm": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "xlock": {
+        "recall": 0.3333,
+        "count": 9
+      },
+      "xsnoop": {
+        "recall": 0.5,
+        "count": 4
+      },
+      "xterm": {
+        "recall": 0.4615,
+        "count": 13
+      }
+    }
+  },
+  "train_vs_test": {
+    "baseline": {
+      "train": {
+        "f1": 0.8777881965163526,
+        "recall": 0.790346239126727,
+        "false_positive_rate": 0.009072954872815288,
+        "pr_auc": 0.9821497588874424
+      },
+      "test": {
+        "f1": 0.5539405684754521,
+        "recall": 0.40091950440271173,
+        "false_positive_rate": 0.06157965194109773,
+        "pr_auc": 0.9128819489198238
+      }
+    },
+    "improved": {
+      "train": {
+        "f1": 0.9622697039260698,
+        "recall": 0.9759167661606686,
+        "false_positive_rate": 0.04566176143028971,
+        "pr_auc": 0.9865474290013836
+      },
+      "test": {
+        "f1": 0.9071794270528003,
+        "recall": 0.904387126938362,
+        "false_positive_rate": 0.11821645556585315,
+        "pr_auc": 0.8975710273645411
+      }
+    },
+    "hybrid": {
+      "train": {
+        "f1": 0.9744382395957984,
+        "recall": 1.0,
+        "false_positive_rate": 0.04567661078360037,
+        "pr_auc": 0.9999999732493192
+      },
+      "test": {
+        "f1": 0.9086159844054581,
+        "recall": 0.9080495597288242,
+        "false_positive_rate": 0.11986407167130059,
+        "pr_auc": 0.9579862810616213
+      }
+    }
+  },
+  "ablation": [
+    {
+      "step": "Original (v1)",
+      "metrics": {
+        "accuracy": 0.6324520936834634,
+        "precision": 0.8958732369841547,
+        "recall": 0.40091950440271173,
+        "f1": 0.5539405684754521,
+        "false_positive_rate": 0.06157965194109773,
+        "roc_auc": 0.9382056254717945,
+        "pr_auc": 0.9128819489198238
+      }
+    },
+    {
+      "step": "+ feature selection",
+      "metrics": {
+        "accuracy": 0.6324520936834634,
+        "precision": 0.8958732369841547,
+        "recall": 0.40091950440271173,
+        "f1": 0.5539405684754521,
+        "false_positive_rate": 0.06157965194109773,
+        "roc_auc": 0.9382056254717945,
+        "pr_auc": 0.9128819489198238
+      }
+    },
+    {
+      "step": "+ tuned detector settings",
+      "metrics": {
+        "accuracy": 0.6358676366217175,
+        "precision": 0.8914663054520826,
+        "recall": 0.4102703966336788,
+        "f1": 0.5619296654037035,
+        "false_positive_rate": 0.0660076202244877,
+        "roc_auc": 0.9372484332789983,
+        "pr_auc": 0.9166627819574689
+      }
+    },
+    {
+      "step": "+ ensemble redesign",
+      "metrics": {
+        "accuracy": 0.7952892122072391,
+        "precision": 0.9252742703374043,
+        "recall": 0.6966414712070443,
+        "f1": 0.7948432985107802,
+        "false_positive_rate": 0.07434867675831532,
+        "roc_auc": 0.9266653797273744,
+        "pr_auc": 0.8975710273645411
+      }
+    },
+    {
+      "step": "+ tuned threshold (= v2)",
+      "metrics": {
+        "accuracy": 0.8946504613200852,
+        "precision": 0.9099890230515917,
+        "recall": 0.904387126938362,
+        "f1": 0.9071794270528003,
+        "false_positive_rate": 0.11821645556585315,
+        "roc_auc": 0.9266653797273744,
+        "pr_auc": 0.8975710273645411
+      }
+    }
+  ],
+  "learning_curve": {
+    "baseline": [
+      {
+        "train_rows": 1000,
+        "train_pr_auc": 0.9315684850200385,
+        "val_pr_auc": 0.9324917640221121
+      },
+      {
+        "train_rows": 3000,
+        "train_pr_auc": 0.9469840259425633,
+        "val_pr_auc": 0.9539843841489153
+      },
+      {
+        "train_rows": 10000,
+        "train_pr_auc": 0.9604804380286277,
+        "val_pr_auc": 0.9631797298077984
+      },
+      {
+        "train_rows": 30000,
+        "train_pr_auc": 0.9737366550487482,
+        "val_pr_auc": 0.9751097544089141
+      }
+    ],
+    "improved": [
+      {
+        "train_rows": 1000,
+        "train_pr_auc": 0.9773496449602104,
+        "val_pr_auc": 0.9770675330606987
+      },
+      {
+        "train_rows": 3000,
+        "train_pr_auc": 0.9857797198876984,
+        "val_pr_auc": 0.9844959652469978
+      },
+      {
+        "train_rows": 10000,
+        "train_pr_auc": 0.9894203797945912,
+        "val_pr_auc": 0.9878433172864105
+      },
+      {
+        "train_rows": 30000,
+        "train_pr_auc": 0.9900527027761136,
+        "val_pr_auc": 0.9875463245233947
+      }
+    ]
+  },
+  "rf_feature_importance": {
+    "duration": 0.00348164937873382,
+    "src_bytes": 0.13829654339857808,
+    "dst_bytes": 0.13662360197351864,
+    "land": 1.4158397355771697e-05,
+    "urgent": 2.403228806930689e-05,
+    "hot": 0.009164730673029675,
+    "num_failed_logins": 0.00012473366829299448,
+    "logged_in": 0.04826866205397701,
+    "num_compromised": 0.0075349890147210245,
+    "root_shell": 0.00011423168043813769,
+    "su_attempted": 2.55535926605173e-05,
+    "num_root": 0.00042825611587655755,
+    "num_file_creations": 0.00016429520994368392,
+    "num_shells": 5.855829138036229e-05,
+    "num_access_files": 6.671471083431877e-05,
+    "is_host_login": 3.307863950594072e-07,
+    "is_guest_login": 0.0006635199598714203,
+    "count": 0.044836766655407354,
+    "srv_count": 0.015153073140788844,
+    "serror_rate": 0.01095257739419,
+    "srv_serror_rate": 0.025685337838366587,
+    "rerror_rate": 0.007872919226605227,
+    "srv_rerror_rate": 0.0035922250900408386,
+    "same_srv_rate": 0.06543847212682387,
+    "diff_srv_rate": 0.04386369737004163,
+    "srv_diff_host_rate": 0.0049665876197684785,
+    "dst_host_count": 0.01666068872380447,
+    "dst_host_srv_count": 0.04662285712696169,
+    "dst_host_same_srv_rate": 0.047286378549338676,
+    "dst_host_diff_srv_rate": 0.029615999375894632,
+    "dst_host_same_src_port_rate": 0.030347715452415495,
+    "dst_host_srv_diff_host_rate": 0.01496591466334211,
+    "dst_host_serror_rate": 0.016980992921742856,
+    "dst_host_srv_serror_rate": 0.02390344423572853,
+    "dst_host_rerror_rate": 0.010299008374829333,
+    "dst_host_srv_rerror_rate": 0.01077781612891548,
+    "protocol_type=tcp": 0.011454263924753993,
+    "protocol_type=udp": 0.004441458590959361,
+    "protocol_type=icmp": 0.023503086721833065,
+    "service=http": 0.016032532719316664,
+    "service=domain_u": 0.004400506004633862,
+    "service=smtp": 0.0023625962640144386,
+    "service=ftp_data": 0.005183542696620988,
+    "service=other": 0.0006623526217444783,
+    "service=private": 0.01316100279004105,
+    "service=ftp": 0.0011071890895354873,
+    "service=telnet": 0.000497407146381598,
+    "service=urp_i": 0.0011228766549239906,
+    "service=finger": 0.0002931860201752953,
+    "service=eco_i": 0.012386985894192244,
+    "service=auth": 0.00016185724728249578,
+    "service=pop_3": 1.8333696928677917e-05,
+    "service=ecr_i": 0.012209340020975713,
+    "service=IRC": 0.000249181634178278,
+    "service=ntp_u": 2.0567916049136494e-05,
+    "service=time": 5.824897210274321e-05,
+    "service=X11": 6.891244094049101e-05,
+    "service=domain": 2.013322355208132e-05,
+    "service=urh_i": 7.133987632462244e-06,
+    "service=red_i": 2.3816424236364554e-05,
+    "service=tim_i": 1.7421504771385533e-05,
+    "service=shell": 5.179268549501784e-06,
+    "service=imap4": 4.0146046437654576e-05,
+    "service=tftp_u": 1.8114606687111657e-05,
+    "service=ssh": 1.2036340486991098e-05,
+    "flag=SF": 0.053860565316802396,
+    "flag=REJ": 0.0020215430728044905,
+    "flag=S0": 0.01717633085168146,
+    "flag=S1": 0.00032155107021769537,
+    "flag=RSTO": 0.00032878463583603827,
+    "flag=RSTR": 0.0017509231955531806,
+    "flag=S2": 3.721570918753266e-05,
+    "flag=S3": 1.5688511048566166e-05,
+    "flag=OTH": 2.285748600416154e-05,
+    "flag=SH": 4.809647224442242e-05
+  },
+  "alert_top_feature_counts": {
+    "src_bytes": 4210,
+    "dst_host_same_src_port_rate": 2308,
+    "flag=RSTO": 434,
+    "num_failed_logins": 271,
+    "dst_host_srv_serror_rate": 1713,
+    "service=pop_3": 915,
+    "flag=RSTR": 576,
+    "service=imap4": 302,
+    "num_file_creations": 3,
+    "is_guest_login": 444,
+    "flag=SH": 73,
+    "service=private": 423,
+    "flag=S3": 249,
+    "service=ecr_i": 39,
+    "flag=S0": 282,
+    "root_shell": 21,
+    "service=auth": 46,
+    "dst_host_rerror_rate": 7,
+    "diff_srv_rate": 8,
+    "flag=S2": 13,
+    "service=domain": 48,
+    "service=telnet": 66,
+    "su_attempted": 1,
+    "srv_diff_host_rate": 29,
+    "service=other": 12,
+    "service=eco_i": 7,
+    "count": 17,
+    "num_access_files": 12,
+    "service=time": 31,
+    "dst_bytes": 16,
+    "service=ssh": 26,
+    "service=shell": 16,
+    "srv_rerror_rate": 1,
+    "same_srv_rate": 7,
+    "service=finger": 2,
+    "dst_host_same_srv_rate": 10,
+    "num_shells": 12,
+    "service=domain_u": 18,
+    "service=ftp": 2,
+    "service=urp_i": 1,
+    "dst_host_diff_srv_rate": 4,
+    "flag=S1": 13,
+    "urgent": 7,
+    "service=X11": 6,
+    "dst_host_srv_diff_host_rate": 2,
+    "dst_host_serror_rate": 8,
+    "srv_serror_rate": 7,
+    "srv_count": 2,
+    "land": 7,
+    "service=smtp": 3,
+    "is_host_login": 3,
+    "service=tim_i": 1,
+    "num_compromised": 5,
+    "flag=OTH": 4,
+    "dst_host_count": 2,
+    "hot": 4,
+    "duration": 1,
+    "service=tftp_u": 1,
+    "service=IRC": 3
+  },
+  "dropped_correlated_features": {},
+  "model_files": {
+    "baseline": "models/baseline_nsl-kdd.joblib",
+    "improved": "models/improved_nsl-kdd.joblib",
+    "hybrid": "models/hybrid_nsl-kdd.joblib"
+  }
+}

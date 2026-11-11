@@ -1,0 +1,78 @@
+[nsl-kdd] fit split {'rows': 100778, 'attacks': 46904, 'benign': 53874, 'attack_types': 22} | val split {'rows': 25195, 'attacks': 11726, 'benign': 13469, 'attack_types': 20}
+  stage0 corr=None: features=75 mean member PR-AUC=0.8873
+  stage0 corr=0.99: features=75 mean member PR-AUC=0.8873
+  stage0 corr=0.95: features=73 mean member PR-AUC=0.8867
+  stage1 robust_z {'top_k': 1}: PR-AUC=0.7861 (1s)
+  stage1 robust_z {'top_k': 3}: PR-AUC=0.8653 (0s)
+  stage1 robust_z {'top_k': 10}: PR-AUC=0.9424 (0s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 'auto', 'max_features': 1.0}: PR-AUC=0.9790 (1s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 'auto', 'max_features': 0.5}: PR-AUC=0.9796 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 1024, 'max_features': 1.0}: PR-AUC=0.9841 (1s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 1024, 'max_features': 0.5}: PR-AUC=0.9825 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 4096, 'max_features': 1.0}: PR-AUC=0.9842 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 4096, 'max_features': 0.5}: PR-AUC=0.9851 (2s)
+  stage1 lof {'n_neighbors': 20, 'max_train_samples': 10000}: PR-AUC=0.8124 (1s)
+  stage1 lof {'n_neighbors': 10, 'max_train_samples': 10000}: PR-AUC=0.6968 (1s)
+  stage1 lof {'n_neighbors': 50, 'max_train_samples': 10000}: PR-AUC=0.7900 (1s)
+  stage1 lof {'n_neighbors': 20, 'max_train_samples': 30000}: PR-AUC=0.7732 (3s)
+  stage1 lof {'n_neighbors': 10, 'max_train_samples': 30000}: PR-AUC=0.8690 (2s)
+  stage1 lof {'n_neighbors': 50, 'max_train_samples': 30000}: PR-AUC=0.8034 (3s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 60, 'alpha': 0.0001, 'bottleneck_ratio': 0.25}: PR-AUC=0.9718 (9s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 200, 'alpha': 0.0001, 'bottleneck_ratio': 0.25}: PR-AUC=0.9718 (9s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 200, 'alpha': 0.001, 'bottleneck_ratio': 0.25}: PR-AUC=0.9711 (9s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 200, 'alpha': 0.0001, 'bottleneck_ratio': 0.5}: PR-AUC=0.9661 (24s)
+  stage2 chosen: {'detectors': ['iforest', 'lof'], 'normalization': 'rank', 'combine': 'max', 'pr_auc': 0.9885214719023183, 'roc_auc': 0.9923451299030994}
+  stage3 p=99.0: F1=0.9372 recall=0.892 FPR=0.0102
+  stage3 p=99.5: F1=0.8983 recall=0.820 FPR=0.0049
+  stage3 p=98.0: F1=0.9478 recall=0.922 FPR=0.0206
+  stage3 p=97.0: F1=0.9550 recall=0.945 FPR=0.0300
+  stage3 p=95.0: F1=0.9595 recall=0.974 FPR=0.0489
+  stage3 p=90.0: F1=0.9388 recall=0.988 FPR=0.1019
+  validation: baseline {'pr_auc': 0.9705293165937962, 'roc_auc': 0.9846172562418901, 'f1': 0.7065679119921577, 'recall': 0.5532150776053215, 'false_positive_rate': 0.011062439676293712, 'member_pr_auc': {'robust_z': 0.7860658444685561, 'iforest': 0.9790025375571662, 'lof': 0.8124069605173808, 'autoencoder': 0.9718176144463303}}
+              improved {'pr_auc': 0.9885214719023183, 'roc_auc': 0.9923451299030994, 'f1': 0.9595060068890195, 'recall': 0.9739894252089374, 'false_positive_rate': 0.04892716608508427, 'fit_seconds': 4.751263655999992}
+              hybrid {'pr_auc': 0.9998662459332488, 'roc_auc': 0.9998536129742567, 'f1': 0.9723697311649518, 'recall': 0.9994030359884019, 'false_positive_rate': 0.04892716608508427}
+  best model on validation: hybrid
+  wrote /home/user/Desktop/anomally_detection/configs/improved_nsl-kdd.yaml and /home/user/Desktop/anomally_detection/reports/improvement/nsl-kdd/tuning.json
+
+real	2m22.566s
+user	13m30.127s
+sys	0m1.982s
+[cicids2017] fit split {'rows': 141173, 'attacks': 23880, 'benign': 117293, 'attack_types': 13} | val split {'rows': 35294, 'attacks': 5970, 'benign': 29324, 'attack_types': 11}
+  stage0 corr=None: features=70 mean member PR-AUC=0.4676
+  stage0 corr=0.99: features=48 mean member PR-AUC=0.4998
+  stage0 corr=0.95: features=39 mean member PR-AUC=0.4748
+  stage1 robust_z {'top_k': 1}: PR-AUC=0.1766 (1s)
+  stage1 robust_z {'top_k': 3}: PR-AUC=0.2099 (1s)
+  stage1 robust_z {'top_k': 10}: PR-AUC=0.1988 (1s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 'auto', 'max_features': 1.0}: PR-AUC=0.4841 (1s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 'auto', 'max_features': 0.5}: PR-AUC=0.4851 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 1024, 'max_features': 1.0}: PR-AUC=0.5666 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 1024, 'max_features': 0.5}: PR-AUC=0.5526 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 4096, 'max_features': 1.0}: PR-AUC=0.6303 (2s)
+  stage1 iforest {'n_estimators': 200, 'max_samples': 4096, 'max_features': 0.5}: PR-AUC=0.6332 (2s)
+  stage1 lof {'n_neighbors': 20, 'max_train_samples': 10000}: PR-AUC=0.5423 (1s)
+  stage1 lof {'n_neighbors': 10, 'max_train_samples': 10000}: PR-AUC=0.6279 (1s)
+  stage1 lof {'n_neighbors': 50, 'max_train_samples': 10000}: PR-AUC=0.4892 (1s)
+  stage1 lof {'n_neighbors': 20, 'max_train_samples': 30000}: PR-AUC=0.6645 (3s)
+  stage1 lof {'n_neighbors': 10, 'max_train_samples': 30000}: PR-AUC=0.7358 (3s)
+  stage1 lof {'n_neighbors': 50, 'max_train_samples': 30000}: PR-AUC=0.6107 (3s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 60, 'alpha': 0.0001, 'bottleneck_ratio': 0.25}: PR-AUC=0.7962 (11s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 200, 'alpha': 0.0001, 'bottleneck_ratio': 0.25}: PR-AUC=0.8027 (13s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 200, 'alpha': 0.001, 'bottleneck_ratio': 0.25}: PR-AUC=0.7996 (16s)
+  stage1 autoencoder {'hidden_layer_sizes': None, 'max_iter': 200, 'alpha': 0.0001, 'bottleneck_ratio': 0.5}: PR-AUC=0.7783 (29s)
+  stage2 chosen: {'detectors': ['lof', 'autoencoder'], 'normalization': 'rank', 'combine': 'mean', 'pr_auc': 0.9349893751853381, 'roc_auc': 0.9864898796030805}
+  stage3 p=99.0: F1=0.8568 recall=0.780 FPR=0.0084
+  stage3 p=99.5: F1=0.6689 recall=0.513 FPR=0.0042
+  stage3 p=98.0: F1=0.8804 recall=0.860 FPR=0.0192
+  stage3 p=97.0: F1=0.8864 recall=0.911 FPR=0.0295
+  stage3 p=95.0: F1=0.8706 recall=0.961 FPR=0.0503
+  stage3 p=90.0: F1=0.8006 recall=0.982 FPR=0.0960
+  validation: baseline {'pr_auc': 0.555910812265891, 'roc_auc': 0.9212735973323627, 'f1': 0.04097591492023772, 'recall': 0.021943048576214406, 'false_positive_rate': 0.009991815577683808, 'member_pr_auc': {'robust_z': 0.17654151277896601, 'iforest': 0.4574672689575433, 'lof': 0.4877712184811688, 'autoencoder': 0.7486707986203112}}
+              improved {'pr_auc': 0.9349893751853381, 'roc_auc': 0.9864898796030805, 'f1': 0.8864265927977839, 'recall': 0.9112227805695142, 'false_positive_rate': 0.029463920338289457, 'fit_seconds': 16.17427038300002}
+              hybrid {'pr_auc': 0.9966203784840898, 'roc_auc': 0.9988797971807841, 'f1': 0.9305088720393966, 'recall': 0.9969849246231156, 'false_positive_rate': 0.02970263265584504}
+  best model on validation: hybrid
+  wrote /home/user/Desktop/anomally_detection/configs/improved_cicids2017.yaml and /home/user/Desktop/anomally_detection/reports/improvement/cicids2017/tuning.json
+
+real	3m46.179s
+user	19m25.974s
+sys	0m6.602s

@@ -1,0 +1,1387 @@
+{
+  "dataset": "cicids2017",
+  "train": {
+    "rows": 176467,
+    "attacks": 29850,
+    "benign": 146617,
+    "attack_types": 13
+  },
+  "test": {
+    "rows": 75630,
+    "attacks": 12793,
+    "benign": 62837,
+    "attack_types": 13
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "summary": {
+    "baseline": {
+      "accuracy": {
+        "mean": 0.8296619507250208,
+        "std": 0.006101761924564287,
+        "values": [
+          0.836665,
+          0.825493,
+          0.826828
+        ]
+      },
+      "precision": {
+        "mean": 0.40344283780488627,
+        "std": 0.20406707399742216,
+        "values": [
+          0.635802,
+          0.25335,
+          0.321176
+        ]
+      },
+      "recall": {
+        "mean": 0.03937048906954324,
+        "std": 0.03572072226300325,
+        "values": [
+          0.080513,
+          0.016259,
+          0.02134
+        ]
+      },
+      "f1": {
+        "mean": 0.07116794259868432,
+        "std": 0.06232464348628515,
+        "values": [
+          0.142927,
+          0.030557,
+          0.040021
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.009442419805740778,
+        "std": 0.00029011588530908637,
+        "values": [
+          0.009389,
+          0.009755,
+          0.009182
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9125670721052531,
+        "std": 0.006964253471587727,
+        "values": [
+          0.919057,
+          0.90521,
+          0.913435
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.5338315757078912,
+        "std": 0.048580754980557035,
+        "values": [
+          0.5897,
+          0.501525,
+          0.51027
+        ]
+      },
+      "fit_seconds": {
+        "mean": 16.40581446499982,
+        "std": 1.2311508955100154,
+        "values": [
+          16.888918,
+          15.006381,
+          17.322145
+        ]
+      },
+      "inference_ms_per_1k_flows": {
+        "mean": 26.276018246727272,
+        "std": 1.1172564971786931,
+        "values": [
+          27.532848,
+          25.899686,
+          25.395521
+        ]
+      }
+    },
+    "improved": {
+      "accuracy": {
+        "mean": 0.9455066331702587,
+        "std": 0.014730876579756436,
+        "values": [
+          0.957266,
+          0.950271,
+          0.928983
+        ]
+      },
+      "precision": {
+        "mean": 0.8501143548707931,
+        "std": 0.01524675789390405,
+        "values": [
+          0.861092,
+          0.856545,
+          0.832706
+        ]
+      },
+      "recall": {
+        "mean": 0.821725422757237,
+        "std": 0.08563362713058442,
+        "values": [
+          0.891112,
+          0.848042,
+          0.726022
+        ]
+      },
+      "f1": {
+        "mean": 0.8346101425254115,
+        "std": 0.05235047037817671,
+        "values": [
+          0.875845,
+          0.852272,
+          0.775713
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.029292720318708193,
+        "std": 0.00039057370942173036,
+        "values": [
+          0.029266,
+          0.028916,
+          0.029696
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9776680751162887,
+        "std": 0.007442623088996118,
+        "values": [
+          0.981931,
+          0.982,
+          0.969074
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.8912646057444539,
+        "std": 0.017986873729969023,
+        "values": [
+          0.904576,
+          0.898416,
+          0.870802
+        ]
+      },
+      "fit_seconds": {
+        "mean": 31.15161483866662,
+        "std": 6.123559658036341,
+        "values": [
+          26.589918,
+          38.111264,
+          28.753662
+        ]
+      },
+      "inference_ms_per_1k_flows": {
+        "mean": 34.905390048039145,
+        "std": 1.3589350614215578,
+        "values": [
+          34.478999,
+          36.426388,
+          33.810783
+        ]
+      }
+    },
+    "hybrid": {
+      "accuracy": {
+        "mean": 0.9749041385693508,
+        "std": 0.0004179156585820437,
+        "values": [
+          0.974944,
+          0.975301,
+          0.974468
+        ]
+      },
+      "precision": {
+        "mean": 0.8725662548049685,
+        "std": 0.001883580786459686,
+        "values": [
+          0.872709,
+          0.874375,
+          0.870616
+        ]
+      },
+      "recall": {
+        "mean": 0.9972901847364444,
+        "std": 4.513017034235101e-05,
+        "values": [
+          0.997342,
+          0.997264,
+          0.997264
+        ]
+      },
+      "f1": {
+        "mean": 0.9307678083732379,
+        "std": 0.0010731940169093547,
+        "values": [
+          0.930872,
+          0.931785,
+          0.929646
+        ]
+      },
+      "false_positive_rate": {
+        "mean": 0.0296534419742084,
+        "std": 0.0005023274228521458,
+        "values": [
+          0.029616,
+          0.029171,
+          0.030173
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.9991029018241476,
+        "std": 6.647001330847442e-05,
+        "values": [
+          0.99907,
+          0.999179,
+          0.999059
+        ]
+      },
+      "pr_auc": {
+        "mean": 0.997953848958061,
+        "std": 3.8194521019925426e-05,
+        "values": [
+          0.99793,
+          0.997998,
+          0.997934
+        ]
+      },
+      "fit_seconds": {
+        "mean": 35.7544806739999,
+        "std": 6.3165986882731255,
+        "values": [
+          31.232518,
+          42.971601,
+          33.059323
+        ]
+      },
+      "inference_ms_per_1k_flows": {
+        "mean": 37.90041865661945,
+        "std": 1.0070319286394651,
+        "values": [
+          39.015367,
+          37.628919,
+          37.05697
+        ]
+      }
+    }
+  },
+  "per_seed": [
+    {
+      "baseline": {
+        "threshold": 0.9168306448862666,
+        "accuracy": 0.836665344440037,
+        "precision": 0.6358024691358025,
+        "recall": 0.08051278042679591,
+        "f1": 0.14292652466523278,
+        "false_positive_rate": 0.009389372503461337,
+        "roc_auc": 0.9190567066924507,
+        "pr_auc": 0.5897001315096115,
+        "confusion_matrix": {
+          "tn": 62247,
+          "fp": 590,
+          "fn": 11763,
+          "tp": 1030
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.0,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 0.0,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.2199,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.1548,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.6218,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.3247,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 0.0,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 0.0,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.0,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 0.0,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.0,
+            "count": 28
+          }
+        },
+        "fit_seconds": 16.88891802399985,
+        "inference_ms_per_1k_flows": 27.53284836705181
+      },
+      "improved": {
+        "threshold": 0.9019489820277597,
+        "accuracy": 0.9572656353298955,
+        "precision": 0.8610922275096307,
+        "recall": 0.8911123270538576,
+        "f1": 0.8758451137062078,
+        "false_positive_rate": 0.02926619666756847,
+        "roc_auc": 0.9819305479714631,
+        "pr_auc": 0.9045756241381033,
+        "confusion_matrix": {
+          "tn": 60998,
+          "fp": 1839,
+          "fn": 1393,
+          "tp": 11400
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.0635,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 0.9512,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.7872,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.9202,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.4615,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.9845,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 0.7157,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 0.861,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.0115,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 0.0244,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.0,
+            "count": 28
+          }
+        },
+        "fit_seconds": 26.58991839500004,
+        "inference_ms_per_1k_flows": 34.478998823218376
+      },
+      "hybrid": {
+        "threshold": 0.5,
+        "accuracy": 0.9749438053682401,
+        "precision": 0.8727086183310534,
+        "recall": 0.9973422965684359,
+        "f1": 0.9308722139131069,
+        "false_positive_rate": 0.02961630886261279,
+        "roc_auc": 0.9990701493756095,
+        "pr_auc": 0.9979300906118092,
+        "confusion_matrix": {
+          "tn": 60976,
+          "fp": 1861,
+          "fn": 34,
+          "tp": 12759
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.7302,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 1.0,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.9929,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.9981,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.9936,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.9948,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 1.0,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 1.0,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.9885,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 1.0,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.9643,
+            "count": 28
+          }
+        },
+        "fit_seconds": 31.232518443999652,
+        "inference_ms_per_1k_flows": 39.015366653446506
+      }
+    },
+    {
+      "baseline": {
+        "threshold": 0.9208032943423248,
+        "accuracy": 0.8254925294195425,
+        "precision": 0.25334957369062117,
+        "recall": 0.01625889158133354,
+        "f1": 0.030556779785514913,
+        "false_positive_rate": 0.00975539888918949,
+        "roc_auc": 0.9052095539217271,
+        "pr_auc": 0.5015248718267016,
+        "confusion_matrix": {
+          "tn": 62224,
+          "fp": 613,
+          "fn": 12585,
+          "tp": 208
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.0,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 0.0,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.1773,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.0015,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.5513,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.3196,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 0.0,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 0.0004,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.0,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 0.0,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.0,
+            "count": 28
+          }
+        },
+        "fit_seconds": 15.006380678999903,
+        "inference_ms_per_1k_flows": 25.899685746397612
+      },
+      "improved": {
+        "threshold": 0.9074460321249531,
+        "accuracy": 0.9502710564590771,
+        "precision": 0.8565450813200695,
+        "recall": 0.8480418979129212,
+        "f1": 0.8522722809222671,
+        "false_positive_rate": 0.02891608447252415,
+        "roc_auc": 0.9819995109157322,
+        "pr_auc": 0.8984163489379782,
+        "confusion_matrix": {
+          "tn": 61020,
+          "fp": 1817,
+          "fn": 1944,
+          "tp": 10849
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.6508,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 0.9668,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.6986,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.9118,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.9231,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.9536,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 0.0051,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 0.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 0.672,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.0115,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 0.0244,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.0714,
+            "count": 28
+          }
+        },
+        "fit_seconds": 38.11126387400009,
+        "inference_ms_per_1k_flows": 36.4263881660702
+      },
+      "hybrid": {
+        "threshold": 0.5,
+        "accuracy": 0.9753008065582441,
+        "precision": 0.8743746144883833,
+        "recall": 0.9972641288204487,
+        "f1": 0.9317849839322232,
+        "false_positive_rate": 0.029170711523465474,
+        "roc_auc": 0.9991793922772257,
+        "pr_auc": 0.997997906962326,
+        "confusion_matrix": {
+          "tn": 61004,
+          "fp": 1833,
+          "fn": 35,
+          "tp": 12758
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.7778,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 1.0,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.9929,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.9981,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.9936,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.9845,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 1.0,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 0.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 1.0,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.9885,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 1.0,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.9286,
+            "count": 28
+          }
+        },
+        "fit_seconds": 42.97160062700004,
+        "inference_ms_per_1k_flows": 37.62891935739771
+      }
+    },
+    {
+      "baseline": {
+        "threshold": 0.9182856460798691,
+        "accuracy": 0.8268279783154833,
+        "precision": 0.3211764705882353,
+        "recall": 0.021339795200500274,
+        "f1": 0.04002052334530529,
+        "false_positive_rate": 0.00918248802457151,
+        "roc_auc": 0.913434955701582,
+        "pr_auc": 0.5102697237873604,
+        "confusion_matrix": {
+          "tn": 62260,
+          "fp": 577,
+          "fn": 12520,
+          "tp": 273
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.0,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 0.0,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.156,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.0117,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.5641,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.3299,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 0.0,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.0,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 0.0056,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.0,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 0.0,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.0,
+            "count": 28
+          }
+        },
+        "fit_seconds": 17.32214469199971,
+        "inference_ms_per_1k_flows": 25.395520626732395
+      },
+      "improved": {
+        "threshold": 0.90387545612659,
+        "accuracy": 0.9289832077218035,
+        "precision": 0.8327057557826789,
+        "recall": 0.7260220433049324,
+        "f1": 0.7757130329477596,
+        "false_positive_rate": 0.029695879816031955,
+        "roc_auc": 0.9690741664616708,
+        "pr_auc": 0.8708018441572803,
+        "confusion_matrix": {
+          "tn": 60971,
+          "fp": 1866,
+          "fn": 3505,
+          "tp": 9288
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.4286,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 0.8525,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.8014,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.8891,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.4231,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.9588,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 0.7005,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 0.2615,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 0.2184,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 0.0732,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.0714,
+            "count": 28
+          }
+        },
+        "fit_seconds": 28.75366224699974,
+        "inference_ms_per_1k_flows": 33.81078315482886
+      },
+      "hybrid": {
+        "threshold": 0.5,
+        "accuracy": 0.9744678037815682,
+        "precision": 0.8706155315954688,
+        "recall": 0.9972641288204487,
+        "f1": 0.9296462272743834,
+        "false_positive_rate": 0.03017330553654694,
+        "roc_auc": 0.9990591638196079,
+        "pr_auc": 0.9979335493000481,
+        "confusion_matrix": {
+          "tn": 60941,
+          "fp": 1896,
+          "fn": 35,
+          "tp": 12758
+        },
+        "recall_per_attack": {
+          "Bot": {
+            "recall": 0.6984,
+            "count": 63
+          },
+          "DDoS": {
+            "recall": 1.0,
+            "count": 3851
+          },
+          "DoS GoldenEye": {
+            "recall": 0.9929,
+            "count": 282
+          },
+          "DoS Hulk": {
+            "recall": 0.9985,
+            "count": 5214
+          },
+          "DoS Slowhttptest": {
+            "recall": 0.9936,
+            "count": 156
+          },
+          "DoS slowloris": {
+            "recall": 0.9845,
+            "count": 194
+          },
+          "FTP-Patator": {
+            "recall": 1.0,
+            "count": 197
+          },
+          "Heartbleed": {
+            "recall": 1.0,
+            "count": 1
+          },
+          "Infiltration": {
+            "recall": 0.5,
+            "count": 2
+          },
+          "PortScan": {
+            "recall": 1.0,
+            "count": 2677
+          },
+          "SSH-Patator": {
+            "recall": 1.0,
+            "count": 87
+          },
+          "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+            "recall": 1.0,
+            "count": 41
+          },
+          "Web Attack \u00ef\u00bf\u00bd XSS": {
+            "recall": 0.9643,
+            "count": 28
+          }
+        },
+        "fit_seconds": 33.05932295100001,
+        "inference_ms_per_1k_flows": 37.05696995901415
+      }
+    }
+  ],
+  "best_model_by_validation": "hybrid",
+  "validation": {
+    "baseline": {
+      "pr_auc": 0.555910812265891,
+      "roc_auc": 0.9212735973323627,
+      "f1": 0.04097591492023772,
+      "recall": 0.021943048576214406,
+      "false_positive_rate": 0.009991815577683808,
+      "member_pr_auc": {
+        "robust_z": 0.17654151277896601,
+        "iforest": 0.4574672689575433,
+        "lof": 0.4877712184811688,
+        "autoencoder": 0.7486707986203112
+      }
+    },
+    "improved": {
+      "pr_auc": 0.9349893751853381,
+      "roc_auc": 0.9864898796030805,
+      "f1": 0.8864265927977839,
+      "recall": 0.9112227805695142,
+      "false_positive_rate": 0.029463920338289457,
+      "fit_seconds": 16.17427038300002
+    },
+    "hybrid": {
+      "pr_auc": 0.9966203784840898,
+      "roc_auc": 0.9988797971807841,
+      "f1": 0.9305088720393966,
+      "recall": 0.9969849246231156,
+      "false_positive_rate": 0.02970263265584504
+    }
+  },
+  "per_attack_recall": {
+    "baseline": {
+      "Bot": {
+        "recall": 0.0,
+        "count": 63
+      },
+      "DDoS": {
+        "recall": 0.0,
+        "count": 3851
+      },
+      "DoS GoldenEye": {
+        "recall": 0.2199,
+        "count": 282
+      },
+      "DoS Hulk": {
+        "recall": 0.1548,
+        "count": 5214
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.6218,
+        "count": 156
+      },
+      "DoS slowloris": {
+        "recall": 0.3247,
+        "count": 194
+      },
+      "FTP-Patator": {
+        "recall": 0.0,
+        "count": 197
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "PortScan": {
+        "recall": 0.0,
+        "count": 2677
+      },
+      "SSH-Patator": {
+        "recall": 0.0,
+        "count": 87
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.0,
+        "count": 28
+      }
+    },
+    "improved": {
+      "Bot": {
+        "recall": 0.0635,
+        "count": 63
+      },
+      "DDoS": {
+        "recall": 0.9512,
+        "count": 3851
+      },
+      "DoS GoldenEye": {
+        "recall": 0.7872,
+        "count": 282
+      },
+      "DoS Hulk": {
+        "recall": 0.9202,
+        "count": 5214
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.4615,
+        "count": 156
+      },
+      "DoS slowloris": {
+        "recall": 0.9845,
+        "count": 194
+      },
+      "FTP-Patator": {
+        "recall": 0.7157,
+        "count": 197
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 0.5,
+        "count": 2
+      },
+      "PortScan": {
+        "recall": 0.861,
+        "count": 2677
+      },
+      "SSH-Patator": {
+        "recall": 0.0115,
+        "count": 87
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.0244,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.0,
+        "count": 28
+      }
+    },
+    "hybrid": {
+      "Bot": {
+        "recall": 0.7302,
+        "count": 63
+      },
+      "DDoS": {
+        "recall": 1.0,
+        "count": 3851
+      },
+      "DoS GoldenEye": {
+        "recall": 0.9929,
+        "count": 282
+      },
+      "DoS Hulk": {
+        "recall": 0.9981,
+        "count": 5214
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.9936,
+        "count": 156
+      },
+      "DoS slowloris": {
+        "recall": 0.9948,
+        "count": 194
+      },
+      "FTP-Patator": {
+        "recall": 1.0,
+        "count": 197
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 0.5,
+        "count": 2
+      },
+      "PortScan": {
+        "recall": 1.0,
+        "count": 2677
+      },
+      "SSH-Patator": {
+        "recall": 0.9885,
+        "count": 87
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 1.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.9643,
+        "count": 28
+      }
+    }
+  },
+  "train_vs_test": {
+    "baseline": {
+      "train": {
+        "f1": 0.1371414942460199,
+        "recall": 0.07705192629815745,
+        "false_positive_rate": 0.009494124146586003,
+        "pr_auc": 0.5900870745465296
+      },
+      "test": {
+        "f1": 0.14292652466523278,
+        "recall": 0.08051278042679591,
+        "false_positive_rate": 0.009389372503461337,
+        "pr_auc": 0.5897001315096115
+      }
+    },
+    "improved": {
+      "train": {
+        "f1": 0.875889041073285,
+        "recall": 0.8890787269681742,
+        "false_positive_rate": 0.028714269150234967,
+        "pr_auc": 0.9071755608478093
+      },
+      "test": {
+        "f1": 0.8758451137062078,
+        "recall": 0.8911123270538576,
+        "false_positive_rate": 0.02926619666756847,
+        "pr_auc": 0.9045756241381033
+      }
+    },
+    "hybrid": {
+      "train": {
+        "f1": 0.9339361419207484,
+        "recall": 1.0,
+        "false_positive_rate": 0.028802935539534977,
+        "pr_auc": 1.0
+      },
+      "test": {
+        "f1": 0.9308722139131069,
+        "recall": 0.9973422965684359,
+        "false_positive_rate": 0.02961630886261279,
+        "pr_auc": 0.9979300906118092
+      }
+    }
+  },
+  "ablation": [
+    {
+      "step": "Original (v1)",
+      "metrics": {
+        "accuracy": 0.836665344440037,
+        "precision": 0.6358024691358025,
+        "recall": 0.08051278042679591,
+        "f1": 0.14292652466523278,
+        "false_positive_rate": 0.009389372503461337,
+        "roc_auc": 0.9190567066924507,
+        "pr_auc": 0.5897001315096115
+      }
+    },
+    {
+      "step": "+ feature selection",
+      "metrics": {
+        "accuracy": 0.8295782097051435,
+        "precision": 0.4533980582524272,
+        "recall": 0.03650433831001329,
+        "f1": 0.06756854517832597,
+        "false_positive_rate": 0.008959689354997852,
+        "roc_auc": 0.9320090528992662,
+        "pr_auc": 0.6051589746546275
+      }
+    },
+    {
+      "step": "+ tuned detector settings",
+      "metrics": {
+        "accuracy": 0.8470448234827449,
+        "precision": 0.7490849938999593,
+        "recall": 0.14398499179238647,
+        "f1": 0.24154209284028325,
+        "false_positive_rate": 0.009819055651924822,
+        "roc_auc": 0.953820968882724,
+        "pr_auc": 0.7215308060530699
+      }
+    },
+    {
+      "step": "+ ensemble redesign",
+      "metrics": {
+        "accuracy": 0.9257569747454714,
+        "precision": 0.9296145559013647,
+        "recall": 0.6070507308684436,
+        "f1": 0.7344777036931952,
+        "false_positive_rate": 0.009357544122093671,
+        "roc_auc": 0.9819305479714631,
+        "pr_auc": 0.9045756241381033
+      }
+    },
+    {
+      "step": "+ tuned threshold (= v2)",
+      "metrics": {
+        "accuracy": 0.9572656353298955,
+        "precision": 0.8610922275096307,
+        "recall": 0.8911123270538576,
+        "f1": 0.8758451137062078,
+        "false_positive_rate": 0.02926619666756847,
+        "roc_auc": 0.9819305479714631,
+        "pr_auc": 0.9045756241381033
+      }
+    }
+  ],
+  "learning_curve": {
+    "baseline": [
+      {
+        "train_rows": 1000,
+        "train_pr_auc": 0.46573542632899506,
+        "val_pr_auc": 0.4649040266264946
+      },
+      {
+        "train_rows": 3000,
+        "train_pr_auc": 0.4833044746269952,
+        "val_pr_auc": 0.48652721629990187
+      },
+      {
+        "train_rows": 10000,
+        "train_pr_auc": 0.614217983348804,
+        "val_pr_auc": 0.6064732484896062
+      },
+      {
+        "train_rows": 30000,
+        "train_pr_auc": 0.6302397452319424,
+        "val_pr_auc": 0.6254742437451019
+      },
+      {
+        "train_rows": 50000,
+        "train_pr_auc": 0.5546320367568984,
+        "val_pr_auc": 0.555910812265891
+      }
+    ],
+    "improved": [
+      {
+        "train_rows": 1000,
+        "train_pr_auc": 0.5964103320637133,
+        "val_pr_auc": 0.6038682578826097
+      },
+      {
+        "train_rows": 3000,
+        "train_pr_auc": 0.727363106166689,
+        "val_pr_auc": 0.729098767342434
+      },
+      {
+        "train_rows": 10000,
+        "train_pr_auc": 0.8538461083077045,
+        "val_pr_auc": 0.8621861637531201
+      },
+      {
+        "train_rows": 30000,
+        "train_pr_auc": 0.9285244698209398,
+        "val_pr_auc": 0.9306808105473368
+      },
+      {
+        "train_rows": 50000,
+        "train_pr_auc": 0.9329832388815695,
+        "val_pr_auc": 0.9349893751853381
+      }
+    ]
+  },
+  "rf_feature_importance": {
+    "Destination Port": 0.05546649942812711,
+    "Flow Duration": 0.012019994729195902,
+    "Total Fwd Packets": 0.020904394690820206,
+    "Total Backward Packets": 0.010023783765727452,
+    "Total Length of Fwd Packets": 0.04144205687819477,
+    "Total Length of Bwd Packets": 0.030107395273915396,
+    "Fwd Packet Length Max": 0.04131843741163215,
+    "Fwd Packet Length Min": 0.03259930993746079,
+    "Fwd Packet Length Mean": 0.025382751912209726,
+    "Fwd Packet Length Std": 0.007333637975985692,
+    "Bwd Packet Length Max": 0.043566605442438955,
+    "Bwd Packet Length Min": 0.023781738171073305,
+    "Bwd Packet Length Mean": 0.069645992552644,
+    "Bwd Packet Length Std": 0.07465308888285248,
+    "Flow Bytes/s": 0.00928047127056575,
+    "Flow Packets/s": 0.014866929608970868,
+    "Flow IAT Std": 0.01248427355702964,
+    "Flow IAT Min": 0.007817934347191663,
+    "Fwd IAT Total": 0.017483799726039466,
+    "Fwd IAT Std": 0.021174679201297633,
+    "Fwd IAT Min": 0.011674421711758417,
+    "Bwd IAT Total": 0.004734884769965926,
+    "Bwd IAT Std": 0.0018254114256699861,
+    "Bwd IAT Min": 0.00505508131071884,
+    "Fwd PSH Flags": 0.0005548505749118872,
+    "Fwd URG Flags": 6.399875123502557e-07,
+    "Fwd Header Length": 0.02315127967393111,
+    "Bwd Header Length": 0.023896554714781314,
+    "Bwd Packets/s": 0.0071532641934865665,
+    "Min Packet Length": 0.014801143329413805,
+    "Max Packet Length": 0.03826424509804851,
+    "Packet Length Mean": 0.07075159219457572,
+    "Packet Length Std": 0.08835010687721476,
+    "FIN Flag Count": 0.0016546814261330382,
+    "RST Flag Count": 9.01802075297252e-07,
+    "PSH Flag Count": 0.01373936943561064,
+    "ACK Flag Count": 0.009621216316088602,
+    "URG Flag Count": 0.01143932987432979,
+    "Down/Up Ratio": 0.0015930112365207317,
+    "Init_Win_bytes_forward": 0.029475201665277596,
+    "Init_Win_bytes_backward": 0.04523817045785829,
+    "act_data_pkt_fwd": 0.008090536158033896,
+    "min_seg_size_forward": 0.005937447903777182,
+    "Active Mean": 0.0020564538079367633,
+    "Active Std": 0.0017804988739862282,
+    "Idle Mean": 0.006964518205774397,
+    "Idle Std": 0.0008414122112356039
+  },
+  "alert_top_feature_counts": {
+    "Fwd IAT Total": 4819,
+    "Flow IAT Min": 297,
+    "Bwd IAT Total": 2758,
+    "Fwd IAT Min": 26,
+    "FIN Flag Count": 1760,
+    "Destination Port": 2236,
+    "Fwd Packet Length Mean": 779,
+    "Bwd IAT Min": 389,
+    "Bwd Packet Length Std": 14,
+    "Fwd PSH Flags": 50,
+    "min_seg_size_forward": 25,
+    "RST Flag Count": 6,
+    "Idle Mean": 8,
+    "Total Backward Packets": 41,
+    "Total Fwd Packets": 6,
+    "Flow Bytes/s": 1,
+    "Bwd Header Length": 10,
+    "Bwd Packet Length Mean": 3,
+    "Fwd URG Flags": 2,
+    "Init_Win_bytes_backward": 2,
+    "Packet Length Std": 2,
+    "URG Flag Count": 5
+  },
+  "dropped_correlated_features": {
+    "Flow IAT Mean": "Flow Packets/s",
+    "Flow IAT Max": "Flow Duration",
+    "Fwd IAT Mean": "Fwd IAT Total",
+    "Fwd IAT Max": "Fwd IAT Total",
+    "Bwd IAT Mean": "Bwd IAT Total",
+    "Bwd IAT Max": "Bwd IAT Total",
+    "Fwd Packets/s": "Flow Packets/s",
+    "Packet Length Variance": "Packet Length Std",
+    "SYN Flag Count": "Fwd PSH Flags",
+    "CWE Flag Count": "Fwd URG Flags",
+    "ECE Flag Count": "RST Flag Count",
+    "Average Packet Size": "Packet Length Mean",
+    "Avg Fwd Segment Size": "Fwd Packet Length Mean",
+    "Avg Bwd Segment Size": "Bwd Packet Length Mean",
+    "Fwd Header Length.1": "Fwd Header Length",
+    "Subflow Fwd Packets": "Total Fwd Packets",
+    "Subflow Fwd Bytes": "Total Length of Fwd Packets",
+    "Subflow Bwd Packets": "Total Backward Packets",
+    "Subflow Bwd Bytes": "Total Length of Bwd Packets",
+    "Active Max": "Active Mean",
+    "Active Min": "Active Mean",
+    "Idle Max": "Idle Mean",
+    "Idle Min": "Idle Mean"
+  },
+  "model_files": {
+    "baseline": "models/baseline_cicids2017.joblib",
+    "improved": "models/improved_cicids2017.joblib",
+    "hybrid": "models/hybrid_cicids2017.joblib"
+  }
+}

@@ -1,0 +1,976 @@
+{
+  "dataset": "cicids2017",
+  "margin": 0.002,
+  "fit_split": {
+    "rows": 141173,
+    "attacks": 23880,
+    "benign": 117293,
+    "attack_types": 13
+  },
+  "val_split": {
+    "rows": 35294,
+    "attacks": 5970,
+    "benign": 29324,
+    "attack_types": 11
+  },
+  "baseline_val": {
+    "pr_auc": 0.555910812265891,
+    "roc_auc": 0.9212735973323627,
+    "f1": 0.04097591492023772,
+    "recall": 0.021943048576214406,
+    "false_positive_rate": 0.009991815577683808,
+    "member_pr_auc": {
+      "robust_z": 0.17654151277896601,
+      "iforest": 0.4574672689575433,
+      "lof": 0.4877712184811688,
+      "autoencoder": 0.7486707986203112
+    }
+  },
+  "stage0_features": {
+    "candidates": [
+      {
+        "corr_threshold": null,
+        "n_features": 70,
+        "member_pr_auc": {
+          "robust_z": 0.17654151277896601,
+          "iforest": 0.4574672689575433,
+          "lof": 0.4877712184811688,
+          "autoencoder": 0.7486707986203112
+        },
+        "mean_member_pr_auc": 0.4676126997094973,
+        "ensemble_pr_auc": 0.555910812265891,
+        "fit_seconds": 18.131388054000126
+      },
+      {
+        "corr_threshold": 0.99,
+        "n_features": 48,
+        "member_pr_auc": {
+          "robust_z": 0.17657226076022622,
+          "iforest": 0.48405741737301883,
+          "lof": 0.5422916883296677,
+          "autoencoder": 0.7961674148452755
+        },
+        "mean_member_pr_auc": 0.4997721953270471,
+        "ensemble_pr_auc": 0.6176696295371364,
+        "fit_seconds": 14.693107800999769
+      },
+      {
+        "corr_threshold": 0.95,
+        "n_features": 39,
+        "member_pr_auc": {
+          "robust_z": 0.17657226321072855,
+          "iforest": 0.4306431307609376,
+          "lof": 0.5698770718603412,
+          "autoencoder": 0.7222128383657663
+        },
+        "mean_member_pr_auc": 0.4748263260494434,
+        "ensemble_pr_auc": 0.6341428129688572,
+        "fit_seconds": 14.020865420000064
+      }
+    ],
+    "chosen": 0.99
+  },
+  "stage1_detectors": {
+    "robust_z": {
+      "candidates": [
+        {
+          "params": {
+            "top_k": 1
+          },
+          "pr_auc": 0.17657226076022622,
+          "roc_auc": 0.55576136948097,
+          "fit_seconds": 0.5891438049998214
+        },
+        {
+          "params": {
+            "top_k": 3
+          },
+          "pr_auc": 0.20990152624641317,
+          "roc_auc": 0.604388502326117,
+          "fit_seconds": 0.548478967000392
+        },
+        {
+          "params": {
+            "top_k": 10
+          },
+          "pr_auc": 0.198815185632952,
+          "roc_auc": 0.6180448575803128,
+          "fit_seconds": 0.541052554000089
+        }
+      ],
+      "chosen": {
+        "top_k": 3
+      }
+    },
+    "iforest": {
+      "candidates": [
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_samples": "auto",
+            "max_features": 1.0
+          },
+          "pr_auc": 0.48405741737301883,
+          "roc_auc": 0.8904790514661243,
+          "fit_seconds": 1.2402400780001699
+        },
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_samples": "auto",
+            "max_features": 0.5
+          },
+          "pr_auc": 0.4851149358845221,
+          "roc_auc": 0.8951121610873447,
+          "fit_seconds": 1.5511217399998714
+        },
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_samples": 1024,
+            "max_features": 1.0
+          },
+          "pr_auc": 0.5666046502014265,
+          "roc_auc": 0.92379798151856,
+          "fit_seconds": 1.8653413359998012
+        },
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_samples": 1024,
+            "max_features": 0.5
+          },
+          "pr_auc": 0.5525622636346978,
+          "roc_auc": 0.9230517156326807,
+          "fit_seconds": 2.2770879169997897
+        },
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_samples": 4096,
+            "max_features": 1.0
+          },
+          "pr_auc": 0.6302783202455423,
+          "roc_auc": 0.9426978279064125,
+          "fit_seconds": 2.1975649619998876
+        },
+        {
+          "params": {
+            "n_estimators": 200,
+            "max_samples": 4096,
+            "max_features": 0.5
+          },
+          "pr_auc": 0.6331674605552025,
+          "roc_auc": 0.9448812230570394,
+          "fit_seconds": 2.171301582000069
+        }
+      ],
+      "chosen": {
+        "n_estimators": 200,
+        "max_samples": 4096,
+        "max_features": 0.5
+      }
+    },
+    "lof": {
+      "candidates": [
+        {
+          "params": {
+            "n_neighbors": 20,
+            "max_train_samples": 10000
+          },
+          "pr_auc": 0.5422916883296677,
+          "roc_auc": 0.9073951522263708,
+          "fit_seconds": 1.062355660999856
+        },
+        {
+          "params": {
+            "n_neighbors": 10,
+            "max_train_samples": 10000
+          },
+          "pr_auc": 0.6278632641915327,
+          "roc_auc": 0.9247708241795528,
+          "fit_seconds": 1.0412713129999247
+        },
+        {
+          "params": {
+            "n_neighbors": 50,
+            "max_train_samples": 10000
+          },
+          "pr_auc": 0.4892099431052758,
+          "roc_auc": 0.8992015989783866,
+          "fit_seconds": 1.174735999999939
+        },
+        {
+          "params": {
+            "n_neighbors": 20,
+            "max_train_samples": 30000
+          },
+          "pr_auc": 0.6644920515746304,
+          "roc_auc": 0.9312155997785498,
+          "fit_seconds": 2.8901013889999376
+        },
+        {
+          "params": {
+            "n_neighbors": 10,
+            "max_train_samples": 30000
+          },
+          "pr_auc": 0.7358372850375484,
+          "roc_auc": 0.9568889810074334,
+          "fit_seconds": 2.913301102999867
+        },
+        {
+          "params": {
+            "n_neighbors": 50,
+            "max_train_samples": 30000
+          },
+          "pr_auc": 0.6107052354002483,
+          "roc_auc": 0.9296310932190165,
+          "fit_seconds": 3.0755442089998724
+        }
+      ],
+      "chosen": {
+        "n_neighbors": 10,
+        "max_train_samples": 30000
+      }
+    },
+    "autoencoder": {
+      "candidates": [
+        {
+          "params": {
+            "hidden_layer_sizes": null,
+            "max_iter": 60,
+            "alpha": 0.0001,
+            "bottleneck_ratio": 0.25
+          },
+          "pr_auc": 0.7961674148452755,
+          "roc_auc": 0.9603871560777562,
+          "fit_seconds": 10.817725603999861
+        },
+        {
+          "params": {
+            "hidden_layer_sizes": null,
+            "max_iter": 200,
+            "alpha": 0.0001,
+            "bottleneck_ratio": 0.25
+          },
+          "pr_auc": 0.8027048070163855,
+          "roc_auc": 0.9601555325849455,
+          "fit_seconds": 13.105531775000145
+        },
+        {
+          "params": {
+            "hidden_layer_sizes": null,
+            "max_iter": 200,
+            "alpha": 0.001,
+            "bottleneck_ratio": 0.25
+          },
+          "pr_auc": 0.7996477941493161,
+          "roc_auc": 0.9606516075123949,
+          "fit_seconds": 16.014664235000055
+        },
+        {
+          "params": {
+            "hidden_layer_sizes": null,
+            "max_iter": 200,
+            "alpha": 0.0001,
+            "bottleneck_ratio": 0.5
+          },
+          "pr_auc": 0.7782697742343297,
+          "roc_auc": 0.940110849569084,
+          "fit_seconds": 28.65181336600017
+        }
+      ],
+      "chosen": {
+        "hidden_layer_sizes": null,
+        "max_iter": 200,
+        "alpha": 0.0001,
+        "bottleneck_ratio": 0.25
+      }
+    }
+  },
+  "stage2_ensemble": {
+    "candidates": [
+      {
+        "detectors": [
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.9349893751853381,
+        "roc_auc": 0.9864898796030805
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.921932169823825,
+        "roc_auc": 0.9867212374791705
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.8946805004098698,
+        "roc_auc": 0.9846393107720204
+      },
+      {
+        "detectors": [
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.8254303118217545,
+        "roc_auc": 0.972908191208395
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.8235373751165248,
+        "roc_auc": 0.9740661544433848
+      },
+      {
+        "detectors": [
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.8035465533838317,
+        "roc_auc": 0.9601540531283709
+      },
+      {
+        "detectors": [
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.8035465533838317,
+        "roc_auc": 0.9601540531283709
+      },
+      {
+        "detectors": [
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.8027048070163855,
+        "roc_auc": 0.9601555325849455
+      },
+      {
+        "detectors": [
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.8027048070163855,
+        "roc_auc": 0.9601555325849455
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.8022076106421308,
+        "roc_auc": 0.9733453220725552
+      },
+      {
+        "detectors": [
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.7894713869151899,
+        "roc_auc": 0.9619547688426215
+      },
+      {
+        "detectors": [
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.7805607292896899,
+        "roc_auc": 0.9608119171997851
+      },
+      {
+        "detectors": [
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.7698523541376211,
+        "roc_auc": 0.9611846688542061
+      },
+      {
+        "detectors": [
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.7561262143888061,
+        "roc_auc": 0.9538976254893345
+      },
+      {
+        "detectors": [
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.7542234320069627,
+        "roc_auc": 0.9533040320960963
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.7466851083678876,
+        "roc_auc": 0.9570470915026184
+      },
+      {
+        "detectors": [
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.7421943426573598,
+        "roc_auc": 0.9611177134478832
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.7418906723054007,
+        "roc_auc": 0.9576570617375515
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.7383713948179792,
+        "roc_auc": 0.9496266457097929
+      },
+      {
+        "detectors": [
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.7367765640061632,
+        "roc_auc": 0.9568904975932269
+      },
+      {
+        "detectors": [
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.7367765640061632,
+        "roc_auc": 0.9568904975932269
+      },
+      {
+        "detectors": [
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.7358372850375484,
+        "roc_auc": 0.9568889810074334
+      },
+      {
+        "detectors": [
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.7358372850375484,
+        "roc_auc": 0.9568889810074334
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.7294446424244828,
+        "roc_auc": 0.9549418876312175
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.72151184704847,
+        "roc_auc": 0.9301132189844783
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.7141209242686282,
+        "roc_auc": 0.9474799570763379
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.7023050406855469,
+        "roc_auc": 0.9451551481547236
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.7003720442227466,
+        "roc_auc": 0.935681199499978
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.6903414691454426,
+        "roc_auc": 0.9458024503913648
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.6790412304564271,
+        "roc_auc": 0.9368445921692306
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.6735610902367539,
+        "roc_auc": 0.9210993870365787
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.6721461101346816,
+        "roc_auc": 0.934026158848624
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.6708780854527623,
+        "roc_auc": 0.9169813567907743
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.6664513502704761,
+        "roc_auc": 0.9418687638620511
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.6530959437438894,
+        "roc_auc": 0.9154303722038557
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.6501927344917536,
+        "roc_auc": 0.947219498460794
+      },
+      {
+        "detectors": [
+          "iforest"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.6334488489703823,
+        "roc_auc": 0.9448821255826717
+      },
+      {
+        "detectors": [
+          "iforest"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.6334488489703823,
+        "roc_auc": 0.9448821255826717
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.6332806360203155,
+        "roc_auc": 0.9287111168537636
+      },
+      {
+        "detectors": [
+          "iforest"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.6331674605552025,
+        "roc_auc": 0.9448812230570394
+      },
+      {
+        "detectors": [
+          "iforest"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.6331674605552025,
+        "roc_auc": 0.9448812230570394
+      },
+      {
+        "detectors": [
+          "iforest",
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.6308956245282417,
+        "roc_auc": 0.9446194620627348
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.6152441601176847,
+        "roc_auc": 0.8625759549578018
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.6149896632567398,
+        "roc_auc": 0.927699754056053
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.5814832414662189,
+        "roc_auc": 0.930744892675993
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "autoencoder"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.579236498760643,
+        "roc_auc": 0.8433352994682867
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.5437905105162841,
+        "roc_auc": 0.9159894696965023
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.5361876944323414,
+        "roc_auc": 0.8586067271975757
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.5263596581945307,
+        "roc_auc": 0.9159598834211069
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.5245031899331337,
+        "roc_auc": 0.8891283504550443
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.5130427215454537,
+        "roc_auc": 0.9041406505084875
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "lof"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.4821934197534194,
+        "roc_auc": 0.8493700399647488
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.46692013798340204,
+        "roc_auc": 0.8804441345773106
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.41627872604904925,
+        "roc_auc": 0.8507937827179822
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "autoencoder"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.4003459584752311,
+        "roc_auc": 0.818303348347247
+      },
+      {
+        "detectors": [
+          "robust_z",
+          "iforest"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.36396346867807017,
+        "roc_auc": 0.8218689529354588
+      },
+      {
+        "detectors": [
+          "robust_z"
+        ],
+        "normalization": "rank",
+        "combine": "mean",
+        "pr_auc": 0.21144274418935982,
+        "roc_auc": 0.6043896761806578
+      },
+      {
+        "detectors": [
+          "robust_z"
+        ],
+        "normalization": "rank",
+        "combine": "max",
+        "pr_auc": 0.21144274418935982,
+        "roc_auc": 0.6043896761806578
+      },
+      {
+        "detectors": [
+          "robust_z"
+        ],
+        "normalization": "tail",
+        "combine": "mean",
+        "pr_auc": 0.20990152624641317,
+        "roc_auc": 0.604388502326117
+      },
+      {
+        "detectors": [
+          "robust_z"
+        ],
+        "normalization": "tail",
+        "combine": "max",
+        "pr_auc": 0.20990152624641317,
+        "roc_auc": 0.604388502326117
+      }
+    ],
+    "chosen": {
+      "detectors": [
+        "lof",
+        "autoencoder"
+      ],
+      "normalization": "rank",
+      "combine": "mean",
+      "pr_auc": 0.9349893751853381,
+      "roc_auc": 0.9864898796030805
+    }
+  },
+  "stage3_threshold": {
+    "candidates": [
+      {
+        "percentile": 99.0,
+        "threshold": 0.9572064967175378,
+        "f1": 0.8568275862068966,
+        "recall": 0.7804020100502512,
+        "false_positive_rate": 0.008389032874096303
+      },
+      {
+        "percentile": 99.5,
+        "threshold": 0.9724707988745844,
+        "f1": 0.6688517425980552,
+        "recall": 0.5127303182579565,
+        "false_positive_rate": 0.004160414677397354
+      },
+      {
+        "percentile": 98.0,
+        "threshold": 0.9262818654616762,
+        "f1": 0.8803565306822078,
+        "recall": 0.8603015075376884,
+        "false_positive_rate": 0.019165188923748466
+      },
+      {
+        "percentile": 97.0,
+        "threshold": 0.8991148009207947,
+        "f1": 0.8864265927977839,
+        "recall": 0.9112227805695142,
+        "false_positive_rate": 0.029463920338289457
+      },
+      {
+        "percentile": 95.0,
+        "threshold": 0.8542597408133684,
+        "f1": 0.8706203549218868,
+        "recall": 0.9614740368509213,
+        "false_positive_rate": 0.05033419724457782
+      },
+      {
+        "percentile": 90.0,
+        "threshold": 0.7856935800153466,
+        "f1": 0.8006279434850864,
+        "recall": 0.9824120603015075,
+        "false_positive_rate": 0.09603055517664712
+      }
+    ],
+    "chosen": 97.0
+  },
+  "improved_val": {
+    "pr_auc": 0.9349893751853381,
+    "roc_auc": 0.9864898796030805,
+    "f1": 0.8864265927977839,
+    "recall": 0.9112227805695142,
+    "false_positive_rate": 0.029463920338289457,
+    "fit_seconds": 16.17427038300002
+  },
+  "hybrid_val": {
+    "pr_auc": 0.9966203784840898,
+    "roc_auc": 0.9988797971807841,
+    "f1": 0.9305088720393966,
+    "recall": 0.9969849246231156,
+    "false_positive_rate": 0.02970263265584504
+  },
+  "best_model": "hybrid"
+}

@@ -1,0 +1,200 @@
+{
+  "robust_z": {
+    "threshold": 6.981783734889435,
+    "precision": 0.9975062344139651,
+    "recall": 1.0,
+    "f1": 0.9987515605493134,
+    "false_positive_rate": 0.0005,
+    "roc_auc": 0.9998843749999999,
+    "pr_auc": 0.9993448681451805,
+    "confusion_matrix": {
+      "tn": 3998,
+      "fp": 2,
+      "fn": 0,
+      "tp": 800
+    },
+    "recall_per_attack": {
+      "bruteforce": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "dos": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "exfiltration": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "portscan": {
+        "recall": 1.0,
+        "count": 200
+      }
+    }
+  },
+  "iforest": {
+    "threshold": 0.6123332389150635,
+    "precision": 0.9398058252427185,
+    "recall": 0.605,
+    "f1": 0.7361216730038023,
+    "false_positive_rate": 0.00775,
+    "roc_auc": 0.9732128124999999,
+    "pr_auc": 0.888438357256789,
+    "confusion_matrix": {
+      "tn": 3969,
+      "fp": 31,
+      "fn": 316,
+      "tp": 484
+    },
+    "recall_per_attack": {
+      "bruteforce": {
+        "recall": 0.0,
+        "count": 200
+      },
+      "dos": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "exfiltration": {
+        "recall": 0.42,
+        "count": 200
+      },
+      "portscan": {
+        "recall": 1.0,
+        "count": 200
+      }
+    }
+  },
+  "lof": {
+    "threshold": 1.5169548798292838,
+    "precision": 0.9569377990430622,
+    "recall": 1.0,
+    "f1": 0.9779951100244498,
+    "false_positive_rate": 0.009,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": {
+      "tn": 3964,
+      "fp": 36,
+      "fn": 0,
+      "tp": 800
+    },
+    "recall_per_attack": {
+      "bruteforce": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "dos": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "exfiltration": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "portscan": {
+        "recall": 1.0,
+        "count": 200
+      }
+    }
+  },
+  "autoencoder": {
+    "threshold": 0.9502423877227689,
+    "precision": 0.9682337992376112,
+    "recall": 0.9525,
+    "f1": 0.9603024574669187,
+    "false_positive_rate": 0.00625,
+    "roc_auc": 0.9990521875,
+    "pr_auc": 0.9950883494697697,
+    "confusion_matrix": {
+      "tn": 3975,
+      "fp": 25,
+      "fn": 38,
+      "tp": 762
+    },
+    "recall_per_attack": {
+      "bruteforce": {
+        "recall": 0.81,
+        "count": 200
+      },
+      "dos": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "exfiltration": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "portscan": {
+        "recall": 1.0,
+        "count": 200
+      }
+    }
+  },
+  "ensemble": {
+    "threshold": 0.9665734375,
+    "precision": 0.9577464788732394,
+    "recall": 0.935,
+    "f1": 0.946236559139785,
+    "false_positive_rate": 0.00825,
+    "roc_auc": 0.998665625,
+    "pr_auc": 0.99293498811164,
+    "confusion_matrix": {
+      "tn": 3967,
+      "fp": 33,
+      "fn": 52,
+      "tp": 748
+    },
+    "recall_per_attack": {
+      "bruteforce": {
+        "recall": 0.74,
+        "count": 200
+      },
+      "dos": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "exfiltration": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "portscan": {
+        "recall": 1.0,
+        "count": 200
+      }
+    }
+  },
+  "random_forest (supervised)": {
+    "threshold": 0.5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_positive_rate": 0.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": {
+      "tn": 4000,
+      "fp": 0,
+      "fn": 0,
+      "tp": 800
+    },
+    "recall_per_attack": {
+      "bruteforce": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "dos": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "exfiltration": {
+        "recall": 1.0,
+        "count": 200
+      },
+      "portscan": {
+        "recall": 1.0,
+        "count": 200
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+\section{Requirements Gathering Techniques Used}
+\label{sec:req-gathering}
+
+A requirements gathering technique is a method for discovering and analysing what stakeholders need from a system, such as interviews, surveys, workshops, observation, document analysis or prototyping \cite{sommerville2016se}. The choice of techniques depends on the project. This project is a research prototype without an external client, and its users (security analysts) were not directly accessible to the team, so requirements were drawn mainly from published knowledge, the data itself and expert guidance. Three techniques were used. Interviews and surveys with practitioners were not carried out, and are a candidate technique for validating the dashboard requirements in the next increment.
+
+\subsection{Literature and Existing System Review}
+
+The team studied published research on machine learning for intrusion detection, anomaly detection and malware analysis \cite{buczak2016survey,chandola2009anomaly,ucci2019malware}, together with critical studies of how such systems are evaluated \cite{sommer2010outside,arp2022dos}. The team also reviewed the documentation of existing security platforms (Section~2.1). This review shaped several requirements. The need to cover unseen attacks led to the anomaly module (FR-A1 to FR-A4). The known weaknesses of accuracy-only evaluation led to the accuracy and explainability attributes. The way commercial platforms combine evidence from several sources informed the integration requirements (FR-S1 to FR-S7).
+
+\subsection{Supervisor Meetings}
+
+Regular meetings with the project supervisor were used to agree the project scope, to divide the work into modules, and to review results as each module was developed. These meetings set the boundaries in Section~1.2, such as working in a controlled environment, making recommendations instead of automatic responses, and not handling live malware. They also determined the order of the increments and confirmed that integration should follow once the first three modules were complete.
+
+\subsection{Dataset and Document Analysis}
+
+The public datasets and their documentation were analysed in detail before and during development: CIC-IDS2017 \cite{sharafaldin2018cicids,cicids2017web}, NSL-KDD \cite{tavallaee2009nslkdd} and BODMAS \cite{yang2021bodmas}. This analysis defined the input formats of the modules (FR-N1, FR-M1), the class taxonomies (FR-N4, FR-M4) and several quality requirements. For example, examining CIC-IDS2017 revealed missing and infinite values, extreme class imbalance and a large number of duplicate flows. This led to the requirements on preprocessing, class-level metrics and leakage-free evaluation. Reference documents were also used: the MITRE ATT\&CK knowledge base for attack techniques \cite{strom2018attack} and NIST incident response guidance \cite{nist80061r3} for the steps an investigation should support.

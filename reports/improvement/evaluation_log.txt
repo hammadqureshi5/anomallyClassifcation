@@ -1,0 +1,58 @@
+[nsl-kdd] train {'rows': 125973, 'attacks': 58630, 'benign': 67343, 'attack_types': 22} | test {'rows': 22544, 'attacks': 12833, 'benign': 9711, 'attack_types': 37}
+  seed 42 baseline  accuracy=0.632 precision=0.896 recall=0.401 f1=0.554 false_positive_rate=0.062 roc_auc=0.938 pr_auc=0.913 fit=15.3s
+  seed 42 improved  accuracy=0.895 precision=0.910 recall=0.904 f1=0.907 false_positive_rate=0.118 roc_auc=0.927 pr_auc=0.898 fit=4.9s
+  seed 42 hybrid    accuracy=0.896 precision=0.909 recall=0.908 f1=0.909 false_positive_rate=0.120 roc_auc=0.954 pr_auc=0.958 fit=7.3s
+  seed 43 baseline  accuracy=0.601 precision=0.917 recall=0.328 f1=0.483 false_positive_rate=0.039 roc_auc=0.934 pr_auc=0.911 fit=15.7s
+  seed 43 improved  accuracy=0.887 precision=0.908 recall=0.891 f1=0.900 false_positive_rate=0.119 roc_auc=0.919 pr_auc=0.882 fit=4.4s
+  seed 43 hybrid    accuracy=0.889 precision=0.908 recall=0.897 f1=0.902 false_positive_rate=0.120 roc_auc=0.951 pr_auc=0.954 fit=6.8s
+  seed 44 baseline  accuracy=0.618 precision=0.884 recall=0.378 f1=0.530 false_positive_rate=0.066 roc_auc=0.934 pr_auc=0.908 fit=12.7s
+  seed 44 improved  accuracy=0.877 precision=0.905 recall=0.876 f1=0.890 false_positive_rate=0.121 roc_auc=0.929 pr_auc=0.923 fit=4.3s
+  seed 44 hybrid    accuracy=0.887 precision=0.906 recall=0.894 f1=0.900 false_positive_rate=0.122 roc_auc=0.950 pr_auc=0.955 fit=6.6s
+  ablation Original (v1)                accuracy=0.632 precision=0.896 recall=0.401 f1=0.554 false_positive_rate=0.062 roc_auc=0.938 pr_auc=0.913
+  ablation + feature selection          accuracy=0.632 precision=0.896 recall=0.401 f1=0.554 false_positive_rate=0.062 roc_auc=0.938 pr_auc=0.913
+  ablation + tuned detector settings    accuracy=0.636 precision=0.891 recall=0.410 f1=0.562 false_positive_rate=0.066 roc_auc=0.937 pr_auc=0.917
+  ablation + ensemble redesign          accuracy=0.795 precision=0.925 recall=0.697 f1=0.795 false_positive_rate=0.074 roc_auc=0.927 pr_auc=0.898
+  ablation + tuned threshold (= v2)     accuracy=0.895 precision=0.910 recall=0.904 f1=0.907 false_positive_rate=0.118 roc_auc=0.927 pr_auc=0.898
+  learning curve baseline n=1000: {'train_rows': 1000, 'train_pr_auc': 0.9315684850200385, 'val_pr_auc': 0.9324917640221121}
+  learning curve baseline n=3000: {'train_rows': 3000, 'train_pr_auc': 0.9469840259425633, 'val_pr_auc': 0.9539843841489153}
+  learning curve baseline n=10000: {'train_rows': 10000, 'train_pr_auc': 0.9604804380286277, 'val_pr_auc': 0.9631797298077984}
+  learning curve baseline n=30000: {'train_rows': 30000, 'train_pr_auc': 0.9737366550487482, 'val_pr_auc': 0.9751097544089141}
+  learning curve improved n=1000: {'train_rows': 1000, 'train_pr_auc': 0.9773496449602104, 'val_pr_auc': 0.9770675330606987}
+  learning curve improved n=3000: {'train_rows': 3000, 'train_pr_auc': 0.9857797198876984, 'val_pr_auc': 0.9844959652469978}
+  learning curve improved n=10000: {'train_rows': 10000, 'train_pr_auc': 0.9894203797945912, 'val_pr_auc': 0.9878433172864105}
+  learning curve improved n=30000: {'train_rows': 30000, 'train_pr_auc': 0.9900527027761136, 'val_pr_auc': 0.9875463245233947}
+  wrote /home/user/Desktop/anomally_detection/reports/improvement/nsl-kdd/results.json, results.md and figures/
+
+real	3m13.566s
+user	17m43.800s
+sys	0m3.221s
+[cicids2017] train {'rows': 176467, 'attacks': 29850, 'benign': 146617, 'attack_types': 13} | test {'rows': 75630, 'attacks': 12793, 'benign': 62837, 'attack_types': 13}
+  seed 42 baseline  accuracy=0.837 precision=0.636 recall=0.081 f1=0.143 false_positive_rate=0.009 roc_auc=0.919 pr_auc=0.590 fit=16.9s
+  seed 42 improved  accuracy=0.957 precision=0.861 recall=0.891 f1=0.876 false_positive_rate=0.029 roc_auc=0.982 pr_auc=0.905 fit=26.6s
+  seed 42 hybrid    accuracy=0.975 precision=0.873 recall=0.997 f1=0.931 false_positive_rate=0.030 roc_auc=0.999 pr_auc=0.998 fit=31.2s
+  seed 43 baseline  accuracy=0.825 precision=0.253 recall=0.016 f1=0.031 false_positive_rate=0.010 roc_auc=0.905 pr_auc=0.502 fit=15.0s
+  seed 43 improved  accuracy=0.950 precision=0.857 recall=0.848 f1=0.852 false_positive_rate=0.029 roc_auc=0.982 pr_auc=0.898 fit=38.1s
+  seed 43 hybrid    accuracy=0.975 precision=0.874 recall=0.997 f1=0.932 false_positive_rate=0.029 roc_auc=0.999 pr_auc=0.998 fit=43.0s
+  seed 44 baseline  accuracy=0.827 precision=0.321 recall=0.021 f1=0.040 false_positive_rate=0.009 roc_auc=0.913 pr_auc=0.510 fit=17.3s
+  seed 44 improved  accuracy=0.929 precision=0.833 recall=0.726 f1=0.776 false_positive_rate=0.030 roc_auc=0.969 pr_auc=0.871 fit=28.8s
+  seed 44 hybrid    accuracy=0.974 precision=0.871 recall=0.997 f1=0.930 false_positive_rate=0.030 roc_auc=0.999 pr_auc=0.998 fit=33.1s
+  ablation Original (v1)                accuracy=0.837 precision=0.636 recall=0.081 f1=0.143 false_positive_rate=0.009 roc_auc=0.919 pr_auc=0.590
+  ablation + feature selection          accuracy=0.830 precision=0.453 recall=0.037 f1=0.068 false_positive_rate=0.009 roc_auc=0.932 pr_auc=0.605
+  ablation + tuned detector settings    accuracy=0.847 precision=0.749 recall=0.144 f1=0.242 false_positive_rate=0.010 roc_auc=0.954 pr_auc=0.722
+  ablation + ensemble redesign          accuracy=0.926 precision=0.930 recall=0.607 f1=0.734 false_positive_rate=0.009 roc_auc=0.982 pr_auc=0.905
+  ablation + tuned threshold (= v2)     accuracy=0.957 precision=0.861 recall=0.891 f1=0.876 false_positive_rate=0.029 roc_auc=0.982 pr_auc=0.905
+  learning curve baseline n=1000: {'train_rows': 1000, 'train_pr_auc': 0.46573542632899506, 'val_pr_auc': 0.4649040266264946}
+  learning curve baseline n=3000: {'train_rows': 3000, 'train_pr_auc': 0.4833044746269952, 'val_pr_auc': 0.48652721629990187}
+  learning curve baseline n=10000: {'train_rows': 10000, 'train_pr_auc': 0.614217983348804, 'val_pr_auc': 0.6064732484896062}
+  learning curve baseline n=30000: {'train_rows': 30000, 'train_pr_auc': 0.6302397452319424, 'val_pr_auc': 0.6254742437451019}
+  learning curve baseline n=50000: {'train_rows': 50000, 'train_pr_auc': 0.5546320367568984, 'val_pr_auc': 0.555910812265891}
+  learning curve improved n=1000: {'train_rows': 1000, 'train_pr_auc': 0.5964103320637133, 'val_pr_auc': 0.6038682578826097}
+  learning curve improved n=3000: {'train_rows': 3000, 'train_pr_auc': 0.727363106166689, 'val_pr_auc': 0.729098767342434}
+  learning curve improved n=10000: {'train_rows': 10000, 'train_pr_auc': 0.8538461083077045, 'val_pr_auc': 0.8621861637531201}
+  learning curve improved n=30000: {'train_rows': 30000, 'train_pr_auc': 0.9285244698209398, 'val_pr_auc': 0.9306808105473368}
+  learning curve improved n=50000: {'train_rows': 50000, 'train_pr_auc': 0.9329832388815695, 'val_pr_auc': 0.9349893751853381}
+  wrote /home/user/Desktop/anomally_detection/reports/improvement/cicids2017/results.json, results.md and figures/
+
+real	7m11.986s
+user	46m27.964s
+sys	0m6.106s

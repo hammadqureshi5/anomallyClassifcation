@@ -1,0 +1,321 @@
+\section{Existing System Description}
+
+Studying existing systems shows which capabilities are already well served, which design choices have worked in practice, and where gaps remain that a new system could address. This section first summarises the research on which the project draws. It then reviews ten existing systems: four commercial platforms (Splunk Enterprise Security, Microsoft Sentinel, CrowdStrike Falcon and Elastic Security), four open-source tools (Wazuh, Security Onion, Snort and Suricata), the Zeek network monitor and the research system Kitsune. They were chosen to cover the main approaches to detection: security information and event management (SIEM), endpoint detection, rule-based network intrusion detection and machine learning-based anomaly detection. The capability statements below are based on each system's official documentation or the published paper.
+
+\subsection{Related Academic Work}
+
+Machine learning for intrusion detection has been studied extensively. Buczak and Guven survey supervised and unsupervised methods for cyber intrusion detection and note how strongly their reported performance depends on the dataset used \cite{buczak2016survey}. Anomaly detection, which models normal behaviour and flags deviations from it, is reviewed in general by Chandola \textit{et al.}~\cite{chandola2009anomaly} and for networks by Ahmed \textit{et al.}~\cite{ahmed2016anomaly}. Widely used unsupervised algorithms include Isolation Forest \cite{liu2008iforest}, Local Outlier Factor \cite{breunig2000lof} and autoencoders \cite{hinton2006autoencoder}. Kitsune applies an ensemble of autoencoders to network traffic in an online setting \cite{mirsky2018kitsune}. For classifying known attacks, tree ensembles such as Random Forest \cite{breiman2001rf} and gradient-boosted trees, including LightGBM \cite{ke2017lightgbm} and CatBoost \cite{prokhorenkova2018catboost}, are strong baselines on tabular flow features. In malware analysis, Ucci \textit{et al.} survey the use of machine learning on static and dynamic features \cite{ucci2019malware}, and the EMBER and BODMAS datasets provide standard feature representations of Windows PE files \cite{anderson2018ember,yang2021bodmas}.
+
+Several studies question how such results are obtained. Sommer and Paxson argue that network anomaly detection is harder than other machine learning tasks, because attacks are rare, errors are costly and normal traffic varies widely \cite{sommer2010outside}. Arp \textit{et al.} identify recurring evaluation pitfalls in security research, such as data snooping and unrealistic assumptions about the data \cite{arp2022dos}. Engelen \textit{et al.} report labelling and flow-construction problems in CIC-IDS2017 itself \cite{engelen2021troubleshooting}. These studies shaped the evaluation protocol of this project: held-out test data, imbalance-aware metrics and the removal of duplicate records.
+
+\subsection{Review of Existing Systems}
+
+\vspace{6pt}
+\textbf{Wazuh \cite{wazuhdocs}:} Wazuh is an open-source security platform that combines log collection and analysis, intrusion detection, file integrity monitoring and vulnerability detection using agents installed on monitored endpoints.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Rule-based collection and analysis of log data from many sources
+    \item Malware detection using rootkit checks, YARA rules, VirusTotal and hash lists
+    \item Mapping of alerts to MITRE ATT\&CK tactics and techniques
+    \item Active response scripts triggered by alerts on monitored endpoints
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Detection is mainly rule-based; machine learning-based anomaly detection is not documented as a core capability
+    \item No machine learning classification of network flows into attack families
+    \item Network visibility depends on logs from other devices instead of its own traffic analysis
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Splunk Enterprise Security \cite{splunkes}:} Splunk Enterprise Security is a commercial SIEM built on the Splunk data platform, used to search, correlate and investigate security events across an organisation.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Centralised collection, search and correlation of security data
+    \item User and entity behaviour analytics that learn normal behaviour
+    \item Coverage mapping against MITRE ATT\&CK
+    \item Built-in security orchestration, automation and response (SOAR)
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Commercial licensing, which can be costly for small organisations
+    \item Detection logic and models are not open for inspection or retraining by the user
+    \item Network traffic is analysed through ingested logs, not captured directly
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Microsoft Sentinel \cite{sentineldocs}:} Microsoft Sentinel is a cloud-native SIEM and SOAR service on Microsoft Azure that collects data from cloud and on-premises sources and applies analytic rules and machine learning to detect threats.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Analytic rules and anomaly detection over collected data
+    \item Incident grouping and investigation tools
+    \item MITRE ATT\&CK coverage views
+    \item Automation rules and playbooks for response
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Tied to the Azure cloud and to usage-based commercial pricing
+    \item Built-in machine learning models cannot be inspected
+    \item Requires data connectors and configuration effort to reach full value
+\end{itemize}
+
+\vspace{6pt}
+\textbf{CrowdStrike Falcon \cite{crowdstrikefalcon}:} CrowdStrike Falcon is a commercial, cloud-delivered platform centred on endpoint detection and response (EDR), extended with SIEM and SOAR capabilities.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item AI- and behaviour-based detection of malicious activity on endpoints
+    \item Malware prevention and detection
+    \item Mapping of detections to MITRE ATT\&CK
+    \item Remote real-time response and workflow automation
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Proprietary and subscription-based
+    \item Focused on endpoints; network flows are not analysed directly
+    \item Detection models are not open for inspection or adaptation
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Elastic Security \cite{elasticsecurity}:} Elastic Security is built on the Elasticsearch stack and combines SIEM, detection rules, machine learning anomaly detection jobs and endpoint protection.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Detection rules and machine learning anomaly detection jobs
+    \item Endpoint malware protection (Elastic Defend)
+    \item MITRE ATT\&CK coverage overview for its detection rules
+    \item Host isolation and other response actions
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Some capabilities, including response actions, require a paid subscription
+    \item Deploying and tuning the stack requires considerable expertise
+    \item No documented classification of network flows into attack families
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Security Onion \cite{securityonion}:} Security Onion is a free and open platform for network security monitoring, intrusion detection and log management that bundles tools such as Suricata, Zeek and Elasticsearch.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Network intrusion detection alerts and full packet capture
+    \item Network metadata from Zeek and Suricata
+    \item File analysis with YARA rules
+    \item Centralised log storage and case management
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Detection relies mainly on the rules of its bundled tools
+    \item Interpreting the large volume of collected data still depends on the analyst
+    \item Machine learning-based classification is not a documented core feature
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Snort \cite{roesch1999snort}:} Snort is a long-established open-source network intrusion detection and prevention system that inspects packets against a set of rules.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Real-time packet inspection with rule-based detection
+    \item Inline deployment to block malicious packets
+    \item Free community ruleset and open-source engine
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Detects only what its rules describe, so new attacks need new rules
+    \item No machine learning-based anomaly detection
+    \item No log analysis or incident management functions
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Suricata \cite{suricata}:} Suricata is an open-source network intrusion detection, intrusion prevention and network security monitoring engine developed by the Open Information Security Foundation.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Rule-based detection of network attacks
+    \item Inline prevention mode
+    \item Network security monitoring output, including protocol logs
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Rule-based, with limited ability to detect unseen attacks
+    \item No built-in machine learning classification
+    \item Alerts must be interpreted and correlated in other tools
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Zeek \cite{paxson1999bro,zeekweb}:} Zeek (formerly Bro) is an open-source network analysis framework that turns traffic into detailed transaction logs and supports behaviour-based detection through its own scripting language.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item High-fidelity logs of network transactions across many protocols
+    \item Scriptable, behaviour-based detection
+    \item Widely used as a data source for other security tools
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Detection logic must be written as scripts by experts
+    \item No machine learning classification or malware analysis
+    \item No automated response
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Kitsune \cite{mirsky2018kitsune}:} Kitsune is a research network intrusion detection system that uses an ensemble of autoencoders to detect anomalies in network traffic online and without supervision.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Unsupervised learning of normal traffic, so no labelled attacks are needed
+    \item Online operation on live packet streams
+    \item Open-source reference implementation
+\end{itemize}
+
+The limitations of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Produces an anomaly score only, without naming the type of attack
+    \item Addresses network anomalies only (no malware or log analysis)
+    \item A research prototype without a user interface or response functions
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Proposed System:} The proposed system is a modular platform that applies machine learning to several kinds of security evidence. It combines supervised classification of known threats with unsupervised detection of unseen behaviour, and returns explainable, structured results.
+
+The main features of the application are listed below:
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item Classification of network flows into attack families (implemented)
+    \item Malware detection and malware category classification (implemented)
+    \item Unsupervised anomaly detection with per-alert explanations (implemented)
+    \item MITRE ATT\&CK context for network threats (implemented)
+    \item Log analysis (in progress); correlation, risk analysis, investigation agent and dashboard (planned)
+\end{itemize}
+
+Table~\ref{tab:App-Comp} compares the reviewed systems with the proposed system. The proposed system is not intended to replace these mature platforms. Its contribution is to bring supervised classification of flows and malware together with unsupervised anomaly detection in one open, explainable design. None of the reviewed systems documents machine learning classification of network flows into attack families. The proposed system does not include rule-based detection, which remains a strength of the established tools, and it deliberately produces response recommendations instead of executing automatic responses.
+
+{\footnotesize
+\begin{center}
+\begin{longtable}{l|ccccccccccc}
+    \caption[Applications Comparison]{\label{tab:App-Comp}Applications Comparison (\cmark: documented capability; \pmark: partial, limited or unclear; \xmark: not documented. For the proposed system, \cmark{} means implemented at mid-term and \pmark{} means in progress, planned or limited by design.)}\\
+    \hline
+    \hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Features}}}
+           & \multicolumn{11}{c}{\textbf{Applications}} \\ \cline{2-12}
+            & \rotatebox{90}{Wazuh \cite{wazuhdocs}}
+            & \rotatebox{90}{Splunk ES \cite{splunkes}}
+            & \rotatebox{90}{MS Sentinel \cite{sentineldocs}}
+            & \rotatebox{90}{CrowdStrike \cite{crowdstrikefalcon}}
+            & \rotatebox{90}{Elastic Sec. \cite{elasticsecurity}}
+            & \rotatebox{90}{Sec. Onion \cite{securityonion}}
+            & \rotatebox{90}{Snort \cite{roesch1999snort}}
+            & \rotatebox{90}{Suricata \cite{suricata}}
+            & \rotatebox{90}{Zeek \cite{zeekweb}}
+            & \rotatebox{90}{Kitsune \cite{mirsky2018kitsune}}
+            & \rotatebox{90}{Proposed} \\
+        \hline
+\endfirsthead
+\multicolumn{12}{l}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Features}}}
+           & \multicolumn{11}{c}{\textbf{Applications}} \\ \cline{2-12}
+            & \rotatebox{90}{Wazuh}
+            & \rotatebox{90}{Splunk ES}
+            & \rotatebox{90}{MS Sentinel}
+            & \rotatebox{90}{CrowdStrike}
+            & \rotatebox{90}{Elastic Sec.}
+            & \rotatebox{90}{Sec. Onion}
+            & \rotatebox{90}{Snort}
+            & \rotatebox{90}{Suricata}
+            & \rotatebox{90}{Zeek}
+            & \rotatebox{90}{Kitsune}
+            & \rotatebox{90}{Proposed} \\
+        \hline
+\endhead
+\hline \multicolumn{12}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+      Network traffic monitoring          & \pmark&\pmark&\pmark&\pmark&\pmark&\cmark&\cmark&\cmark&\cmark&\cmark&\pmark \\
+      Signature / rule-based detection    & \cmark&\cmark&\cmark&\cmark&\cmark&\cmark&\cmark&\cmark&\pmark&\xmark&\xmark \\
+      ML / behavioural anomaly detection  & \pmark&\cmark&\cmark&\cmark&\cmark&\pmark&\xmark&\xmark&\cmark&\cmark&\cmark \\
+      ML classification of flow attacks   & \xmark&\xmark&\xmark&\xmark&\xmark&\xmark&\xmark&\xmark&\xmark&\xmark&\cmark \\
+      Malware detection / classification  & \cmark&\pmark&\pmark&\cmark&\cmark&\cmark&\pmark&\pmark&\pmark&\xmark&\cmark \\
+      Log analysis (SIEM)                 & \cmark&\cmark&\cmark&\cmark&\cmark&\cmark&\xmark&\xmark&\xmark&\xmark&\pmark \\
+      MITRE ATT\&CK mapping               & \cmark&\cmark&\cmark&\cmark&\cmark&\pmark&\xmark&\xmark&\xmark&\xmark&\cmark \\
+      Open source or free                 & \cmark&\xmark&\xmark&\xmark&\pmark&\cmark&\cmark&\cmark&\cmark&\cmark&\pmark \\
+      Automated response                  & \cmark&\cmark&\cmark&\cmark&\cmark&\pmark&\cmark&\cmark&\xmark&\xmark&\pmark \\
+\end{longtable}
+\end{center}}
+
+\vspace{-35pt}

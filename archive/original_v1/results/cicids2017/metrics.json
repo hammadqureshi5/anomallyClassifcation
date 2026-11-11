@@ -1,0 +1,440 @@
+{
+  "robust_z": {
+    "threshold": 11.08191919165685,
+    "precision": 0.08333333333333333,
+    "recall": 0.003763890548452623,
+    "f1": 0.007202469418086201,
+    "false_positive_rate": 0.010163525702133901,
+    "roc_auc": 0.5374543045082877,
+    "pr_auc": 0.19088594046569163,
+    "confusion_matrix": {
+      "tn": 67492,
+      "fp": 693,
+      "fn": 16675,
+      "tp": 63
+    },
+    "recall_per_attack": {
+      "Bot": {
+        "recall": 0.0,
+        "count": 47
+      },
+      "DDoS": {
+        "recall": 0.0,
+        "count": 3887
+      },
+      "DoS GoldenEye": {
+        "recall": 0.1547,
+        "count": 278
+      },
+      "DoS Hulk": {
+        "recall": 0.0,
+        "count": 6937
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.0,
+        "count": 174
+      },
+      "DoS slowloris": {
+        "recall": 0.0,
+        "count": 173
+      },
+      "FTP-Patator": {
+        "recall": 0.0,
+        "count": 222
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 0.0,
+        "count": 1
+      },
+      "PortScan": {
+        "recall": 0.004,
+        "count": 4759
+      },
+      "SSH-Patator": {
+        "recall": 0.0,
+        "count": 195
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd Sql Injection": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.0,
+        "count": 21
+      }
+    }
+  },
+  "iforest": {
+    "threshold": 0.6227159482212264,
+    "precision": 0.15465116279069768,
+    "recall": 0.007945991157844426,
+    "f1": 0.015115354017501989,
+    "false_positive_rate": 0.01066216909877539,
+    "roc_auc": 0.8124957187344639,
+    "pr_auc": 0.42605181096299616,
+    "confusion_matrix": {
+      "tn": 67458,
+      "fp": 727,
+      "fn": 16605,
+      "tp": 133
+    },
+    "recall_per_attack": {
+      "Bot": {
+        "recall": 0.0,
+        "count": 47
+      },
+      "DDoS": {
+        "recall": 0.0,
+        "count": 3887
+      },
+      "DoS GoldenEye": {
+        "recall": 0.0,
+        "count": 278
+      },
+      "DoS Hulk": {
+        "recall": 0.0009,
+        "count": 6937
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.5,
+        "count": 174
+      },
+      "DoS slowloris": {
+        "recall": 0.1908,
+        "count": 173
+      },
+      "FTP-Patator": {
+        "recall": 0.0,
+        "count": 222
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "PortScan": {
+        "recall": 0.0011,
+        "count": 4759
+      },
+      "SSH-Patator": {
+        "recall": 0.0,
+        "count": 195
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd Sql Injection": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.0,
+        "count": 21
+      }
+    }
+  },
+  "lof": {
+    "threshold": 4.168349560296095,
+    "precision": 0.6670870113493065,
+    "recall": 0.09481419524435417,
+    "f1": 0.1660302348694879,
+    "false_positive_rate": 0.011615457945295886,
+    "roc_auc": 0.8870298146591532,
+    "pr_auc": 0.5934164409157946,
+    "confusion_matrix": {
+      "tn": 67393,
+      "fp": 792,
+      "fn": 15151,
+      "tp": 1587
+    },
+    "recall_per_attack": {
+      "Bot": {
+        "recall": 0.0,
+        "count": 47
+      },
+      "DDoS": {
+        "recall": 0.0005,
+        "count": 3887
+      },
+      "DoS GoldenEye": {
+        "recall": 0.0,
+        "count": 278
+      },
+      "DoS Hulk": {
+        "recall": 0.0326,
+        "count": 6937
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.1322,
+        "count": 174
+      },
+      "DoS slowloris": {
+        "recall": 0.0231,
+        "count": 173
+      },
+      "FTP-Patator": {
+        "recall": 0.0,
+        "count": 222
+      },
+      "Heartbleed": {
+        "recall": 0.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 0.0,
+        "count": 1
+      },
+      "PortScan": {
+        "recall": 0.269,
+        "count": 4759
+      },
+      "SSH-Patator": {
+        "recall": 0.0051,
+        "count": 195
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.7805,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd Sql Injection": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.9048,
+        "count": 21
+      }
+    }
+  },
+  "autoencoder": {
+    "threshold": 0.06722091309407968,
+    "precision": 0.767078488372093,
+    "recall": 0.1261202055203728,
+    "f1": 0.21662390969728065,
+    "false_positive_rate": 0.009400894624917503,
+    "roc_auc": 0.8976802837423328,
+    "pr_auc": 0.6802640915177379,
+    "confusion_matrix": {
+      "tn": 67544,
+      "fp": 641,
+      "fn": 14627,
+      "tp": 2111
+    },
+    "recall_per_attack": {
+      "Bot": {
+        "recall": 0.0,
+        "count": 47
+      },
+      "DDoS": {
+        "recall": 0.1639,
+        "count": 3887
+      },
+      "DoS GoldenEye": {
+        "recall": 0.2338,
+        "count": 278
+      },
+      "DoS Hulk": {
+        "recall": 0.171,
+        "count": 6937
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.6724,
+        "count": 174
+      },
+      "DoS slowloris": {
+        "recall": 0.5434,
+        "count": 173
+      },
+      "FTP-Patator": {
+        "recall": 0.0,
+        "count": 222
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "PortScan": {
+        "recall": 0.0021,
+        "count": 4759
+      },
+      "SSH-Patator": {
+        "recall": 0.0,
+        "count": 195
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd Sql Injection": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.0,
+        "count": 21
+      }
+    }
+  },
+  "ensemble": {
+    "threshold": 0.9217970395046985,
+    "precision": 0.2900763358778626,
+    "recall": 0.015891982315688852,
+    "f1": 0.03013310676862079,
+    "false_positive_rate": 0.009547554447459118,
+    "roc_auc": 0.8784708808622189,
+    "pr_auc": 0.5569103160843044,
+    "confusion_matrix": {
+      "tn": 67534,
+      "fp": 651,
+      "fn": 16472,
+      "tp": 266
+    },
+    "recall_per_attack": {
+      "Bot": {
+        "recall": 0.0,
+        "count": 47
+      },
+      "DDoS": {
+        "recall": 0.0,
+        "count": 3887
+      },
+      "DoS GoldenEye": {
+        "recall": 0.1763,
+        "count": 278
+      },
+      "DoS Hulk": {
+        "recall": 0.0007,
+        "count": 6937
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.5402,
+        "count": 174
+      },
+      "DoS slowloris": {
+        "recall": 0.526,
+        "count": 173
+      },
+      "FTP-Patator": {
+        "recall": 0.0,
+        "count": 222
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "PortScan": {
+        "recall": 0.0053,
+        "count": 4759
+      },
+      "SSH-Patator": {
+        "recall": 0.0,
+        "count": 195
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 0.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd Sql Injection": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 0.0,
+        "count": 21
+      }
+    }
+  },
+  "random_forest (supervised)": {
+    "threshold": 0.5,
+    "precision": 0.996062522372032,
+    "recall": 0.997490739634365,
+    "f1": 0.996776119402985,
+    "false_positive_rate": 0.0009679548287746572,
+    "roc_auc": 0.9997080257734704,
+    "pr_auc": 0.997863886438802,
+    "confusion_matrix": {
+      "tn": 68119,
+      "fp": 66,
+      "fn": 42,
+      "tp": 16696
+    },
+    "recall_per_attack": {
+      "Bot": {
+        "recall": 0.7447,
+        "count": 47
+      },
+      "DDoS": {
+        "recall": 0.9992,
+        "count": 3887
+      },
+      "DoS GoldenEye": {
+        "recall": 0.9964,
+        "count": 278
+      },
+      "DoS Hulk": {
+        "recall": 0.9983,
+        "count": 6937
+      },
+      "DoS Slowhttptest": {
+        "recall": 0.9885,
+        "count": 174
+      },
+      "DoS slowloris": {
+        "recall": 0.9942,
+        "count": 173
+      },
+      "FTP-Patator": {
+        "recall": 1.0,
+        "count": 222
+      },
+      "Heartbleed": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "Infiltration": {
+        "recall": 1.0,
+        "count": 1
+      },
+      "PortScan": {
+        "recall": 0.9996,
+        "count": 4759
+      },
+      "SSH-Patator": {
+        "recall": 0.9641,
+        "count": 195
+      },
+      "Web Attack \u00ef\u00bf\u00bd Brute Force": {
+        "recall": 1.0,
+        "count": 41
+      },
+      "Web Attack \u00ef\u00bf\u00bd Sql Injection": {
+        "recall": 0.0,
+        "count": 2
+      },
+      "Web Attack \u00ef\u00bf\u00bd XSS": {
+        "recall": 1.0,
+        "count": 21
+      }
+    }
+  }
+}

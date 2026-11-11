@@ -1,0 +1,37 @@
+# Anomaly detection module configuration.
+# Any key left out falls back to the default in anomaly_detection/config.py.
+
+# Detectors combined in the ensemble. Options: robust_z, iforest, lof, autoencoder
+detectors: [robust_z, iforest, lof, autoencoder]
+
+# Detector whose decisions produce alerts ("ensemble" or one of the detectors above).
+primary_detector: ensemble
+
+# Anomaly threshold = this percentile of scores on held-out BENIGN validation traffic.
+# 99.0 means about 1% of normal traffic gets flagged (false-positive budget).
+threshold_percentile: 99.0
+
+# Severity cutoffs, as percentiles of benign validation scores.
+severity_percentiles:
+  medium: 99.7
+  high: 99.95
+
+val_fraction: 0.2          # share of benign training traffic held out for thresholds
+max_train_samples: 50000   # cap on benign rows used to fit detectors
+random_state: 42
+top_k_features: 3          # features listed per alert as the explanation
+
+iforest:
+  n_estimators: 200
+
+lof:
+  n_neighbors: 20
+  max_train_samples: 10000  # LOF is slow on large data
+
+autoencoder:
+  hidden_layer_sizes: null  # null = sized automatically from the number of features
+  max_iter: 60
+
+data:
+  cicids_sample_frac: 0.1   # CIC-IDS2017 is ~2.8M rows; sample this fraction of each CSV
+  test_size: 0.3            # test split for datasets without a separate test file

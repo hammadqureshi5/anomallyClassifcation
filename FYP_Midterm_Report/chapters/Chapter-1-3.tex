@@ -1,0 +1,17 @@
+\section{Objectives}
+
+The primary goal of the project is to build and evaluate an AI-based platform that helps security analysts detect, classify and understand threats across different kinds of security data. This goal is divided into the following objectives. Objectives 1--5 belong to the first half of the project and are the subject of this mid-term report; objectives 6--9 belong to the second half.
+
+\begin{enumerate}[label=\textbf{O\arabic*.}, leftmargin=*, itemsep=2pt, topsep=2pt]
+  \item \textbf{Network threat classification.} Train a classifier that separates benign and malicious network flows and assigns attacks to families, and report class-level precision, recall and F1-score in addition to overall accuracy. \textit{(Achieved for CIC-IDS2017.)}
+  \item \textbf{Malware classification.} Train a two-stage model that detects malicious PE samples and assigns them to malware categories, using the BODMAS dataset. \textit{(Achieved; metrics to be re-confirmed against the saved model files before the final report.)}
+  \item \textbf{Anomaly detection for unseen attacks.} Build an unsupervised detector trained only on normal traffic, and measure how many attack types absent from its training data it can still detect. \textit{(Achieved on NSL-KDD and CIC-IDS2017.)}
+  \item \textbf{Sound evaluation.} Evaluate every model on held-out data that is never used for training or tuning, fit preprocessing on training data only, and report metrics suited to imbalanced data, such as macro F1-score and PR-AUC \cite{saito2015pr}. \textit{(Achieved for the three modules.)}
+  \item \textbf{Explainable and structured output.} Make each module return structured results (labels, confidence values, severity levels and the main contributing features) that later components can consume. \textit{(Achieved at module level.)}
+  \item \textbf{Integration.} Connect the modules through a shared backend so that their results can be stored, combined and displayed together. \textit{(Planned.)}
+  \item \textbf{Extended analysis.} Complete log analysis and develop incident correlation, vulnerability analysis, attack-path analysis, attack prediction and risk analysis. \textit{(Log analysis in progress; others planned.)}
+  \item \textbf{Investigation support.} Develop an investigation agent that summarises findings from several modules in plain language, linked to the underlying evidence. \textit{(Planned.)}
+  \item \textbf{Usability and feedback.} Provide a dashboard that presents alerts, incidents and risk levels, and lets analysts give feedback on the results. \textit{(Planned.)}
+\end{enumerate}
+
+In terms of quality, the project aims to keep false alarms at a level an analyst can manage and to make every reported number reproducible from saved code, configuration and data splits. In the long term, the platform is intended as a foundation that can be extended with new models and data sources without redesigning the existing modules.

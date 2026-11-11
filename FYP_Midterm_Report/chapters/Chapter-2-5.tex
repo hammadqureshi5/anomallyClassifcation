@@ -1,0 +1,55 @@
+\section{Software Process Model}
+
+A software process model is a structured description of the activities used to develop a system, such as requirements analysis, design, implementation, testing and deployment, and of the order in which they are carried out \cite{sommerville2016se}. Common models include the Waterfall model, in which phases follow one another strictly; Agile methods, which work in short, flexible iterations; the Spiral model, which focuses on risk; and the Incremental model, in which the system is delivered as a series of increments, each adding working functionality \cite{sommerville2016se,larman2003iterative}.
+
+\textbf{Chosen model.} The project follows the \textbf{Incremental model}. The system is divided into parts that are specified, built and tested in separate increments, each producing working functionality that later increments extend. Within each increment, the usual activities of analysis, design, implementation and testing are carried out in sequence (Figure~\ref{fig:process}).
+
+\textbf{Justification.}
+\begin{itemize}[itemsep=1pt, topsep=2pt]
+  \item \textit{Project complexity.} The proposed system has twelve modules. Building them all at once would be risky; developing them in increments allows each to be finished and evaluated before the next is started.
+  \item \textit{Team structure.} The first increment could be divided naturally among the three team members, each responsible for one analysis module. This is how the network, malware and anomaly modules were developed in parallel.
+  \item \textit{Flexibility.} Results from one increment inform the next. For example, the anomaly module's evaluation exposed duplicate records in CIC-IDS2017 and the need for recalibrated thresholds, and these findings will shape the integration work.
+  \item \textit{Timeline.} The academic calendar requires demonstrable progress at mid-term. The Incremental model guarantees that a tested subset of the system exists at that point.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[every node/.style={font=\small}]
+  \tikzset{ph/.style={draw, minimum width=20mm, minimum height=9mm, align=center, font=\scriptsize},
+           inc/.style={text width=50mm, minimum height=11mm, font=\scriptsize}}
+  \node[done, inc, anchor=west] (inc1) at (0,0)      {\textbf{Increment 1:} network, malware and\\anomaly detection modules};
+  \node[wip,  inc, anchor=west] (inc2) at (0,-16mm)  {\textbf{Increment 2:} log analysis,\\backend and integration};
+  \node[plan, inc, anchor=west] (inc3) at (0,-32mm)  {\textbf{Increment 3:} correlation, risk,\\vulnerability, investigation agent};
+  \node[plan, inc, anchor=west] (inc4) at (0,-48mm)  {\textbf{Increment 4:} dashboard,\\feedback, system testing};
+  \foreach \i/\lab in {1/Completed, 2/In progress, 3/Planned, 4/Planned} {
+    \node[ph, right=6mm of inc\i] (r\i) {Requirements};
+    \node[ph, right=2mm of r\i] (d\i) {Design};
+    \node[ph, right=2mm of d\i] (c\i) {Implemen-\\tation};
+    \node[ph, right=2mm of c\i] (t\i) {Testing and\\evaluation};
+    \node[right=3mm of t\i, font=\scriptsize\itshape, anchor=west] {\lab};
+    \draw[arr] (inc\i) -- (r\i);
+    \draw[-{Stealth[length=1.6mm]}] (r\i) -- (d\i);
+    \draw[-{Stealth[length=1.6mm]}] (d\i) -- (c\i);
+    \draw[-{Stealth[length=1.6mm]}] (c\i) -- (t\i);
+  }
+  \draw[arr] (inc1) -- (inc2);
+  \draw[arr] (inc2) -- (inc3);
+  \draw[arr] (inc3) -- (inc4);
+\end{tikzpicture}}
+\caption{Incremental development model applied to the project, with the status of each increment at mid-term}
+\label{fig:process}
+\end{figure}
+
+\textbf{Stages within each increment.}
+\begin{itemize}[itemsep=1pt, topsep=2pt]
+  \item \textit{Requirements analysis.} The requirements for the increment are drawn from the proposal, the literature, dataset documentation and supervisor meetings (Section~3.4).
+  \item \textit{Design.} Each module's data pipeline, model architecture and output format are designed. Integration increments also design the shared interfaces.
+  \item \textit{Implementation.} Modules are implemented in Python and their trained models are saved for reuse.
+  \item \textit{Testing and evaluation.} Each model is evaluated on held-out data with metrics suited to imbalanced classes. Code is checked with unit tests where available; the anomaly module, for example, has an automated test suite. Integration and system testing will be carried out in Increments 2--4.
+  \item \textit{Deployment and maintenance.} Deployment is limited to a controlled demonstration environment. Maintenance consists of retraining models and recalibrating thresholds as new data becomes available.
+\end{itemize}
+
+\textbf{Advantages for this project.} Each increment ends with something that works and can be measured, so problems are found early. In Increment~1, for example, evaluation revealed weak results in the first version of the anomaly detector and duplicate data in CIC-IDS2017, and both were addressed before mid-term. Regular supervisor reviews at the end of each increment keep the work aligned with the project goals.
+
+\textbf{Challenges and mitigation.} The main risk of incremental development is that independently built parts may be difficult to integrate later. Increment~1 has indeed produced three modules with different interfaces and data formats. This is mitigated by making integration the focus of Increment~2, before further modules are added, and by requiring every module to produce structured output.

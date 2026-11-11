@@ -1,0 +1,71 @@
+\section{Functional Requirements}
+
+Functional requirements define the services a system provides: the inputs it accepts, how it processes them and the outputs it returns \cite{sommerville2016se}. They are the basis for design, for test cases and for checking at the end of the project whether the system does what was agreed. Each requirement below is written to be specific enough to be tested.
+
+Table~\ref{tab:FRs} lists the functional requirements, grouped by module. The \textit{Status} column shows the state at mid-term: \textbf{Done} means implemented and tested on benchmark data, \textbf{Partial} means implemented with a known limitation, \textbf{WIP} means in progress, and \textbf{Planned} means scheduled for a later increment.
+
+{\footnotesize
+\begin{center}
+\begin{longtable}{p{0.15\textwidth}p{0.65\textwidth}p{0.08\textwidth}}
+   \caption{\label{tab:FRs}Functional Requirements}\\
+   \hline
+   \hline
+   \textbf{Requirement ID} & \textbf{Description} & \textbf{Status} \\
+	\hline
+\endfirsthead
+\multicolumn{3}{l}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+   \textbf{Requirement ID} & \textbf{Description} & \textbf{Status} \\
+\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+
+  \multicolumn{3}{l}{\textit{Network Threat Classification}} \\
+  FR-N1 & The module shall accept network flow records containing the CICFlowMeter-style features used in training, either as a single record or as a CSV batch. & Done \\
+  FR-N2 & The module shall apply the saved preprocessing (imputation, variance filtering and scaling) fitted on the training data before classification. & Done \\
+  FR-N3 & The module shall classify each flow as BENIGN or ATTACK using the Stage~1 model and the validation-selected decision threshold. & Done \\
+  FR-N4 & For flows classified as ATTACK, the module shall assign one of six attack families (DDoS, DoS, PortScan, WebAttack, Botnet, Infiltration). & Done \\
+  FR-N5 & The module shall return, for each flow, the predicted class, a confidence value, an anomaly score, a feature-based explanation and the related MITRE ATT\&CK context. & Done \\
+  FR-N6 & The module shall generate a recommended response plan for each decision as text for analyst review, and shall not execute it. & Done \\
+  FR-N7 & The module shall provide command-line functions for training, evaluation and batch classification of CSV files. & Done \\
+
+  \multicolumn{3}{l}{\textit{Malware Classification}} \\
+  FR-M1 & The module shall accept a CSV file containing the 2,326 static PE features expected by the trained models. & Done \\
+  FR-M2 & The module shall reject input files that do not contain all required feature columns and report how many are missing. & Done \\
+  FR-M3 & The module shall classify each sample as benign or malware using the CatBoost model. & Done \\
+  FR-M4 & For samples classified as malware, the module shall predict one of eight categories using the Random Forest model. & Done \\
+  FR-M5 & The module shall display predictions, model performance figures and summary charts in a web interface (Gradio). & Done \\
+  FR-M6 & The module shall load saved models at start-up without retraining. & Done \\
+  FR-M7 & The module shall extract features directly from raw executable files. & Planned \\
+
+  \multicolumn{3}{l}{\textit{Anomaly Detection}} \\
+  FR-A1 & The module shall train on benign traffic only. When labels are present, attack rows shall be excluded from training automatically. & Done \\
+  FR-A2 & The module shall preprocess flow features with steps fitted on training data only, including handling of missing and infinite values and categorical encoding. & Done \\
+  FR-A3 & The module shall score each flow with the configured unsupervised detectors and combine their scores into a single anomaly score. & Done \\
+  FR-A4 & The module shall flag a flow as anomalous when its score exceeds a threshold calibrated as a configurable percentile of held-out benign scores. & Done \\
+  FR-A5 & The module shall write alerts in JSON or CSV format containing the time stamp, source and destination address, destination port, score, threshold, severity level (low, medium or high) and the three most anomalous features. & Done \\
+  FR-A6 & The module shall evaluate a trained model on labelled data and report precision, recall, F1-score, false-positive rate, ROC-AUC, PR-AUC and recall per attack type, with ROC and precision--recall plots. & Done \\
+  FR-A7 & The module shall read detector choices, thresholds and model settings from a configuration file, and shall save and reload trained models. & Done \\
+  FR-A8 & The module shall validate the schema of input files and warn about missing or unexpected feature columns. (At present, missing columns are filled with training medians without a warning.) & Partial \\
+
+  \multicolumn{3}{l}{\textit{Log Analysis}} \\
+  FR-L1 & The module shall read system and application logs and identify errors and suspicious events relevant to security incidents. & WIP \\
+
+  \multicolumn{3}{l}{\textit{System Integration and Planned Components}} \\
+  FR-S1 & The system shall provide a backend service through which each analysis module can be called and its structured results returned in a common format. & Planned \\
+  FR-S2 & The system shall store alerts, predictions and analyst feedback in a database. & Planned \\
+  FR-S3 & The system shall correlate related alerts from different modules into incidents. & Planned \\
+  FR-S4 & The system shall estimate a risk level for each incident to support prioritisation. & Planned \\
+  FR-S5 & The system shall identify known vulnerabilities and possible attack paths, using MITRE ATT\&CK techniques as a reference. & Planned \\
+  FR-S6 & The investigation agent shall summarise an incident in plain language and link each statement to the module results it is based on. & Planned \\
+  FR-S7 & The dashboard shall display alerts, incidents, risk levels and explanations, with filtering by time, module and severity. & Planned \\
+  FR-S8 & The dashboard shall allow analysts to mark results as correct or incorrect and record this feedback for evaluation. & Planned \\
+  FR-S9 & The system shall authenticate users and restrict access to stored security data according to their role. & Planned \\
+\end{longtable}
+\end{center}}
+
+\vspace{-35pt}

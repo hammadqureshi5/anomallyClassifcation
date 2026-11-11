@@ -1,0 +1,11 @@
+\section{Intended Users of the Product}
+
+The system is designed for people who examine security events as part of their work. Their technical background differs, so the planned interface will present results at more than one level of detail.
+
+\textbf{Primary users: security analysts.} SOC analysts and IT security staff are the main users. They will use the network and malware classifiers to obtain specific labels for suspicious traffic and files, and the anomaly detector to find unusual flows that no rule describes. For each alert they will see a severity level and the features that contributed most to the decision, which should shorten the time needed to decide whether an alert deserves further investigation. Planned features for this group include incident correlation, the investigation agent and the ability to mark results as correct or incorrect.
+
+\textbf{Secondary users: IT administrators and managers.} Network and system administrators in smaller organisations often handle security alongside other duties. They will mainly use summary views, such as the number and severity of alerts and the most affected hosts. Managers and team leads will use the planned risk analysis and dashboard summaries to decide which problems need attention first.
+
+\textbf{Secondary users: students and researchers.} Students and researchers in AI and cybersecurity can use the modules to study detection methods on public datasets, compare models and repeat experiments, since each module's training and evaluation are documented and reproducible.
+
+\textbf{Collaboration and user experience.} The planned dashboard is intended to give analysts and administrators a shared view of the same alerts and incidents, so that findings can be passed between roles without re-collecting evidence. The current prototypes already reflect this goal in a simple form. The malware module offers a Gradio web page for uploading CSV files and viewing predictions, while the network and anomaly modules provide command-line tools that write structured result files.

@@ -1,0 +1,24 @@
+\section{Introduction}
+
+This SRS describes the requirements of the AI-Based Autonomous Cyber Defense System. It guides the remaining development work and gives the team, the supervisor and the evaluation committee a common reference for what the system is expected to do. Because three modules are already implemented, the requirements in this chapter are of two kinds. Some describe behaviour that exists and has been tested on benchmark data. Others describe behaviour planned for later increments. Every requirement is labelled accordingly. The requirements were derived from the approved proposal and refined through the literature review, analysis of the datasets and their documentation, and regular supervisor meetings (Section~\ref{sec:req-gathering}).
+
+\subsection{Document Scope}
+
+The document covers both functional and non-functional requirements. The functional requirements state the inputs each module accepts, the processing it performs and the outputs it produces, together with the system-level functions planned for integration: storage, correlation, risk analysis, investigation support and the dashboard. The non-functional requirements set expectations for quality attributes, including accuracy, explainability, usability, maintainability and interoperability, as well as performance, safety, privacy and reproducibility. The SRS focuses on \textit{what} the system must do and \textit{why}. The internal design of the models is described in Chapter~2. Detailed design artefacts, such as use cases and sequence diagrams, belong to the next stage of the project.
+
+\subsection{Audience}
+
+The SRS is written for the following readers:
+
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \item \textbf{Development team:} the three team members, who use the SRS to keep their modules consistent with each other and to plan the integration increment.
+    \item \textbf{Supervisor and FYP committee:} who use it to assess the scope of the project and the progress made against agreed requirements.
+    \item \textbf{Testing team:} in this project, the developers themselves, who derive unit, integration and system test cases from the listed requirements.
+    \item \textbf{End users (security analysts and administrators):} whose needs, as identified in Chapter~1, are expressed in the functional and usability requirements.
+    \item \textbf{Documentation team:} who use the SRS as the basis for user guides and the final report.
+    \item \textbf{User experience designers:} who use the dashboard and feedback requirements to design the planned interface.
+    \item \textbf{Future maintenance team:} who need to understand the expected behaviour of each module before retraining models or adding new ones.
+\end{itemize}
