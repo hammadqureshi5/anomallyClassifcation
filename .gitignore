@@ -1,0 +1,19 @@
+# Local datasets and downloaded Hugging Face cache
+/datasets/*.csv
+/datasets/catboost_info/
+/datasets/category_model_results/
+/datasets/it4lia___bodmas_cleaned/
+/datasets/test_samples.csv
+/hub/
+/xet/
+/catboost_info/
+
+# Generated outputs and Python cache
+**/__pycache__/
+/datasets/bodmas_project/prediction_reports/
+/datasets/bodmas_project/tmp_test.csv
+
+# Local tooling state
+/.agent_harnesses.json
+/.check_for_skill_update_done
+/.check_for_update_done
