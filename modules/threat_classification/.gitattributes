@@ -1,0 +1,19 @@
+# Normalise line endings so Windows and Linux contributors stop fighting diffs.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary model artifacts — never diffed or line-ending converted.
+*.pkl  binary
+*.cbm  binary
+*.joblib binary
+*.onnx binary
+*.npy  binary
+*.npz  binary
+
+# Treat data files as binary if any ever slip through .gitignore.
+*.csv  binary
+*.parquet binary

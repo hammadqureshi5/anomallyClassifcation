@@ -1,0 +1,87 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Datasets — never committed.
+# CSE-CIC-IDS2018 is ~6.5 GB and publicly redistributable from UNB.
+# See data/README.md for download instructions.
+# ──────────────────────────────────────────────────────────────────────────────
+data/*
+!data/README.md
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Training telemetry / experiment logs
+catboost_info/
+lightgbm_info/
+runs/
+mlruns/
+wandb/
+*.tfevents
+*.tfevents.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# Testing / coverage / linting
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+
+# Editors and OS cruft
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local logs
+*.log
+push.log
