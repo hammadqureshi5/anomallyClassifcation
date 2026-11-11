@@ -1,10 +1,8 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # Datasets — never committed.
 # CSE-CIC-IDS2018 is ~6.5 GB and publicly redistributable from UNB.
-# See data/README.md for download instructions.
+# They live in the repository-level data/threat_classification/ (see its README).
 # ──────────────────────────────────────────────────────────────────────────────
-data/*
-!data/README.md
 *.csv
 *.tsv
 *.parquet

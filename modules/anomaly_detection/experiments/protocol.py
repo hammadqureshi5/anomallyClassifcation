@@ -18,8 +18,9 @@ from sklearn.model_selection import train_test_split
 from anomaly_detection.data import Dataset, load_cicids2017, load_nsl_kdd
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIRS = {"nsl-kdd": ROOT / "data/raw/NSL-KDD", "cicids2017": ROOT / "data/raw/CIC-IDS- 2017"}
-CACHE_DIR = ROOT / "data/processed"
+DATA_ROOT = ROOT.parents[1] / "data" / "anomaly_detection"  # repository-level data/ folder
+DATA_DIRS = {"nsl-kdd": DATA_ROOT / "NSL-KDD", "cicids2017": DATA_ROOT / "CIC-IDS2017"}
+CACHE_DIR = DATA_ROOT / "processed"
 REPORT_DIR = ROOT / "reports/improvement"
 DATASETS = list(DATA_DIRS)
 SPLIT_SEED = 42          # fixed: defines the test set

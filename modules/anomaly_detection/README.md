@@ -129,7 +129,7 @@ never seen** (version 1 caught 41%). This is the main reason anomaly detection i
 | **NSL-KDD** | Older but classic network-attack dataset | Its test file has **17 attack types not in the training file**, which makes it perfect for testing unknown attacks |
 | **CIC-IDS2017** | Modern traffic recorded over 5 days (DoS, DDoS, PortScan, brute force, web attacks, botnet) | 2.8 million flows. We found **11% duplicate rows** and removed them before splitting, so results aren't inflated. |
 
-The data files are in `data/raw/NSL-KDD/` and `data/raw/CIC-IDS- 2017/`.
+The data files are in the repository-level `data/anomaly_detection/NSL-KDD/` and `data/anomaly_detection/CIC-IDS2017/`.
 
 ---
 
@@ -155,8 +155,7 @@ modules/anomaly_detection/
 │   ├── improvement/        ← ★ full results, graphs, TECHNICAL_REPORT.md
 │   └── alerts.json         ← example alerts
 ├── tests/                  ← automatic checks that the code works (15 tests)
-├── archive/original_v1/    ← untouched copy of version 1
-└── data/raw/               ← the datasets
+└── archive/original_v1/    ← untouched copy of version 1
 ```
 
 **The three most useful files for you to read:**
@@ -182,8 +181,8 @@ Open a terminal in this folder. The libraries are already installed in `.venv`.
 
 **Find alerts in a CSV file of traffic:**
 ```bash
-.venv/bin/python -m anomaly_detection.cli generate --out data/processed/sample_traffic.csv
-.venv/bin/python -m anomaly_detection.cli detect --input data/processed/sample_traffic.csv --output reports/alerts.json
+.venv/bin/python -m anomaly_detection.cli generate --out ../../data/anomaly_detection/processed/sample_traffic.csv
+.venv/bin/python -m anomaly_detection.cli detect --input ../../data/anomaly_detection/processed/sample_traffic.csv --output reports/alerts.json
 ```
 Then open `reports/alerts.json` to see the alerts.
 

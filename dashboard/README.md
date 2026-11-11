@@ -38,10 +38,11 @@ script + one entry in `backend/app/modules.py`.
 
 API docs: http://127.0.0.1:8000/docs
 
-**Demo inputs.** Built-in samples are generated from the local datasets (they are not committed):
+**Demo inputs.** Built-in samples are small CSVs cut from the datasets in `data/anomaly_detection/`
+and stored in `data/dashboard/samples/` (not committed). Rebuild them with:
 
 ```bash
-../modules/anomaly_detection/.venv/bin/python samples/make_samples.py
+modules/anomaly_detection/.venv/bin/python dashboard/make_samples.py
 ```
 
 ## Connecting the modules

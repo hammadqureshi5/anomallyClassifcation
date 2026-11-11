@@ -4,3 +4,9 @@ __pycache__/
 *.pyc
 .claude/
 .DS_Store
+
+# Datasets: everything under data/ except the READMEs and placeholder files
+/data/**
+!/data/**/
+!/data/**/README.md
+!/data/**/.gitkeep

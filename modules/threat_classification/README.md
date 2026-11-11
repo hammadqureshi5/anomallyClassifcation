@@ -75,13 +75,13 @@ acds-threat-classification/
 │   └── integration_demo.py      # how other modules call this one
 ├── tests/
 │   └── test_pickle_compat.py
-├── data/                        # datasets live here, git-ignored
-│   └── README.md                # download instructions
 ├── docs/
 │   └── alert_schema.md
 ├── requirements.txt
 └── pyproject.toml
 ```
+
+Datasets live in the repository-level `data/threat_classification/` folder.
 
 ---
 
@@ -233,10 +233,10 @@ unrecognised anomalies.
 ## Training
 
 The dataset is **not** in this repository (~6.5 GB). See
-[`data/README.md`](data/README.md) for download instructions.
+[`../../data/threat_classification/README.md`](../../data/threat_classification/README.md) for download instructions.
 
 ```bash
-python -m acds.threat_classifier train data/cic_ids2018/*.csv
+python -m acds.threat_classifier train ../../data/threat_classification/CSE-CIC-IDS2018/*.csv
 ```
 
 This fits the preprocessor, both tiers, and overwrites `acds_models/`.

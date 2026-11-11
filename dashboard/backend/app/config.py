@@ -18,7 +18,7 @@ WORKERS_DIR = PLATFORM_DIR / "workers"
 DATA_DIR = Path(os.environ.get("ACDS_DATA_DIR", PLATFORM_DIR / "var"))
 UPLOAD_DIR = DATA_DIR / "uploads"
 RESULTS_DIR = DATA_DIR / "results"
-SAMPLES_DIR = PLATFORM_DIR / "samples"
+SAMPLES_DIR = PLATFORM_DIR.parent / "data" / "dashboard" / "samples"
 DB_PATH = DATA_DIR / "acds.sqlite3"
 FRONTEND_DIST = PLATFORM_DIR / "frontend" / "dist"
 

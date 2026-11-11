@@ -24,6 +24,10 @@ CIC2017_TO_2018 = {
     "Subflow Fwd Bytes": "Subflow Fwd Byts", "Subflow Bwd Bytes": "Subflow Bwd Byts",
 }
 
+# Tier-2 classes that are not attacks: "Benign", and "Label" (a CSV header row that ended up
+# among the training labels, see acds_models/meta.json).
+NOT_A_THREAT_CLASS = {"Benign", "Label"}
+
 ACTION_TEXT = {
     "BLOCK": "Recommended action: BLOCK the source at the perimeter firewall and investigate the target "
              "host. This is a recommendation for analyst review; ACDS never executes it automatically.",
@@ -72,6 +76,9 @@ def main() -> None:
             probs = {c: round(float(p), 6) for c, p in zip(system.threat_classes, t2[k])}
             alert = system._build_alert("Anomalous", float(t1[i, 1]), label, float(t2[k][idx]), probs,
                                         system._resolve_mitre(label))
+            unclassified = label in NOT_A_THREAT_CLASS
+            if unclassified:
+                alert["severity"], alert["action"], alert["mitre"] = "LOW", "ALERT", None
             row = df.iloc[i]
             src, dst = clean(row.get("Src IP")), clean(row.get("Dst IP"))
             port = clean(row.get("Dst Port"))
@@ -85,12 +92,19 @@ def main() -> None:
             ]
             if labels is not None:
                 evidence.append({"label": "Label in input file", "value": labels.iloc[i]})
+            if unclassified:
+                title = "Anomalous flow (attack type not identified)"
+                description = (f"Tier 1 flagged this flow as anomalous, but Tier 2 returned the class "
+                               f"'{label}', which is not an attack family, so the type is unknown.")
+            else:
+                title = f"{label} detected"
+                description = (f"The two-tier classifier identified this flow as {label}, mapped to "
+                               f"MITRE ATT&CK {alert['mitre']['technique_id']} "
+                               f"({alert['mitre']['technique_name']}, tactic: {alert['mitre']['tactic']}).")
             findings.append({
                 "severity": alert["severity"].lower(),
-                "title": f"{label} detected",
-                "description": f"The two-tier classifier identified this flow as {label}, mapped to "
-                               f"MITRE ATT&CK {alert['mitre']['technique_id']} "
-                               f"({alert['mitre']['technique_name']}, tactic: {alert['mitre']['tactic']}).",
+                "title": title,
+                "description": description,
                 "host": host_for(src, dst, port, fallback=f"row {i}"),
                 "asset": {"src_ip": src, "dst_ip": dst, "dst_port": None if port is None else int(float(port))},
                 "score": alert["tier2"]["confidence"],

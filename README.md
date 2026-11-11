@@ -10,6 +10,10 @@ modules and shows their results together, with analyst feedback on every finding
 ## Repository layout
 
 ```
+data/                               Datasets, one folder per module (not committed, see data/README.md)
+  anomaly_detection/                CIC-IDS2017, NSL-KDD
+  threat_classification/            CSE-CIC-IDS2018
+  malware_classification/           BODMAS
 dashboard/                          Web console: FastAPI backend + React UI (module 12)
 modules/
   anomaly_detection/                Anomaly detection: Hammad Qureshi
@@ -47,8 +51,8 @@ cd modules/malware_classification && python3 -m venv .venv && .venv/bin/pip inst
 ./dashboard/start.sh
 ```
 
-Datasets (CIC-IDS2017, NSL-KDD, CSE-CIC-IDS2018, BODMAS) are not committed. See each module's
-README for download instructions.
+Datasets are not committed. Download them into `data/<module>/` as described in
+`data/README.md` and the README in each module's data folder.
 
 ## Adding a module
 

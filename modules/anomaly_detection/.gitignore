@@ -7,12 +7,8 @@ __pycache__/
 # Local tool settings
 .claude/
 
-# Datasets (large; download them as described in README.md)
+# Datasets live in the repository-level data/anomaly_detection/ (ignored there)
 *.zip
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
 
 # Trained models (~130 MB; recreate with `bash experiments/run_all.sh`)
 models/*

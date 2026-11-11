@@ -1,7 +1,7 @@
 # Datasets
 
 Dataset files are **not committed** — the CSE-CIC-IDS2018 CSVs used here total
-roughly 6.5 GB. Everything in this directory except this file is git-ignored.
+roughly 6.5 GB. Everything in this folder except this README is git-ignored.
 
 ## CSE-CIC-IDS2018
 
@@ -9,11 +9,11 @@ Published by the Canadian Institute for Cybersecurity, University of New
 Brunswick: <https://www.unb.ca/cic/datasets/ids-2018.html>
 
 The processed CSVs (`*_TrafficForML_CICFlowMeter.csv`) are distributed through
-the registry described on that page. Place them here:
+the registry described on that page. Place them here (repository root):
 
 ```
-data/
-└── cic_ids2018/
+data/threat_classification/
+└── CSE-CIC-IDS2018/
     ├── Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv
     ├── Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv
     ├── Friday-16-02-2018_TrafficForML_CICFlowMeter.csv
@@ -26,10 +26,10 @@ data/
     └── Friday-02-03-2018_TrafficForML_CICFlowMeter.csv
 ```
 
-Then train:
+Then train, from `modules/threat_classification/`:
 
 ```bash
-python -m acds.threat_classifier train data/cic_ids2018/*.csv
+python -m acds.threat_classifier train ../../data/threat_classification/CSE-CIC-IDS2018/*.csv
 ```
 
 ### Known data-quality issue

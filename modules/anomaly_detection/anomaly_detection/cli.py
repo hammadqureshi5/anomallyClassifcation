@@ -1,6 +1,6 @@
 """Command-line interface.
 
-    python -m anomaly_detection.cli generate --out data/processed/sample_traffic.csv
+    python -m anomaly_detection.cli generate --out ../../data/anomaly_detection/processed/sample_traffic.csv
     python -m anomaly_detection.cli evaluate --dataset synthetic
     python -m anomaly_detection.cli evaluate --dataset nsl-kdd --supervised
     python -m anomaly_detection.cli train    --dataset nsl-kdd --model models/pipeline.joblib
@@ -23,7 +23,9 @@ from .evaluation import evaluate_scores, metrics_table, plot_curves, supervised_
 from .pipeline import AnomalyPipeline
 
 DATASETS = ["synthetic", "nsl-kdd", "cicids2017", "csv"]
-DEFAULT_DIRS = {"nsl-kdd": "data/raw/NSL-KDD", "cicids2017": "data/raw/CIC-IDS- 2017"}
+# Datasets live in the repository-level data/anomaly_detection/ folder.
+DATA_ROOT = Path(__file__).resolve().parents[3] / "data" / "anomaly_detection"
+DEFAULT_DIRS = {"nsl-kdd": str(DATA_ROOT / "NSL-KDD"), "cicids2017": str(DATA_ROOT / "CIC-IDS2017")}
 
 
 def _random_split(ds: Dataset, cfg: Config) -> tuple[Dataset, Dataset]:
@@ -136,13 +138,13 @@ def main(argv: list[str] | None = None) -> None:
 
     def data_args(p):
         p.add_argument("--dataset", choices=DATASETS, default="synthetic")
-        p.add_argument("--data-dir", help="folder with dataset files (defaults under data/raw/)")
+        p.add_argument("--data-dir", help="folder with dataset files (defaults under data/anomaly_detection/ at the repo root)")
         p.add_argument("--input", help="CSV file when --dataset csv")
         p.add_argument("--label-col", help="label column of a CSV (benign values: BENIGN/normal/0)")
         p.add_argument("--model", default="models/pipeline.joblib")
 
     p = sub.add_parser("generate", help="write a synthetic traffic CSV for demos")
-    p.add_argument("--out", default="data/processed/sample_traffic.csv")
+    p.add_argument("--out", default=str(DATA_ROOT / "processed" / "sample_traffic.csv"))
     p.add_argument("--n-benign", type=int, default=2000)
     p.add_argument("--n-attack", type=int, default=200)
     p.add_argument("--seed", type=int, default=7)
