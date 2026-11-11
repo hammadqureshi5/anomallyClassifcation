@@ -1,0 +1,6 @@
+# Each module and dashboard/ has its own .gitignore; these apply everywhere.
+.venv/
+__pycache__/
+*.pyc
+.claude/
+.DS_Store

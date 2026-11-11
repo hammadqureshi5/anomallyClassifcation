@@ -1,0 +1,5 @@
+{
+  "anomaly": {"dir": "/path/to/modules/anomaly_detection", "python": "/path/to/modules/anomaly_detection/.venv/bin/python"},
+  "threat":  {"dir": "/path/to/modules/threat_classification", "python": "/path/to/python3.11-env/bin/python"},
+  "malware": {"dir": "/path/to/modules/malware_classification", "python": "/path/to/modules/malware_classification/.venv/bin/python"}
+}

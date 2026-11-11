@@ -136,7 +136,7 @@ The data files are in `data/raw/NSL-KDD/` and `data/raw/CIC-IDS- 2017/`.
 ## 6. What is in each folder?
 
 ```
-anomally_detection/
+modules/anomaly_detection/
 ├── anomaly_detection/      ← the actual module (the code)
 │   ├── data/               ← reads datasets; can also make fake test traffic
 │   ├── features/           ← step 1: cleaning and scaling
@@ -156,14 +156,13 @@ anomally_detection/
 │   └── alerts.json         ← example alerts
 ├── tests/                  ← automatic checks that the code works (15 tests)
 ├── archive/original_v1/    ← untouched copy of version 1
-├── data/raw/               ← the datasets
-└── FYP_Midterm_Report/     ← the LaTeX mid-term report (Chapters 1–3)
+└── data/raw/               ← the datasets
 ```
 
 **The three most useful files for you to read:**
 1. `reports/improvement/TECHNICAL_REPORT.md`: full details of the improvement study.
 2. `reports/improvement/cicids2017/figures/` and `reports/improvement/nsl-kdd/figures/`: all graphs.
-3. `FYP_Midterm_Report/main.pdf`: the mid-term report.
+3. `docs/FYP_Midterm_Report/main.pdf` (at the repository root): the mid-term report.
 
 ---
 

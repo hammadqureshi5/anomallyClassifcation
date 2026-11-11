@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+var/
+acds.config.json
+samples/*.csv
+frontend/node_modules/
+frontend/dist/
+samples/samples.json
