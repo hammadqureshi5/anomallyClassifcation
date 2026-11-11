@@ -1,0 +1,12 @@
+{
+  "threat_classes": [
+    "Benign",
+    "DoS attacks-GoldenEye",
+    "DoS attacks-Hulk",
+    "DoS attacks-SlowHTTPTest",
+    "DoS attacks-Slowloris",
+    "FTP-BruteForce",
+    "Label",
+    "SSH-Bruteforce"
+  ]
+}
